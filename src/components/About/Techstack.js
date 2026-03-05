@@ -2,17 +2,11 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { DiPython, DiPostgresql } from "react-icons/di";
 import {
-  SiPytorch,
-  SiTensorflow,
-  SiScikitlearn,
-  SiHuggingface,
-  SiGooglecloud,
-  SiPandas,
-  SiApachespark,
-  SiOpencv,
-  SiApacheairflow
-} from "react-icons/si";
-import { FaBrain, FaNetworkWired, FaDatabase, FaCogs, FaChartBar, FaRobot, FaLink } from "react-icons/fa";
+  FaBrain, FaNetworkWired, FaDatabase, FaCogs,
+  FaChartBar, FaRobot, FaLink, FaComments,
+  FaFire, FaProjectDiagram, FaEye, FaChartLine,
+  FaTable, FaBolt, FaWind, FaCloud
+} from "react-icons/fa";
 
 function Techstack() {
   return (
@@ -32,7 +26,7 @@ function Techstack() {
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Vector DBs & RAG</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiHuggingface />
+        <FaRobot />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Hugging Face & LLMs</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -40,7 +34,7 @@ function Techstack() {
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>LLMOps & MLOps</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <FaRobot />
+        <FaComments />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Chatbot Dev</h6>
       </Col>
 
@@ -50,19 +44,19 @@ function Techstack() {
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Gen AI & Neural Nets</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPytorch />
+        <FaFire />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>PyTorch (Deep Learning)</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiTensorflow />
+        <FaProjectDiagram />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>TensorFlow & Keras</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiOpencv />
+        <FaEye />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Computer Vision (OpenCV)</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiScikitlearn />
+        <FaChartLine />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Scikit-Learn (ML)</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -76,7 +70,7 @@ function Techstack() {
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Python</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPandas />
+        <FaTable />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Pandas & NumPy</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -84,15 +78,15 @@ function Techstack() {
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>SQL & Databases</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiApachespark />
+        <FaBolt />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>PySpark</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiApacheairflow />
+        <FaWind />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>Apache Airflow</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiGooglecloud />
+        <FaCloud />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>GCP & Data Eng</h6>
       </Col>
 

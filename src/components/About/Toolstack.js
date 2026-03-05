@@ -1,24 +1,17 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import {
-  SiPycharm,
-  SiJupyter,
-  SiVercel,
-  SiLinux,
-  SiRailway
-} from "react-icons/si";
-import { FaWindows, FaChartBar } from "react-icons/fa"; // Safe icons that won't crash
+import { FaLinux, FaWindows, FaCode, FaBook, FaChartBar, FaServer, FaCloudUploadAlt } from "react-icons/fa";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons"><SiLinux /></Col>
+      <Col xs={4} md={2} className="tech-icons"><FaLinux /></Col>
       <Col xs={4} md={2} className="tech-icons"><FaWindows /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiPycharm /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiJupyter /></Col>
-      <Col xs={4} md={2} className="tech-icons"><FaChartBar /></Col> {/* Represents Data Dashboards/PowerBI */}
-      <Col xs={4} md={2} className="tech-icons"><SiRailway /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiVercel /></Col>
+      <Col xs={4} md={2} className="tech-icons"><FaCode /></Col> {/* IDEs */}
+      <Col xs={4} md={2} className="tech-icons"><FaBook /></Col> {/* Notebooks */}
+      <Col xs={4} md={2} className="tech-icons"><FaChartBar /></Col> {/* Dashboards */}
+      <Col xs={4} md={2} className="tech-icons"><FaServer /></Col> {/* Deployment */}
+      <Col xs={4} md={2} className="tech-icons"><FaCloudUploadAlt /></Col> {/* Cloud Hosting */}
     </Row>
   );
 }
