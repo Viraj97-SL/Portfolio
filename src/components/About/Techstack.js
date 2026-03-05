@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { DiPython, DiPostgresql, DiDocker } from "react-icons/di";
+import { DiPython, DiPostgresql } from "react-icons/di";
 import {
   SiPytorch,
   SiTensorflow,
