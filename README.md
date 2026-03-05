@@ -1,10 +1,13 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
+Markdown
+<h1 align="center">
+  Viraj Bulugahapitiya | AI Engineer Portfolio
+</h1>
+
+<h3 align="center">
+  <a href="https://viraj-bulugahapitiya.vercel.app/" target="_blank">viraj-bulugahapitiya.vercel.app</a>
+</h3>
+
+
 
 <br/>
 
@@ -13,64 +16,54 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/Viraj97-SL/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
+![GitHub forks](https://img.shields.io/github/forks/Viraj97-SL/Portfolio?color=red&logo=github&style=for-the-badge)
 
 </center>
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
+## About This Repository
 
-## TL;DR
+This repository contains the source code for my personal portfolio website. As an AI & Machine Learning Engineer specializing in Agentic Systems and Deep Learning, I needed a clean, dark-mode, cyberpunk-aesthetic platform to showcase my production-grade architectures.
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+You can view the live site here: **[viraj-bulugahapitiya.vercel.app](https://viraj-bulugahapitiya.vercel.app/)**
 
-## Built With
+## Featured AI & ML Projects
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+This portfolio highlights several complex systems I have architected, including:
+- **CricOracle 2026:** T20 World Cup predictor using XGBoost, PyTorch LSTMs, and Genetic Algorithms.
+- **RepoSentinel & AI Learning Hub:** Autonomous LangGraph state machine for analyzing and generating educational GitHub content.
+- **Pamorya AI Commerce Assistant:** Multi-agent retail system bridging Groq Llama-3 with GenAI virtual try-ons.
+- **Tri-Modal Alzheimer's Detection:** Custom 3D Swin Transformer built in PyTorch for high-dimensional medical data fusion.
 
-This project was built using these technologies.
+## Portfolio Tech Stack
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+While my daily engineering stack revolves around Python, PyTorch, LangGraph, and FastAPI, this specific portfolio UI was built using:
+- **React.js**
+- **Node.js**
+- **React-Bootstrap / CSS3**
+- **Vercel (Deployment)**
 
-## Features
+## 🛠 Local Installation and Setup
 
-**📖 Multi-Page Layout**
+If you want to run this portfolio locally:
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/Viraj97-SL/Portfolio.git](https://github.com/Viraj97-SL/Portfolio.git)
+Install the dependencies:
 
-**📱 Fully Responsive**
+Bash
+npm install
+Run the development server:
 
-## Getting Started
+Bash
+npm start
+Open http://localhost:3000 to view it in the browser.
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+Acknowledgements
+Original React portfolio template created by Soumyajit4419, which has been heavily customized and adapted for an AI Engineering showcase.
 
-## 🛠 Installation and Setup Instructions
 
-1. Installation: `npm install`
+Save this, commit, and push it to your `main` branch. 
 
-2. In the project directory, you can run: `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
-
-## Usage Instructions
-
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
-
-### Show your support
-
-Give a ⭐ if you like this website!
-
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+Now, when a recruiter or hiring manager lands on `https://github.com/Viraj97-SL/Port
