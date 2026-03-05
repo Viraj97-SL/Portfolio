@@ -64,6 +64,3 @@ Acknowledgements
 Original React portfolio template created by Soumyajit4419, which has been heavily customized and adapted for an AI Engineering showcase.
 
 
-Save this, commit, and push it to your `main` branch. 
-
-Now, when a recruiter or hiring manager lands on `https://github.com/Viraj97-SL/Port
