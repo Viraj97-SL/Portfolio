@@ -1,30 +1,24 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
-import chrome from "../../Assets/TechIcons/Google Chrome.svg";
-import vsCode from "../../Assets/TechIcons/vscode.svg";
-import intelliJ from "../../Assets/TechIcons/intellij-idea.svg";
+import {
+  SiPycharm,
+  SiJupyter,
+  SiVercel,
+  SiLinux,
+  SiRailway
+} from "react-icons/si";
+import { FaWindows, FaChartBar } from "react-icons/fa"; // Safe icons that won't crash
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={macOs} alt="macOs" className="tech-icon-images" />
-        <div className="tech-icons-text">Mac Os</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={chrome} alt="Chrome" className="tech-icon-images" />
-        <div className="tech-icons-text">Google Chrome</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={vsCode} alt="vsCode" className="tech-icon-images" />
-        <div className="tech-icons-text">Vs Code</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={intelliJ} alt="go" className="tech-icon-images" />
-        <div className="tech-icons-text">IntelliJ</div>
-      </Col>
+      <Col xs={4} md={2} className="tech-icons"><SiLinux /></Col>
+      <Col xs={4} md={2} className="tech-icons"><FaWindows /></Col>
+      <Col xs={4} md={2} className="tech-icons"><SiPycharm /></Col>
+      <Col xs={4} md={2} className="tech-icons"><SiJupyter /></Col>
+      <Col xs={4} md={2} className="tech-icons"><FaChartBar /></Col> {/* Represents Data Dashboards/PowerBI */}
+      <Col xs={4} md={2} className="tech-icons"><SiRailway /></Col>
+      <Col xs={4} md={2} className="tech-icons"><SiVercel /></Col>
     </Row>
   );
 }
