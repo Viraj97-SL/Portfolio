@@ -9,11 +9,10 @@ import {
   SiGooglecloud,
   SiPandas,
   SiApachespark,
-  SiLangchain,
   SiOpencv,
   SiApacheairflow
 } from "react-icons/si";
-import { FaBrain, FaNetworkWired, FaDatabase, FaCogs, FaChartBar, FaRobot } from "react-icons/fa";
+import { FaBrain, FaNetworkWired, FaDatabase, FaCogs, FaChartBar, FaRobot, FaLink } from "react-icons/fa";
 
 function Techstack() {
   return (
@@ -21,7 +20,7 @@ function Techstack() {
 
       {/* 1. Generative AI & Agentic Ecosystem */}
       <Col xs={4} md={2} className="tech-icons">
-        <SiLangchain />
+        <FaLink />
         <h6 style={{ marginTop: "15px", fontSize: "15px", color: "white" }}>LangChain & Agents</h6>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
