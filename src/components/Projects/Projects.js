@@ -18,17 +18,17 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are a few production-grade AI and multi-agent systems I've architected.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row style={{ justifyItems: "center", paddingBottom: "10px" }}>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Pamorya AI Commerce Assistant"
+              description='An advanced multi-agent AI commerce system utilizing a "Supervisor-Worker" architecture built on LangGraph. Features a central Supervisor AI that routes intents to specialist agents (Data Query, Sales, Policy). Includes RAG hallucination control and a FastAPI microservices backend deployed on Railway.'
+              ghLink="https://github.com/Viraj97-SL"
             />
           </Col>
 
@@ -36,10 +36,9 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Tri-Modal Alzheimer's Detection"
+              description="Engineered a custom 3D Swin Transformer using PyTorch for the early detection of Alzheimer's Disease. Fused disparate healthcare data including high-dimensional 3D MRI scans, longitudinal clinical records, and biomarker sequences to handle unstructured medical data efficiently."
+              ghLink="https://github.com/Viraj97-SL"
             />
           </Col>
 
@@ -47,10 +46,9 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="SATH-CHAKRA AI Framework"
+              description="Architected a full-stack agentic framework using LangGraph and a non-linear state machine for complex memory and reasoning loops. Engineered an intelligence layer leveraging Groq Llama-3 models paired with a headless Playwright rendering pipeline and a glassmorphic React/Vite UI."
+              ghLink="https://github.com/Viraj97-SL"
             />
           </Col>
 
@@ -58,10 +56,9 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="VisionAID Multi-Agent System"
+              description="An award-winning multi-agent assistive AI system. Developed to run efficiently with custom Model Context Protocol (MCP) coordination. Won the University of Hertfordshire Agentic AI Competition by demonstrating robust, real-world utility."
+              ghLink="https://github.com/Viraj97-SL"
             />
           </Col>
 
@@ -69,24 +66,12 @@ function Projects() {
             <ProjectCard
               imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="GenAI Fashion Stylist"
+              description="A multi-agent retail workforce simulation using FastAPI and Docker. Integrated the IDM-VTON visual AI model for virtual garment try-ons, bridging text-based LLMs with computer vision. Grounded in ChromaDB to ensure zero hallucination on inventory data."
+              ghLink="https://github.com/Viraj97-SL"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
         </Row>
       </Container>
     </Container>
