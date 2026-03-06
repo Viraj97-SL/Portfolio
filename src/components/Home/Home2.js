@@ -15,31 +15,27 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I am an AI Engineer specializing in LLM-based agent systems and production-grade orchestration.
+              I am an <b className="purple">AI Engineer</b>, <b className="purple">Machine Learning Engineer</b>, and <b className="purple">Data Scientist</b> — bridging the full spectrum from raw data pipelines to deployed autonomous agent systems.
               <br />
-              <br />I am fluent in heavy-hitting ML and engineering stacks like
+              <br />I am fluent in end-to-end ML stacks including
               <i>
-                <b className="purple"> Python, PyTorch, SQL, and FastAPI. </b>
+                <b className="purple"> Python, PyTorch, scikit-learn, SQL, and FastAPI </b>
               </i>
+              — covering everything from statistical modelling to production LLM orchestration.
               <br />
               <br />
-              My field of interest revolves around building complex &nbsp;
+              My core interests span building &nbsp;
               <i>
-                <b className="purple">Autonomous Multi-Agent Architectures (LangGraph)</b> and
-                solving high-impact problems in{" "}
-                <b className="purple">
-                  Healthcare Computer Vision and Data Engineering.
-                </b>
+                <b className="purple">Autonomous Multi-Agent Architectures (LangGraph)</b>
               </i>
+              , training and deploying{" "}
+              <b className="purple">Deep Learning models</b> for Computer Vision &amp; NLP, and designing scalable{" "}
+              <b className="purple">Data Engineering pipelines.</b>
               <br />
               <br />
-              Whenever possible, I apply my passion for AI by architecting full-stack intelligence pipelines using <b className="purple">Docker, GCP,</b> and
+              Whenever possible, I close the gap between research and production by deploying full-stack AI systems with <b className="purple">Docker, GCP,</b> and
               <i>
-                <b className="purple"> Modern UI Frameworks</b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React and Next.js.</b>
+                <b className="purple"> React.</b>
               </i>
             </p>
           </Col>
