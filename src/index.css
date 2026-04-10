@@ -7,6 +7,7 @@ body {
   font-family: "PT Mono", monospace !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #050508;
+  background-color: #020204;
   background-image: none;
+  color: rgba(255, 255, 255, 0.85);
 }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
+import HomeAbout from "./HomeAbout";
 import Type from "./Type";
 import LogoCloud from "../LogoCloud/LogoCloud";
 import BentoGrid from "../Bento/BentoGrid";
@@ -81,6 +82,9 @@ function Home() {
 
       {/* ══════════════════ INTRO ══════════════════ */}
       <Home2 />
+
+      {/* ══════════════════ ABOUT PREVIEW ══════════════════ */}
+      <HomeAbout />
 
       {/* ══════════════════ BENTO GRID ══════════════════ */}
       <BentoGrid />
