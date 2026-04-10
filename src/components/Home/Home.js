@@ -1,49 +1,89 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import LogoCloud from "../LogoCloud/LogoCloud";
+import BentoGrid from "../Bento/BentoGrid";
 
 function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      {/* ══════════════════ HERO ══════════════════ */}
+      <div className="hero-section" id="home">
         <Particle />
-        <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
+
+        <Container style={{ position: "relative", zIndex: 1 }}>
+          <Row
+            className="align-items-center"
+            style={{ minHeight: "100vh", paddingTop: "70px" }}
+          >
+            {/* Left — text */}
+            <Col md={7} style={{ paddingBottom: "2rem" }}>
+              <p className="hero-greeting">
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
+                &nbsp; Hello, World
+              </p>
+
+              <h1 className="hero-name">
+                I'M <br />
+                <span className="hero-name-accent">VIRAJ</span>
               </h1>
 
-              <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> VIRAJ BULUGAHAPITIYA</strong>
-              </h1>
-
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ marginBottom: "1.5rem" }}>
                 <Type />
+              </div>
+
+              <div className="hero-cta-group">
+                <Link to="/project" className="hero-cta-primary">
+                  View My Work →
+                </Link>
+                <Link to="/contact" className="hero-cta-outline">
+                  Contact Me
+                </Link>
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
+            {/* Right — avatar */}
+            <Col
+              md={5}
+              className="d-flex justify-content-center"
+              style={{ paddingBottom: "2rem" }}
+            >
+              <div className="hero-img-wrapper">
+                <div className="hero-img-glow" />
+                <img
+                  src={homeLogo}
+                  alt="AI Engineer"
+                  className="img-fluid"
+                  style={{ maxHeight: "430px", position: "relative", zIndex: 1 }}
+                />
+              </div>
             </Col>
           </Row>
         </Container>
-      </Container>
 
-      {/* Home2 contains your "About Me" introduction and your Social Links */}
+        {/* Scroll cue */}
+        <div className="scroll-indicator">
+          <div className="scroll-mouse">
+            <div className="scroll-mouse-dot" />
+          </div>
+          <span>scroll</span>
+        </div>
+      </div>
+
+      {/* ══════════════════ LOGO CLOUD ══════════════════ */}
+      <LogoCloud />
+
+      {/* ══════════════════ INTRO ══════════════════ */}
       <Home2 />
+
+      {/* ══════════════════ BENTO GRID ══════════════════ */}
+      <BentoGrid />
     </section>
   );
 }
