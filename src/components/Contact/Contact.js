@@ -6,11 +6,7 @@ import { FaLinkedinIn, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Particle from "../Particle";
 
 // ─────────────────────────────────────────────
-// ⚙️  EmailJS setup — fill in your own credentials:
-//   1. Create a free account at https://www.emailjs.com
-//   2. Add a service (e.g. Gmail) → copy the Service ID
-//   3. Create an email template    → copy the Template ID
-//   4. Account ▸ API Keys          → copy the Public Key
+// ⚙️  EmailJS setup
 // ─────────────────────────────────────────────
 const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
@@ -18,7 +14,7 @@ const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
 
 function Contact() {
   const form    = useRef();
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [status, setStatus] = useState("idle");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -93,7 +89,7 @@ function Contact() {
               <a
                 href="https://github.com/Viraj97-SL"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="contact-info-card"
               >
                 <AiFillGithub className="contact-info-icon" />
@@ -106,7 +102,7 @@ function Contact() {
               <a
                 href="https://www.linkedin.com/in/viraj97"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="contact-info-card"
               >
                 <FaLinkedinIn className="contact-info-icon" />
@@ -116,15 +112,15 @@ function Contact() {
                 </div>
               </a>
 
-              {/* ✏️  Replace with your real email address */}
+              {/* Added mailto: prefix to correctly trigger email client */}
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:amanthavirajavb@gmail.com"
                 className="contact-info-card"
               >
                 <FaEnvelope className="contact-info-icon" />
                 <div>
                   <div className="contact-info-label">Email</div>
-                  <div className="contact-info-value">your.email@example.com</div>
+                  <div className="contact-info-value">amanthavirajavb@gmail.com</div>
                 </div>
               </a>
 
@@ -132,7 +128,7 @@ function Contact() {
                 <FaMapMarkerAlt className="contact-info-icon" />
                 <div>
                   <div className="contact-info-label">Location</div>
-                  <div className="contact-info-value">Sri Lanka 🇱🇰</div>
+                  <div className="contact-info-value">London, UK</div>
                 </div>
               </div>
             </Col>
