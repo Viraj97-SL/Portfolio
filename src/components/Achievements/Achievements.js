@@ -37,8 +37,8 @@ const achievements = [
     blurb:
       "Three days at UCL East building a full AI governance pipeline for ICU early-warning systems — three competing models (multimodal fusion, LightGBM, logistic regression) triangulated for trust, an explicit MNAR-aware feature for the ~32% of patients missing clinical notes, and two production UIs: a 6-tab evidence dashboard and a voice-driven ICU nursing monitor with a LangChain clinical agent.",
     credits: "With Yang Chen, Sakib Ahammed & Daria",
-    link: null,
-    linkLabel: "Repo private",
+    link: "https://github.com/Viraj97-SL/UKOMAIN26_Hackathon_Clinical",
+    linkLabel: "View project",
   },
   {
     id: 2,

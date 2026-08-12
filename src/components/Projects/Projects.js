@@ -29,11 +29,81 @@ function Projects() {
         </p>
         <Row style={{ justifyItems: "center", paddingBottom: "10px" }}>
 
+          {/* ── Featured — brought to the front ── */}
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={marketforgeImg}
+              featured
+              isBlog={false}
+              category="Multi-Agent · Career Intelligence"
+              tags={["LangGraph", "MLflow", "Airflow", "FastAPI", "TypeScript"]}
+              title="MarketForge AI"
+              description="A full-stack career intelligence platform for the UK job market. The core engine runs 9 coordinated LangGraph agents with MLflow drift monitoring and Airflow-orchestrated pipelines, backed by a GDPR-compliant CV parsing service and a FastAPI + APScheduler production backend."
+              ghLink="https://github.com/Viraj97-SL/marketforge-ai"
+              demoLink="https://www.marketforge.digital/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              glyph="⚕"
+              accentColor="#00d2ff"
+              featured
+              isBlog={false}
+              category="Hackathon Win · Clinical AI"
+              tags={["LangChain", "Clinical AI", "Model Governance", "SHAP / DCA", "Streamlit"]}
+              title="UKOMAIN26 Hackathon — Clinical AI"
+              description='🏆 Best Multimodal Idea at the MultimodalAI’26 Hackathon (UKOMAIN × UCL East). Built a full AI governance pipeline for ICU early-warning systems — three competing models triangulated for trust, an explicit MNAR-aware feature for missing clinical notes, a 6-tab evidence dashboard (AUROC/AUPRC, calibration, DCA, SHAP), and a voice-driven ICU nursing monitor powered by a LangChain clinical agent.'
+              ghLink="https://github.com/Viraj97-SL/UKOMAIN26_Hackathon_Clinical"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={visionaidImg}
+              featured
+              isBlog={false}
+              category="Computer Vision · Assistive AI"
+              tags={["Computer Vision", "AI Agent"]}
+              title="VisionAId"
+              description="🏆 1st place, Data Science Project Club, University of Hertfordshire. A multi-agent assistive system for visually impaired users, coordinating Navigation, Vision, and E-commerce agents over a lightweight MCP protocol — Whisper for speech, YOLOv8 + OpenCV for real-time recognition, running fully offline on a Raspberry Pi."
+              ghLink="https://github.com/Viraj97-SL/VisionAId"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={pamoryaImg}
+              featured
+              isBlog={false}
+              category="Multi-Agent · Retail"
+              tags={["LangGraph", "GenAI", "ChromaDB", "Docker"]}
+              title="Pamorya AI Commerce & Stylist"
+              description='An advanced multi-agent retail system built on a "Supervisor-Worker" LangGraph architecture. Integrates virtual garment try-ons (GenAI Fashion Stylist) via Docker and FastAPI. Grounded in ChromaDB to prevent hallucination, routing intents seamlessly between Sales, Data Query, and Policy agents.'
+              ghLink="https://github.com/Viraj97-SL/apparel-agent-backend"
+              demoLink="https://apparel-agent-frontend.vercel.app"
+            />
+          </Col>
+
+          {/* ── Rest, ordered by depth / tech / impact ── */}
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={alzheimersImg}
+              isBlog={false}
+              category="Research · Medical AI"
+              tags={["PyTorch", "3D Swin Transformer", "Multimodal Fusion"]}
+              title="Tri-Modal Alzheimer's Detection"
+              description="Engineered a custom 3D Swin Transformer using PyTorch for the early detection of Alzheimer's Disease. Fused disparate healthcare data including high-dimensional 3D MRI scans, longitudinal clinical records, and biomarker sequences to handle unstructured medical data efficiently."
+              ghLink="https://github.com/Viraj97-SL/Research-Early-prediction-of-Alzheimer-s"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={cricoracleImg}
               isBlog={false}
-              featured
               category="Predictive AI · Sports"
               tags={["XGBoost", "PyTorch LSTM", "Genetic Algorithms", "FastAPI"]}
               title="CricOracle 2026"
@@ -44,9 +114,20 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={massifyxImg}
+              isBlog={false}
+              category="Supply Chain Intelligence"
+              tags={["Node.js", "AI Enrichment", "Live Monitoring", "REST API"]}
+              title="MassifyX Global"
+              description="A real-time supply chain disruption monitoring platform. The MassifyX Intelligence Service ingests global disruption signals, enriches them with AI-generated analysis, and exposes a read API that powers a live monitor dashboard for logistics and procurement teams."
+              ghLink="https://github.com/Viraj97-SL/MassifyX_Global"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={reposentinelImg}
               isBlog={false}
-              featured
               category="Multi-Agent · LangGraph"
               tags={["LangGraph", "Gemini 2.5 Pro", "GitHub Automation"]}
               title="RepoSentinel & AI Learning Hub"
@@ -69,32 +150,6 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={pamoryaImg}
-              isBlog={false}
-              featured
-              category="Multi-Agent · Retail"
-              tags={["LangGraph", "GenAI", "ChromaDB", "Docker"]}
-              title="Pamorya AI Commerce & Stylist"
-              description='An advanced multi-agent retail system built on a "Supervisor-Worker" LangGraph architecture. Integrates virtual garment try-ons (GenAI Fashion Stylist) via Docker and FastAPI. Grounded in ChromaDB to prevent hallucination, routing intents seamlessly between Sales, Data Query, and Policy agents.'
-              ghLink="https://github.com/Viraj97-SL/apparel-agent-backend"
-              demoLink="https://apparel-agent-frontend.vercel.app"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={alzheimersImg}
-              isBlog={false}
-              category="Research · Medical AI"
-              tags={["PyTorch", "3D Swin Transformer", "Multimodal Fusion"]}
-              title="Tri-Modal Alzheimer's Detection"
-              description="Engineered a custom 3D Swin Transformer using PyTorch for the early detection of Alzheimer's Disease. Fused disparate healthcare data including high-dimensional 3D MRI scans, longitudinal clinical records, and biomarker sequences to handle unstructured medical data efficiently."
-              ghLink="https://github.com/Viraj97-SL/Research-Early-prediction-of-Alzheimer-s"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
               imgPath={sathchakraImg}
               isBlog={false}
               category="Agentic Framework"
@@ -108,31 +163,6 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={massifyxImg}
-              featured
-              isBlog={false}
-              category="Supply Chain Intelligence"
-              tags={["Node.js", "AI Enrichment", "Live Monitoring", "REST API"]}
-              title="MassifyX Global"
-              description="A real-time supply chain disruption monitoring platform. The MassifyX Intelligence Service ingests global disruption signals, enriches them with AI-generated analysis, and exposes a read API that powers a live monitor dashboard for logistics and procurement teams."
-              ghLink="https://github.com/Viraj97-SL/MassifyX_Global"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={marketforgeImg}
-              isBlog={false}
-              category="Multi-Agent · Career Intelligence"
-              tags={["LangGraph", "MLflow", "Airflow", "FastAPI", "TypeScript"]}
-              title="MarketForge AI"
-              description="A full-stack career intelligence platform for the UK job market. The core engine runs 9 coordinated LangGraph agents with MLflow drift monitoring and Airflow-orchestrated pipelines, backed by a GDPR-compliant CV parsing service and a FastAPI + APScheduler production backend."
-              ghLink="https://github.com/Viraj97-SL/marketforge-ai"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
               imgPath={jobfinderImg}
               isBlog={false}
               category="Autonomous Agents · Career"
@@ -140,18 +170,6 @@ function Projects() {
               title="JobFinder"
               description="An autonomous multi-agent job-hunting pipeline that discovers, evaluates, and prepares personalised applications for Data Science, AI Engineering, and ML Engineering roles across the UK — end to end, without manual triage."
               ghLink="https://github.com/Viraj97-SL/JobFinder"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={visionaidImg}
-              isBlog={false}
-              category="Computer Vision · Assistive AI"
-              tags={["Computer Vision", "AI Agent"]}
-              title="VisionAId"
-              description="🏆 Winning project at the University of Hertfordshire Data Science showcase. An AI agent built to assist visually impaired users by interpreting their surroundings in real time and communicating context through natural language."
-              ghLink="https://github.com/Viraj97-SL/VisionAId"
             />
           </Col>
 
