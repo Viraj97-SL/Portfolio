@@ -1,8 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLogoGithub } from "react-icons/bi";
-import { FaRocket, FaBrain, FaCode } from "react-icons/fa";
+import { FaRocket, FaBrain, FaCode, FaTrophy } from "react-icons/fa";
 
 function BentoGrid() {
   return (
@@ -39,7 +40,7 @@ function BentoGrid() {
             <div className="bento-stat-icon">
               <FaRocket style={{ color: "#00d2ff" }} />
             </div>
-            <div className="bento-stat-value">6+</div>
+            <div className="bento-stat-value">11+</div>
             <div className="bento-stat-label">AI Projects Built</div>
           </div>
 
@@ -99,6 +100,21 @@ function BentoGrid() {
               freelance projects.
             </p>
           </div>
+
+          {/* Achievements tile — spans full width */}
+          <Link to="/achievements" className="bento-tile bento-span-4 bento-tile-link">
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <FaTrophy style={{ fontSize: "1.9rem", color: "#00d2ff", flexShrink: 0 }} />
+              <div>
+                <div style={{ color: "white", fontWeight: 700, fontSize: "1rem" }}>
+                  Hackathon wins, poster presentations &amp; workshops
+                </div>
+                <div style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.78rem" }}>
+                  UKOMAIN26 · Pre-ICML · UCL · UOH — see the full list →
+                </div>
+              </div>
+            </div>
+          </Link>
 
         </div>
       </Container>

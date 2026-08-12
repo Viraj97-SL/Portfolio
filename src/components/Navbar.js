@@ -14,6 +14,7 @@ import {
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import { BiAward } from "react-icons/bi";
+import { FaTrophy } from "react-icons/fa";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -74,6 +75,12 @@ function NavBar() {
               <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
                 <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} />{" "}
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link as={Link} to="/achievements" onClick={() => updateExpanded(false)}>
+                <FaTrophy style={{ marginBottom: "2px" }} /> Achievements
               </Nav.Link>
             </Nav.Item>
 
