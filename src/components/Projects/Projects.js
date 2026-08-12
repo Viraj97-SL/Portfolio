@@ -15,6 +15,7 @@ import marketforgeImg from "../../Assets/Projects/MarketForge AI.png";
 import jobfinderImg from "../../Assets/Projects/JobFinder.png";
 import visionaidImg from "../../Assets/Projects/VisionAID.png";
 import scopeguardImg from "../../Assets/Projects/ScopeGuuard.png";
+import ukomainImg from "../../Assets/Projects/ICU Command Center-selection.png";
 
 function Projects() {
   return (
@@ -47,8 +48,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              glyph="⚕"
-              accentColor="#00d2ff"
+              imgPath={ukomainImg}
               featured
               isBlog={false}
               category="Hackathon Win · Clinical AI"
