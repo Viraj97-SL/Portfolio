@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import PageHeader from "../common/PageHeader";
+import headerAvif from "../../Assets/PageHeaders/certificates.avif";
+import headerWebp from "../../Assets/PageHeaders/certificates.webp";
 
 // ─────────────────────────────────────────────────────────────────
 // ➕  Add your certificates here.
@@ -107,13 +110,12 @@ function Certificates() {
 
   return (
     <section>
+      <PageHeader label="Credentials & Achievements" avif={headerAvif} webp={headerWebp}>
+        My <span className="text-accent">Certificates</span>
+      </PageHeader>
+
       <Container fluid className="cert-section">
         <Container>
-          <p className="cert-subheading">Credentials &amp; Achievements</p>
-          <h1 className="cert-heading">
-            My <span className="text-accent">Certificates</span>
-          </h1>
-
           {/* Filter bar */}
           <div className="cert-filter-bar">
             {categories.map((cat) => (

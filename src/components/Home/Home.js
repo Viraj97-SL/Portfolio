@@ -5,6 +5,9 @@ import Home2 from "./Home2";
 import HomeAbout from "./HomeAbout";
 import LogoCloud from "../LogoCloud/LogoCloud";
 import BentoGrid from "../Bento/BentoGrid";
+import Picture from "../common/Picture";
+import heroAvif from "../../Assets/hero.avif";
+import heroWebp from "../../Assets/hero.webp";
 import "./hero.css";
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -23,7 +26,16 @@ function Home() {
     <section>
       {/* ══════════════════ HERO ══════════════════ */}
       <div className="hero" id="home">
-        <div className="hero-bg-placeholder" />
+        <Picture
+          avif={heroAvif}
+          webp={heroWebp}
+          width={1920}
+          height={949}
+          alt=""
+          className="hero-bg"
+          loading="eager"
+          fetchPriority="high"
+        />
         <div className="hero-scrim" />
 
         <div className="hero-content">

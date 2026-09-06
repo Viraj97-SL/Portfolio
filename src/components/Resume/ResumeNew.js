@@ -5,6 +5,9 @@ import pdf from "../../Assets/Viraj_CV.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import PageHeader from "../common/PageHeader";
+import headerAvif from "../../Assets/PageHeaders/resume.avif";
+import headerWebp from "../../Assets/PageHeaders/resume.webp";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
@@ -16,6 +19,10 @@ function ResumeNew() {
 
   return (
     <div>
+      <PageHeader label="Curriculum Vitae" avif={headerAvif} webp={headerWebp}>
+        My <span className="text-accent">Resume</span>
+      </PageHeader>
+
       <Container fluid className="resume-section">
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button

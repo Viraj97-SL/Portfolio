@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLogoGithub } from "react-icons/bi";
-import { FaRocket, FaBrain, FaCode, FaTrophy } from "react-icons/fa";
+import { FaCode, FaTrophy, FaGraduationCap } from "react-icons/fa";
 
 function BentoGrid() {
   return (
@@ -35,31 +35,31 @@ function BentoGrid() {
             </div>
           </div>
 
-          {/* Projects stat */}
-          <div className="bento-tile">
-            <div className="bento-stat-icon">
-              <FaRocket style={{ color: "#00d2ff" }} />
-            </div>
-            <div className="bento-stat-value">11+</div>
-            <div className="bento-stat-label">AI Projects Built</div>
-          </div>
-
-          {/* Experience stat */}
-          <div className="bento-tile">
-            <div className="bento-stat-icon">
-              <FaBrain style={{ color: "#9B59B6" }} />
-            </div>
-            <div className="bento-stat-value">3+</div>
-            <div className="bento-stat-label">Years in AI / ML</div>
-          </div>
-
-          {/* Tech count stat */}
-          <div className="bento-tile">
+          {/* Fact — exact project count, matches the /project grid */}
+          <Link to="/project" className="bento-tile bento-tile-link">
             <div className="bento-stat-icon">
               <FaCode style={{ color: "#27AE60" }} />
             </div>
-            <div className="bento-stat-value">20+</div>
-            <div className="bento-stat-label">Technologies Mastered</div>
+            <div className="bento-stat-value">12</div>
+            <div className="bento-stat-label">Production AI/ML projects shipped →</div>
+          </Link>
+
+          {/* Fact — named, dated award */}
+          <Link to="/achievements" className="bento-tile bento-tile-link">
+            <div className="bento-stat-icon">
+              <FaTrophy style={{ color: "#00d2ff" }} />
+            </div>
+            <div className="bento-stat-value">MMAI'26</div>
+            <div className="bento-stat-label">Best Multimodal Idea, UKOMAIN × UCL East →</div>
+          </Link>
+
+          {/* Fact — real credential */}
+          <div className="bento-tile">
+            <div className="bento-stat-icon">
+              <FaGraduationCap style={{ color: "#9B59B6" }} />
+            </div>
+            <div className="bento-stat-value">MSc</div>
+            <div className="bento-stat-label">Data Science, University of Hertfordshire</div>
           </div>
 
           {/* GitHub tile — spans 2 */}

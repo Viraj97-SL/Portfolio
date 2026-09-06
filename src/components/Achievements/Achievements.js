@@ -4,6 +4,9 @@ import { FaTrophy, FaMedal, FaChalkboardTeacher, FaChevronLeft, FaChevronRight }
 import { BsFileEarmarkText, BsImages } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import Picture from "../common/Picture";
+import PageHeader from "../common/PageHeader";
+import headerAvif from "../../Assets/PageHeaders/achievements.avif";
+import headerWebp from "../../Assets/PageHeaders/achievements.webp";
 
 import hackathon1Avif from "../../Assets/Projects/UKOMAIN26_Hackathon1.avif";
 import hackathon1Webp from "../../Assets/Projects/UKOMAIN26_Hackathon1.webp";
@@ -253,15 +256,17 @@ function Achievements() {
 
   return (
     <section>
+      <PageHeader
+        label="Wins & Recognition"
+        description="Hackathon wins, poster presentations, and workshops from the past year."
+        avif={headerAvif}
+        webp={headerWebp}
+      >
+        My <span className="text-accent">Achievements</span>
+      </PageHeader>
+
       <Container fluid className="ach-section">
         <Container>
-          <p className="ach-subheading">Wins &amp; Recognition</p>
-          <h1 className="ach-heading">
-            My <span className="text-accent">Achievements</span>
-          </h1>
-          <p style={{ color: "rgba(255,255,255,0.55)", textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
-            Hackathon wins, poster presentations, and workshops from the past year.
-          </p>
 
           <div className="ach-grid">
             {achievements.map((item) => (

@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
+import PageHeader from "../common/PageHeader";
+import headerAvif from "../../Assets/PageHeaders/projects.avif";
+import headerWebp from "../../Assets/PageHeaders/projects.webp";
 
 // Importing your custom generated AI visual assets (AVIF primary, WebP fallback)
 import cricoracleAvif from "../../Assets/Projects/cricoracle.avif";
@@ -43,14 +46,17 @@ const ukomainImg = { avif: ukomainAvif, webp: ukomainWebp, width: 1200, height: 
 
 function Projects() {
   return (
-    <Container fluid className="project-section">
+    <>
+      <PageHeader
+        description="Production-grade AI systems, multi-agent architectures, and predictive models I've built."
+        avif={headerAvif}
+        webp={headerWebp}
+      >
+        My Recent <span className="text-accent">Works</span>
+      </PageHeader>
+
+      <Container fluid className="project-section">
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="text-accent">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Production-grade AI systems, multi-agent architectures, and predictive models I've built.
-        </p>
         <Row style={{ justifyItems: "center", paddingBottom: "10px" }}>
 
           {/* ── Featured — brought to the front ── */}
@@ -210,7 +216,8 @@ function Projects() {
 
         </Row>
       </Container>
-    </Container>
+      </Container>
+    </>
   );
 }
 

@@ -7,10 +7,17 @@ import laptopImgAvif from "../../Assets/about.avif";
 import laptopImgWebp from "../../Assets/about.webp";
 import Toolstack from "./Toolstack";
 import Picture from "../common/Picture";
+import PageHeader from "../common/PageHeader";
+import headerAvif from "../../Assets/PageHeaders/about.avif";
+import headerWebp from "../../Assets/PageHeaders/about.webp";
 
 function About() {
   return (
     <>
+      <PageHeader label="Who I Am" avif={headerAvif} webp={headerWebp}>
+        Know Who <span className="text-accent">I'M</span>
+      </PageHeader>
+
       <Container fluid className="about-section">
         <Container>
           <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -22,9 +29,6 @@ function About() {
                 paddingBottom: "50px",
               }}
             >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-                Know Who <strong className="text-accent">I'M</strong>
-              </h1>
               <Aboutcard />
             </Col>
             <Col

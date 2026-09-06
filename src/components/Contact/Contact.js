@@ -3,6 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import PageHeader from "../common/PageHeader";
+import headerAvif from "../../Assets/PageHeaders/contact.avif";
+import headerWebp from "../../Assets/PageHeaders/contact.webp";
 
 // ─────────────────────────────────────────────
 // ⚙️  EmailJS setup
@@ -29,13 +32,12 @@ function Contact() {
 
   return (
     <section>
+      <PageHeader label="Get in Touch" avif={headerAvif} webp={headerWebp}>
+        Let's <span className="text-accent">Connect</span>
+      </PageHeader>
+
       <Container fluid className="contact-section">
         <Container>
-          <p className="contact-subheading">Get in Touch</p>
-          <h1 className="contact-heading">
-            Let's <span className="text-accent">Connect</span>
-          </h1>
-
           <Row style={{ justifyContent: "center", paddingTop: "20px" }}>
 
             {/* ── Contact Form ── */}
