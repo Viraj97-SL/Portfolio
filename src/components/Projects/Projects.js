@@ -48,7 +48,7 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="text-accent">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
           Production-grade AI systems, multi-agent architectures, and predictive models I've built.

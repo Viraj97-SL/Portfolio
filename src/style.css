@@ -10,12 +10,6 @@ html {
     rgba(17, 16, 16, 0.678),
     rgba(12, 10, 22, 0.863)
   );
-
-  --imp-text-color: #00d2ff;
-}
-
-.purple {
-  color: var(--imp-text-color) !important;
 }
 
 button:focus {
@@ -32,18 +26,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0a1a3a;
+  background: var(--bg);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 210, 255, 0.9);
+  background: rgb(from var(--accent) r g b / 0.9);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 255, 255, 0.9);
+  background: rgb(from var(--accent) r g b / 0.9);
   border-radius: 12px;
 }
 
@@ -51,7 +45,7 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: oklch(from var(--surface) l c h / 0.66) !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
@@ -72,7 +66,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #00d2ff !important;
+  background-color: var(--accent) !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -119,7 +113,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background-color: var(--surface) !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -169,7 +163,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #00d2ff;
+  background: var(--accent);
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -256,17 +250,17 @@ button:focus {
 }
 
 .main-name {
-  color: #00d2ff;
+  color: var(--accent);
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #00d2ff !important;
+  color: var(--accent) !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #3a7bd5 !important;
+  color: var(--accent) !important;
 }
 
 @media (max-width: 767px) {
@@ -296,10 +290,10 @@ button:focus {
   position: relative;
   padding: 0.6rem;
   background: rgba(5, 5, 12, 0.75);
-  border: 1px solid rgba(0, 210, 255, 0.18);
+  border: 1px solid rgb(from var(--accent) r g b / 0.18);
   border-radius: 18px;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02),
-    0 20px 45px rgba(0, 0, 0, 0.45), 0 0 40px rgba(0, 210, 255, 0.08);
+    0 20px 45px rgba(0, 0, 0, 0.45), 0 0 40px rgb(from var(--accent) r g b / 0.08);
   max-width: 320px;
 }
 
@@ -370,7 +364,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #0a3d7a;
+  background: color-mix(in oklch, var(--accent) 40%, var(--bg));
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -378,13 +372,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #0056b3;
+  box-shadow: 0 0 15px var(--accent);
 }
 
 .home-social-icons:hover {
-  color: #00ffff;
-  box-shadow: 0 0 5px #00ffff;
-  text-shadow: 0 0 2px #00ffff;
+  color: var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+  text-shadow: 0 0 2px var(--accent);
 }
 
 .social-icons {
@@ -394,7 +388,7 @@ button:focus {
 }
 
 .icon-colour {
-  color: #3a7bd5 !important;
+  color: var(--accent) !important;
 }
 
 /* --------- */
@@ -438,7 +432,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #6ab0d4 !important;
+  color: var(--dim) !important;
 }
 /* --------- */
 /* Projects */
@@ -459,7 +453,7 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(0, 86, 179, 0.459) !important;
+  box-shadow: 0 4px 5px 3px rgb(from var(--accent) r g b / 0.459) !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
@@ -469,7 +463,7 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(0, 86, 179, 0.561) !important;
+  box-shadow: 0 4px 4px 5px rgb(from var(--accent) r g b / 0.561) !important;
 }
 
 .blog-card {
@@ -482,7 +476,7 @@ button:focus {
 
 .blog-card-view {
   background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(0, 86, 179, 0.459) !important;
+  box-shadow: 0 3px 3px 2px rgb(from var(--accent) r g b / 0.459) !important;
   color: white !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
@@ -500,7 +494,7 @@ button:focus {
 .blog-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(0, 86, 179, 0.65) !important;
+  box-shadow: 0 3px 3px 5px rgb(from var(--accent) r g b / 0.65) !important;
 }
 
 .card-img-top {
@@ -516,15 +510,15 @@ button:focus {
 }
 
 .btn-primary {
-  color: #fff !important;
-  background-color: #3a7bd5 !important;
-  border-color: #3a7bd5 !important;
+  color: var(--text) !important;
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
 }
 
 .btn-primary:hover {
-  color: #fff !important;
-  background-color: #2968c8 !important;
-  border-color: #2968c8 !important;
+  color: var(--text) !important;
+  background-color: oklch(from var(--accent) calc(l - 0.08) c h) !important;
+  border-color: oklch(from var(--accent) calc(l - 0.08) c h) !important;
 }
 .btn:focus {
   outline: none !important;
@@ -557,11 +551,11 @@ button:focus {
   margin: 15px !important;
   padding: 10px 20px !important;
   opacity: 0.93 !important;
-  outline: 1.7px solid rgba(0, 210, 255, 0.637) !important;
+  outline: 1.7px solid rgb(from var(--accent) r g b / 0.637) !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 24px !important;
-  box-shadow: 4px 5px 4px 3px rgba(0, 86, 179, 0.137) !important;
+  box-shadow: 4px 5px 4px 3px rgb(from var(--accent) r g b / 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
   width: fit-content !important;
@@ -586,7 +580,7 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  outline: 2.2px solid rgba(0, 255, 255, 0.883) !important;
+  outline: 2.2px solid rgb(from var(--accent) r g b / 0.883) !important;
 }
 .tech-icon-images {
   height: 1.6rem;
@@ -657,14 +651,14 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #3a7bd5;
+  border-left: 2px solid var(--accent);
   position: relative;
 }
 
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: #5234795d;
+  background: oklch(from var(--surface) l c h / 0.36);
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;
@@ -693,8 +687,8 @@ button:focus {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #fff;
-  border: 2px solid #3a7bd5;
+  background: var(--text);
+  border: 2px solid var(--accent);
 }
 
 .like-item {
@@ -714,8 +708,8 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: rgba(0, 210, 255, 0.53) !important;
-  border-color: rgba(0, 210, 255, 0.53) !important;
+  background-color: rgb(from var(--accent) r g b / 0.53) !important;
+  border-color: rgb(from var(--accent) r g b / 0.53) !important;
 }
 
 .animate-like {
@@ -747,8 +741,8 @@ button:focus {
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
-  background-color: rgba(0, 210, 255, 0.53) !important;
-  border-color: rgba(0, 210, 255, 0.53) !important;
+  background-color: rgb(from var(--accent) r g b / 0.53) !important;
+  border-color: rgb(from var(--accent) r g b / 0.53) !important;
 }
 .fork-btn-inner::after {
   display: none !important;
@@ -762,7 +756,7 @@ button:focus {
 
 /* Global dark overrides */
 ::-webkit-scrollbar-track {
-  background: #06060a !important;
+  background: var(--bg) !important;
 }
 
 /* Prevent Bootstrap card white bleed */
@@ -783,8 +777,8 @@ button:focus {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0, 210, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 210, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(rgb(from var(--accent) r g b / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(from var(--accent) r g b / 0.06) 1px, transparent 1px);
   background-size: 55px 55px;
   pointer-events: none;
   z-index: 0;
@@ -809,7 +803,7 @@ button:focus {
 
 .hero-greeting {
   font-size: 0.92rem;
-  color: var(--imp-text-color);
+  color: var(--accent);
   letter-spacing: 0.38em;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
@@ -822,8 +816,8 @@ button:focus {
   font-size: clamp(2.6rem, 6vw, 5.2rem) !important;
   font-weight: 800 !important;
   line-height: 1.05 !important;
-  color: #ffffff !important;
-  text-shadow: 0 0 50px rgba(0, 210, 255, 0.2);
+  color: var(--text) !important;
+  text-shadow: 0 0 50px rgb(from var(--accent) r g b / 0.2);
   margin-bottom: 0.6rem !important;
   padding: 0 !important;
   position: relative;
@@ -831,10 +825,10 @@ button:focus {
 }
 
 .hero-name-accent {
-  color: var(--imp-text-color);
+  color: var(--accent);
   text-shadow:
-    0 0 70px rgba(0, 210, 255, 0.65),
-    0 0 140px rgba(0, 210, 255, 0.28);
+    0 0 70px rgb(from var(--accent) r g b / 0.65),
+    0 0 140px rgb(from var(--accent) r g b / 0.28);
 }
 
 .hero-cta-group {
@@ -851,8 +845,8 @@ button:focus {
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 1.8rem;
-  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  color: #000 !important;
+  background: linear-gradient(135deg, var(--accent) 0%, oklch(from var(--accent) calc(l - 0.12) c h) 100%);
+  color: var(--bg) !important;
   font-weight: 700;
   border: none;
   border-radius: 8px;
@@ -860,13 +854,13 @@ button:focus {
   font-size: 0.88rem;
   letter-spacing: 0.04em;
   transition: all 0.3s ease;
-  box-shadow: 0 0 24px rgba(0, 210, 255, 0.45);
+  box-shadow: 0 0 24px rgb(from var(--accent) r g b / 0.45);
 }
 
 .hero-cta-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 42px rgba(0, 210, 255, 0.7);
-  color: #000 !important;
+  box-shadow: 0 0 42px rgb(from var(--accent) r g b / 0.7);
+  color: var(--bg) !important;
 }
 
 .hero-cta-outline {
@@ -875,9 +869,9 @@ button:focus {
   gap: 0.5rem;
   padding: 0.8rem 1.8rem;
   background: transparent;
-  color: #fff !important;
+  color: var(--text) !important;
   font-weight: 600;
-  border: 1.5px solid rgba(0, 210, 255, 0.4);
+  border: 1.5px solid rgb(from var(--accent) r g b / 0.4);
   border-radius: 8px;
   text-decoration: none !important;
   font-size: 0.88rem;
@@ -886,11 +880,11 @@ button:focus {
 }
 
 .hero-cta-outline:hover {
-  border-color: #00d2ff;
-  background: rgba(0, 210, 255, 0.08);
+  border-color: var(--accent);
+  background: rgb(from var(--accent) r g b / 0.08);
   transform: translateY(-2px);
-  box-shadow: 0 0 22px rgba(0, 210, 255, 0.2);
-  color: #fff !important;
+  box-shadow: 0 0 22px rgb(from var(--accent) r g b / 0.2);
+  color: var(--text) !important;
 }
 
 .hero-img-wrapper {
@@ -907,7 +901,7 @@ button:focus {
   height: 360px;
   background: radial-gradient(
     circle,
-    rgba(0, 210, 255, 0.13) 0%,
+    rgb(from var(--accent) r g b / 0.13) 0%,
     transparent 70%
   );
   border-radius: 50%;
@@ -928,7 +922,7 @@ button:focus {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  color: rgba(0, 210, 255, 0.38);
+  color: rgb(from var(--accent) r g b / 0.38);
   font-size: 0.63rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -938,7 +932,7 @@ button:focus {
 .scroll-mouse {
   width: 20px;
   height: 34px;
-  border: 1.5px solid rgba(0, 210, 255, 0.28);
+  border: 1.5px solid rgb(from var(--accent) r g b / 0.28);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -948,7 +942,7 @@ button:focus {
 .scroll-mouse-dot {
   width: 3px;
   height: 7px;
-  background: rgba(0, 210, 255, 0.58);
+  background: rgb(from var(--accent) r g b / 0.58);
   border-radius: 2px;
   animation: scrollDot 1.8s ease infinite;
 }
@@ -964,8 +958,8 @@ button:focus {
   overflow: hidden;
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(0, 210, 255, 0.07);
-  border-bottom: 1px solid rgba(0, 210, 255, 0.07);
+  border-top: 1px solid rgb(from var(--accent) r g b / 0.07);
+  border-bottom: 1px solid rgb(from var(--accent) r g b / 0.07);
   background: rgba(0, 0, 0, 0.55);
 }
 
@@ -985,7 +979,7 @@ button:focus {
   padding: 8px 17px;
   margin: 0 7px;
   background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(0, 210, 255, 0.09);
+  border: 1px solid rgb(from var(--accent) r g b / 0.09);
   border-radius: 40px;
   color: rgba(255, 255, 255, 0.48);
   font-size: 0.79rem;
@@ -996,9 +990,9 @@ button:focus {
 }
 
 .logo-item:hover {
-  background: rgba(0, 210, 255, 0.07);
-  border-color: rgba(0, 210, 255, 0.25);
-  color: #00d2ff;
+  background: rgb(from var(--accent) r g b / 0.07);
+  border-color: rgb(from var(--accent) r g b / 0.25);
+  color: var(--accent);
 }
 
 .logo-item-icon {
@@ -1010,7 +1004,7 @@ button:focus {
 /* ---- Home2 (Introduce Myself) dark overrides ---- */
 .home-about-section {
   background: rgba(3, 3, 8, 0.65) !important;
-  border-top: 1px solid rgba(0, 210, 255, 0.06) !important;
+  border-top: 1px solid rgb(from var(--accent) r g b / 0.06) !important;
 }
 
 /* ---- HomeAbout Section ---- */
@@ -1018,7 +1012,7 @@ button:focus {
   padding: 90px 0;
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(0, 210, 255, 0.07);
+  border-top: 1px solid rgb(from var(--accent) r g b / 0.07);
   background: rgba(2, 2, 6, 0.88);
 }
 
@@ -1040,8 +1034,8 @@ button:focus {
 }
 
 .ha-title span {
-  color: var(--imp-text-color);
-  text-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+  color: var(--accent);
+  text-shadow: 0 0 30px rgb(from var(--accent) r g b / 0.4);
 }
 
 .ha-row {
@@ -1054,7 +1048,7 @@ button:focus {
 
 .ha-card {
   background: rgba(5, 5, 12, 0.88);
-  border: 1px solid rgba(0, 210, 255, 0.12);
+  border: 1px solid rgb(from var(--accent) r g b / 0.12);
   border-radius: 18px;
   padding: 2rem 2.2rem;
   backdrop-filter: blur(14px);
@@ -1085,7 +1079,7 @@ button:focus {
 }
 
 .ha-list-icon {
-  color: #00d2ff;
+  color: var(--accent);
   flex-shrink: 0;
   margin-top: 3px;
 }
@@ -1108,7 +1102,7 @@ button:focus {
   position: relative;
   padding: 1.25rem;
   background: rgba(5, 5, 12, 0.75);
-  border: 1px solid rgba(0, 210, 255, 0.1);
+  border: 1px solid rgb(from var(--accent) r g b / 0.1);
   border-radius: 20px;
   max-width: 440px;
   width: 100%;
@@ -1126,7 +1120,7 @@ button:focus {
   padding: 90px 0;
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(0, 210, 255, 0.07);
+  border-top: 1px solid rgb(from var(--accent) r g b / 0.07);
   background: rgba(2, 2, 6, 0.75);
 }
 
@@ -1139,8 +1133,8 @@ button:focus {
 }
 
 .bento-section-title span {
-  color: var(--imp-text-color);
-  text-shadow: 0 0 28px rgba(0, 210, 255, 0.4);
+  color: var(--accent);
+  text-shadow: 0 0 28px rgb(from var(--accent) r g b / 0.4);
 }
 
 .bento-section-subtitle {
@@ -1156,7 +1150,7 @@ button:focus {
   font-size: 0.6rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--imp-text-color);
+  color: var(--accent);
   opacity: 0.62;
   margin-bottom: 0.6rem;
 }
@@ -1170,7 +1164,7 @@ button:focus {
 
 .bento-tile {
   background: rgba(5, 5, 12, 0.9);
-  border: 1px solid rgba(0, 210, 255, 0.09);
+  border: 1px solid rgb(from var(--accent) r g b / 0.09);
   border-radius: 16px;
   padding: 1.6rem;
   position: relative;
@@ -1185,7 +1179,7 @@ button:focus {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(0, 210, 255, 0.03) 0%,
+    rgb(from var(--accent) r g b / 0.03) 0%,
     transparent 60%
   );
   border-radius: 16px;
@@ -1194,9 +1188,9 @@ button:focus {
 }
 
 .bento-tile:hover {
-  border-color: rgba(0, 210, 255, 0.28);
+  border-color: rgb(from var(--accent) r g b / 0.28);
   transform: translateY(-3px);
-  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.65), 0 0 22px rgba(0, 210, 255, 0.07);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.65), 0 0 22px rgb(from var(--accent) r g b / 0.07);
 }
 
 .bento-tile:hover::before { opacity: 1; }
@@ -1216,9 +1210,9 @@ button:focus {
 .bento-stat-value {
   font-size: 3rem;
   font-weight: 800;
-  color: var(--imp-text-color);
+  color: var(--accent);
   line-height: 1;
-  text-shadow: 0 0 32px rgba(0, 210, 255, 0.5);
+  text-shadow: 0 0 32px rgb(from var(--accent) r g b / 0.5);
 }
 
 .bento-stat-label {
@@ -1246,10 +1240,10 @@ button:focus {
 .bento-tag {
   display: inline-block;
   padding: 3px 10px;
-  background: rgba(0, 210, 255, 0.07);
-  border: 1px solid rgba(0, 210, 255, 0.16);
+  background: rgb(from var(--accent) r g b / 0.07);
+  border: 1px solid rgb(from var(--accent) r g b / 0.16);
   border-radius: 20px;
-  color: var(--imp-text-color);
+  color: var(--accent);
   font-size: 0.68rem;
   margin: 3px;
 }
@@ -1257,11 +1251,11 @@ button:focus {
 .bento-status-dot {
   width: 8px;
   height: 8px;
-  background: #00ff88;
+  background: var(--success);
   border-radius: 50%;
   display: inline-block;
   margin-right: 8px;
-  box-shadow: 0 0 10px #00ff88;
+  box-shadow: 0 0 10px var(--success);
   animation: statusBlink 2s ease-in-out infinite;
 }
 
@@ -1270,10 +1264,10 @@ button:focus {
   50%       { opacity: 0.3; }
 }
 
-.bento-status-text { color: #00ff88; font-size: 0.84rem; font-weight: 600; }
+.bento-status-text { color: var(--success); font-size: 0.84rem; font-weight: 600; }
 
 .bento-gh-link {
-  color: var(--imp-text-color) !important;
+  color: var(--accent) !important;
   font-size: 0.8rem;
   text-decoration: none !important;
   display: inline-flex;
@@ -1342,7 +1336,7 @@ button:focus {
 
 .contact-form-card {
   background: rgba(5, 5, 12, 0.92);
-  border: 1px solid rgba(0, 210, 255, 0.12);
+  border: 1px solid rgb(from var(--accent) r g b / 0.12);
   border-radius: 20px;
   padding: 2.4rem;
   backdrop-filter: blur(16px);
@@ -1352,7 +1346,7 @@ button:focus {
   display: block;
   width: 100%;
   background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(0, 210, 255, 0.15) !important;
+  border: 1px solid rgb(from var(--accent) r g b / 0.15) !important;
   border-radius: 10px !important;
   color: white !important;
   padding: 0.82rem 1rem !important;
@@ -1364,8 +1358,8 @@ button:focus {
 }
 
 .contact-input:focus {
-  border-color: rgba(0, 210, 255, 0.48) !important;
-  box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.06) !important;
+  border-color: rgb(from var(--accent) r g b / 0.48) !important;
+  box-shadow: 0 0 0 3px rgb(from var(--accent) r g b / 0.06) !important;
   background: rgba(255, 255, 255, 0.05) !important;
 }
 
@@ -1376,8 +1370,8 @@ button:focus {
 .contact-send-btn {
   width: 100%;
   padding: 0.88rem;
-  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  color: #000 !important;
+  background: linear-gradient(135deg, var(--accent) 0%, oklch(from var(--accent) calc(l - 0.12) c h) 100%);
+  color: var(--bg) !important;
   font-weight: 700;
   border: none;
   border-radius: 10px;
@@ -1386,19 +1380,19 @@ button:focus {
   letter-spacing: 0.04em;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 24px rgba(0, 210, 255, 0.32);
+  box-shadow: 0 0 24px rgb(from var(--accent) r g b / 0.32);
 }
 
 .contact-send-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 0 42px rgba(0, 210, 255, 0.55);
+  box-shadow: 0 0 42px rgb(from var(--accent) r g b / 0.55);
 }
 
 .contact-send-btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .contact-info-card {
   background: rgba(5, 5, 12, 0.85);
-  border: 1px solid rgba(0, 210, 255, 0.1);
+  border: 1px solid rgb(from var(--accent) r g b / 0.1);
   border-radius: 14px;
   padding: 1.1rem 1.4rem;
   margin-bottom: 0.85rem;
@@ -1411,14 +1405,14 @@ button:focus {
 }
 
 .contact-info-card:hover {
-  border-color: rgba(0, 210, 255, 0.28);
-  background: rgba(0, 210, 255, 0.04);
+  border-color: rgb(from var(--accent) r g b / 0.28);
+  background: rgb(from var(--accent) r g b / 0.04);
   transform: translateX(4px);
 }
 
 .contact-info-icon {
   font-size: 1.55rem;
-  color: var(--imp-text-color);
+  color: var(--accent);
   flex-shrink: 0;
 }
 
@@ -1431,8 +1425,8 @@ button:focus {
 
 .contact-info-value { font-size: 0.86rem; color: rgba(255, 255, 255, 0.75); margin-top: 2px; }
 
-.contact-success { color: #00ff88; text-align: center; margin-top: 1rem; font-size: 0.86rem; }
-.contact-error   { color: #ff5555; text-align: center; margin-top: 1rem; font-size: 0.86rem; }
+.contact-success { color: var(--success); text-align: center; margin-top: 1rem; font-size: 0.86rem; }
+.contact-error   { color: var(--error); text-align: center; margin-top: 1rem; font-size: 0.86rem; }
 
 /* ---- Certificates Section ---- */
 .cert-section {
@@ -1473,7 +1467,7 @@ button:focus {
 .cert-filter-btn {
   padding: 5px 18px;
   border-radius: 30px;
-  border: 1px solid rgba(0, 210, 255, 0.18);
+  border: 1px solid rgb(from var(--accent) r g b / 0.18);
   background: transparent;
   color: rgba(255, 255, 255, 0.42);
   font-size: 0.74rem;
@@ -1485,9 +1479,9 @@ button:focus {
 
 .cert-filter-btn:hover,
 .cert-filter-btn.active {
-  border-color: #00d2ff;
-  color: #00d2ff;
-  background: rgba(0, 210, 255, 0.07);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgb(from var(--accent) r g b / 0.07);
 }
 
 .cert-grid {
@@ -1498,7 +1492,7 @@ button:focus {
 
 .cert-card {
   background: rgba(5, 5, 12, 0.9);
-  border: 1px solid rgba(0, 210, 255, 0.09);
+  border: 1px solid rgb(from var(--accent) r g b / 0.09);
   border-radius: 16px;
   padding: 1.4rem 1.5rem 1.4rem 2rem;
   position: relative;
@@ -1514,12 +1508,12 @@ button:focus {
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--cert-color, #00d2ff);
+  background: var(--cert-color, var(--accent));
   border-radius: 16px 0 0 16px;
 }
 
 .cert-card:hover {
-  border-color: rgba(0, 210, 255, 0.24);
+  border-color: rgb(from var(--accent) r g b / 0.24);
   transform: translateY(-4px);
   box-shadow: 0 18px 52px rgba(0, 0, 0, 0.6);
 }
@@ -1529,24 +1523,24 @@ button:focus {
 .cert-badge {
   display: inline-block;
   padding: 2px 10px;
-  background: rgba(0, 210, 255, 0.07);
-  border: 1px solid rgba(0, 210, 255, 0.15);
+  background: rgb(from var(--accent) r g b / 0.07);
+  border: 1px solid rgb(from var(--accent) r g b / 0.15);
   border-radius: 12px;
   font-size: 0.63rem;
-  color: var(--imp-text-color);
+  color: var(--accent);
   margin-bottom: 0.7rem;
   letter-spacing: 0.06em;
 }
 
 .cert-title  { font-size: 0.94rem; font-weight: 700; color: white; margin-bottom: 0.3rem; line-height: 1.4; }
 .cert-issuer { font-size: 0.74rem; color: rgba(255, 255, 255, 0.36); margin-bottom: 0.25rem; }
-.cert-date   { font-size: 0.7rem;  color: var(--imp-text-color);    margin-bottom: 0.9rem; opacity: 0.78; }
+.cert-date   { font-size: 0.7rem;  color: var(--accent);    margin-bottom: 0.9rem; opacity: 0.78; }
 
 .cert-link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: var(--imp-text-color) !important;
+  color: var(--accent) !important;
   font-size: 0.74rem;
   text-decoration: none !important;
   opacity: 0.7;
@@ -1591,7 +1585,7 @@ button:focus {
 
 .ach-card {
   background: rgba(5, 5, 12, 0.9);
-  border: 1px solid rgba(0, 210, 255, 0.09);
+  border: 1px solid rgb(from var(--accent) r g b / 0.09);
   border-radius: 16px;
   overflow: hidden;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -1599,7 +1593,7 @@ button:focus {
 }
 
 .ach-card:hover {
-  border-color: var(--ach-color, #00d2ff);
+  border-color: var(--ach-color, var(--accent));
   transform: translateY(-4px);
   box-shadow: 0 18px 52px rgba(0, 0, 0, 0.6);
 }
@@ -1607,7 +1601,7 @@ button:focus {
 .ach-media {
   position: relative;
   height: 190px;
-  background: #08080f;
+  background: var(--bg);
   cursor: pointer;
   overflow: hidden;
 }
@@ -1631,12 +1625,12 @@ button:focus {
   left: 12px;
   padding: 3px 11px;
   background: rgba(2, 2, 6, 0.75);
-  border: 1px solid var(--ach-color, #00d2ff);
+  border: 1px solid var(--ach-color, var(--accent));
   border-radius: 20px;
   font-size: 0.62rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ach-color, #00d2ff);
+  color: var(--ach-color, var(--accent));
   backdrop-filter: blur(6px);
 }
 
@@ -1660,7 +1654,7 @@ button:focus {
 }
 
 .ach-title { font-size: 0.98rem; font-weight: 700; color: white; margin-bottom: 0.35rem; line-height: 1.4; }
-.ach-event { font-size: 0.78rem; color: var(--ach-color, #00d2ff); margin-bottom: 0.7rem; line-height: 1.5; opacity: 0.9; }
+.ach-event { font-size: 0.78rem; color: var(--ach-color, var(--accent)); margin-bottom: 0.7rem; line-height: 1.5; opacity: 0.9; }
 .ach-blurb { font-size: 0.78rem; color: rgba(255, 255, 255, 0.55); line-height: 1.72; margin-bottom: 0.6rem; }
 .ach-credits { font-size: 0.72rem; color: rgba(255, 255, 255, 0.34); font-style: italic; margin-bottom: 0.9rem; }
 
@@ -1676,7 +1670,7 @@ button:focus {
 
 .ach-link {
   font-size: 0.74rem;
-  color: var(--ach-color, #00d2ff) !important;
+  color: var(--ach-color, var(--accent)) !important;
   text-decoration: none !important;
   opacity: 0.85;
   transition: opacity 0.2s;
@@ -1741,7 +1735,7 @@ button:focus {
   cursor: pointer;
   transition: background 0.2s;
 }
-.ach-lightbox-nav:hover { background: rgba(0, 210, 255, 0.18); }
+.ach-lightbox-nav:hover { background: rgb(from var(--accent) r g b / 0.18); }
 .ach-lightbox-prev { left: 24px; }
 .ach-lightbox-next { right: 24px; }
 
@@ -1758,7 +1752,7 @@ button:focus {
 /* ---- Project cards darker ---- */
 .project-card-view {
   background: rgba(5, 5, 12, 0.85) !important;
-  border: 1px solid rgba(0, 210, 255, 0.09) !important;
+  border: 1px solid rgb(from var(--accent) r g b / 0.09) !important;
   overflow: hidden !important;
   position: relative !important;
 }
@@ -1780,14 +1774,14 @@ button:focus {
   align-items: center;
   gap: 5px;
   padding: 4px 12px;
-  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  color: #000;
+  background: linear-gradient(135deg, var(--accent) 0%, oklch(from var(--accent) calc(l - 0.12) c h) 100%);
+  color: var(--bg);
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 30px;
-  box-shadow: 0 0 18px rgba(0, 210, 255, 0.45);
+  box-shadow: 0 0 18px rgb(from var(--accent) r g b / 0.45);
 }
 
 .project-card-noimg {
@@ -1802,7 +1796,7 @@ button:focus {
   background:
     radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--noimg-accent) 30%, transparent) 0%, transparent 55%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.25) 100%),
-    #08080f;
+    var(--bg);
   border: 1px solid color-mix(in srgb, var(--noimg-accent) 30%, transparent);
 }
 
@@ -1828,13 +1822,13 @@ button:focus {
   display: inline-block;
   padding: 2px 11px;
   margin-bottom: 0.6rem;
-  background: rgba(0, 210, 255, 0.08);
-  border: 1px solid rgba(0, 210, 255, 0.2);
+  background: rgb(from var(--accent) r g b / 0.08);
+  border: 1px solid rgb(from var(--accent) r g b / 0.2);
   border-radius: 12px;
   font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #00d2ff;
+  color: var(--accent);
 }
 
 .project-card-tags {

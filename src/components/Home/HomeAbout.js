@@ -27,15 +27,15 @@ function HomeAbout() {
             <div className="ha-card">
               <p className="ha-text">
                 Hi, I'm{" "}
-                <span className="purple">Viraj Bulugahapitiya</span> — an{" "}
-                <span className="purple">AI Engineer</span>,{" "}
-                <span className="purple">ML Engineer</span> and{" "}
-                <span className="purple">Data Scientist</span> based in{" "}
-                <span className="purple">London, UK</span>.
+                <span className="text-accent">Viraj Bulugahapitiya</span> — an{" "}
+                <span className="text-accent">AI Engineer</span>,{" "}
+                <span className="text-accent">ML Engineer</span> and{" "}
+                <span className="text-accent">Data Scientist</span> based in{" "}
+                <span className="text-accent">London, UK</span>.
               </p>
               <p className="ha-text">
                 Currently completing my{" "}
-                <span className="purple">MSc in Data Science</span> at the
+                <span className="text-accent">MSc in Data Science</span> at the
                 University of Hertfordshire, I specialise in autonomous
                 multi-agent architectures, production LLM deployment, and
                 scalable data engineering pipelines.

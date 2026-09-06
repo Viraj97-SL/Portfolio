@@ -35,7 +35,7 @@ function Contact() {
         <Container>
           <p className="contact-subheading">Get in Touch</p>
           <h1 className="contact-heading">
-            Let's <span className="purple">Connect</span>
+            Let's <span className="text-accent">Connect</span>
           </h1>
 
           <Row style={{ justifyContent: "center", paddingTop: "20px" }}>

@@ -113,7 +113,7 @@ function Certificates() {
         <Container>
           <p className="cert-subheading">Credentials &amp; Achievements</p>
           <h1 className="cert-heading">
-            My <span className="purple">Certificates</span>
+            My <span className="text-accent">Certificates</span>
           </h1>
 
           {/* Filter bar */}

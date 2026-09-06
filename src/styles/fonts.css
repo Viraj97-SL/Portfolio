@@ -1,0 +1,47 @@
+/* Self-hosted — no Google Fonts network request. Latin-subset woff2 only. */
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/instrument-serif-latin-400.woff2") format("woff2");
+}
+
+/* Metric-matched fallback so text laid out with the fallback face reflows as
+   little as possible once Instrument Serif finishes loading. Values derived
+   from Instrument Serif's own head/hhea/OS-2 tables (unitsPerEm 1000, ascent
+   990, descent 310) against Times New Roman's published metrics. */
+@font-face {
+  font-family: "Instrument Serif Fallback";
+  src: local("Times New Roman");
+  ascent-override: 99%;
+  descent-override: 31%;
+  line-gap-override: 0%;
+  size-adjust: 101.6%;
+}
+
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("./fonts/inter-tight-latin-variable.woff2") format("woff2");
+}
+
+/* Same technique against Arial's published metrics (unitsPerEm 2048, ascent
+   1854, descent 434, xAvgCharWidth 904) using Inter Tight's own real
+   unitsPerEm 2048 / ascent 1984 / descent 494 / xAvgCharWidth 1238. */
+@font-face {
+  font-family: "Inter Tight Fallback";
+  src: local("Arial");
+  ascent-override: 96.88%;
+  descent-override: 24.12%;
+  line-gap-override: 0%;
+  size-adjust: 137%;
+}
+
+:root {
+  --font-display: "Instrument Serif", "Instrument Serif Fallback", Georgia, serif;
+  --font-body: "Inter Tight", "Inter Tight Fallback", Arial, sans-serif;
+}

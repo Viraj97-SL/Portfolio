@@ -9,8 +9,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import Grain from "./components/Grain/Grain";
+import "./styles/tokens.css";
+import "./styles/fonts.css";
+import "./styles/typography.css";
 import "./style.css";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Code-split every route but Home so / only ships the JS it needs
@@ -26,6 +29,7 @@ const Achievements = lazy(() => import("./components/Achievements/Achievements")
 function App() {
   return (
     <Router>
+      <Grain />
       <div className="App">
         <Navbar />
         <ScrollToTop />

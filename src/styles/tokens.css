@@ -1,0 +1,15 @@
+:root {
+  /* Core palette */
+  --bg: oklch(0.15 0.012 60);
+  --surface: oklch(0.19 0.014 60);
+  --text: oklch(0.93 0.012 85);
+  --dim: oklch(0.62 0.014 80);
+  --accent: oklch(0.72 0.13 68);
+  --line: oklch(0.28 0.012 60);
+
+  /* Status colours — not in the original six, but "success"/"error" states
+     need a distinct hue from --accent and have nowhere else to live without
+     reintroducing hardcoded hex. */
+  --success: oklch(0.75 0.16 145);
+  --error: oklch(0.65 0.19 25);
+}

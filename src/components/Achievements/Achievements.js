@@ -259,7 +259,7 @@ function Achievements() {
         <Container>
           <p className="ach-subheading">Wins &amp; Recognition</p>
           <h1 className="ach-heading">
-            My <span className="purple">Achievements</span>
+            My <span className="text-accent">Achievements</span>
           </h1>
           <p style={{ color: "rgba(255,255,255,0.55)", textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
             Hackathon wins, poster presentations, and workshops from the past year.

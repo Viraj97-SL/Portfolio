@@ -40,7 +40,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex">
           <strong
-            className="purple"
+            className="text-accent"
             style={{ fontSize: "1.5em", letterSpacing: "1px" }}
           >
             VIRAJ.AI
