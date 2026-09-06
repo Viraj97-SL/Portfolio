@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import Home2 from "./Home2";
-import HomeAbout from "./HomeAbout";
-import LogoCloud from "../LogoCloud/LogoCloud";
-import BentoGrid from "../Bento/BentoGrid";
+import HomeIntro from "./HomeIntro";
+import HomeFacts from "./HomeFacts";
 import Picture from "../common/Picture";
-import heroAvif from "../../Assets/hero.avif";
-import heroWebp from "../../Assets/hero.webp";
+import heroAvif from "../../Assets/hero-orrery.avif";
+import heroWebp from "../../Assets/hero-orrery.webp";
 import "./hero.css";
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -29,8 +27,8 @@ function Home() {
         <Picture
           avif={heroAvif}
           webp={heroWebp}
-          width={1920}
-          height={949}
+          width={1264}
+          height={848}
           alt=""
           className="hero-bg"
           loading="eager"
@@ -40,7 +38,7 @@ function Home() {
 
         <div className="hero-content">
           <motion.p className="label hero-label" {...reveal(0)}>
-            AI / ML ENGINEER — LONDON
+            AI / ML ENGINEER · LONDON
           </motion.p>
 
           <motion.h1 className="hero-name" {...reveal(1)}>
@@ -48,32 +46,29 @@ function Home() {
           </motion.h1>
 
           <motion.p className="hero-statement" {...reveal(2)}>
-            AI Engineer building autonomous multi-agent systems — from data
-            pipelines to production.
+            I build at both ends of the stack. Research-grade deep
+            learning on one side, the agent infrastructure that puts it
+            into production on the other.
           </motion.p>
 
           <motion.div className="hero-cta-group" {...reveal(3)}>
             <Link to="/project" className="hero-cta-primary">
-              View My Work →
+              See the work
             </Link>
             <Link to="/contact" className="hero-cta-ghost">
-              Contact Me
+              Get in touch
             </Link>
           </motion.div>
         </div>
+
+        <div className="hero-scroll-cue" aria-hidden="true" />
       </div>
 
-      {/* ══════════════════ LOGO CLOUD ══════════════════ */}
-      <LogoCloud />
+      {/* ══════════════════ 01 ABOUT ══════════════════ */}
+      <HomeIntro />
 
-      {/* ══════════════════ INTRO ══════════════════ */}
-      <Home2 />
-
-      {/* ══════════════════ ABOUT PREVIEW ══════════════════ */}
-      <HomeAbout />
-
-      {/* ══════════════════ BENTO GRID ══════════════════ */}
-      <BentoGrid />
+      {/* ══════════════════ FACTS ══════════════════ */}
+      <HomeFacts />
     </section>
   );
 }

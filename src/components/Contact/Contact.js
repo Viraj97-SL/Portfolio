@@ -32,8 +32,14 @@ function Contact() {
 
   return (
     <section>
-      <PageHeader label="Get in Touch" avif={headerAvif} webp={headerWebp}>
-        Let's <span className="text-accent">Connect</span>
+      <PageHeader
+        n="06"
+        label="Contact"
+        description="I read everything. I reply to most of it. Best for: AI/ML engineering roles, research collaboration, or anything involving agents."
+        avif={headerAvif}
+        webp={headerWebp}
+      >
+        Say something
       </PageHeader>
 
       <Container fluid className="contact-section">
@@ -48,20 +54,20 @@ function Contact() {
                     className="contact-input"
                     name="from_name"
                     type="text"
-                    placeholder="Your Name"
+                    placeholder="Name"
                     required
                   />
                   <input
                     className="contact-input"
                     name="reply_to"
                     type="email"
-                    placeholder="Your Email"
+                    placeholder="Email"
                     required
                   />
                   <textarea
                     className="contact-input contact-textarea"
                     name="message"
-                    placeholder="Your Message..."
+                    placeholder="What's on your mind"
                     required
                   />
                   <button
@@ -69,15 +75,15 @@ function Contact() {
                     className="contact-send-btn"
                     disabled={status === "sending"}
                   >
-                    {status === "sending" ? "Sending…" : "Send Message →"}
+                    {status === "sending" ? "Sending" : "Send"}
                   </button>
 
                   {status === "success" && (
-                    <p className="contact-success">✓ Message sent! I'll get back to you soon.</p>
+                    <p className="contact-success">Got it. I'll come back to you.</p>
                   )}
                   {status === "error" && (
                     <p className="contact-error">
-                      ✗ Failed to send. Please email me directly at the address below.
+                      That didn't send. Try amanthavirajavb@gmail.com directly.
                     </p>
                   )}
                 </form>
