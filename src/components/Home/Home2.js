@@ -58,7 +58,7 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
+            <h1 style={{ fontSize: "2.3em" }}>FIND ME ON</h1>
             <p>
               Feel free to <span className="text-accent">connect </span>with me
             </p>

@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import Particle from "../Particle";
 
 // ─────────────────────────────────────────────
 // ⚙️  EmailJS setup
@@ -31,7 +30,6 @@ function Contact() {
   return (
     <section>
       <Container fluid className="contact-section">
-        <Particle />
         <Container>
           <p className="contact-subheading">Get in Touch</p>
           <h1 className="contact-heading">

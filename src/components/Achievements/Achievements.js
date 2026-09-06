@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import { FaTrophy, FaMedal, FaChalkboardTeacher, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { BsFileEarmarkText, BsImages } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
-import Particle from "../Particle";
 import Picture from "../common/Picture";
 
 import hackathon1Avif from "../../Assets/Projects/UKOMAIN26_Hackathon1.avif";
@@ -255,7 +254,6 @@ function Achievements() {
   return (
     <section>
       <Container fluid className="ach-section">
-        <Particle />
         <Container>
           <p className="ach-subheading">Wins &amp; Recognition</p>
           <h1 className="ach-heading">

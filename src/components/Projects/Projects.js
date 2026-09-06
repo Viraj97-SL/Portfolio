@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
 
 // Importing your custom generated AI visual assets (AVIF primary, WebP fallback)
 import cricoracleAvif from "../../Assets/Projects/cricoracle.avif";
@@ -45,7 +44,6 @@ const ukomainImg = { avif: ukomainAvif, webp: ukomainWebp, width: 1200, height: 
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="text-accent">Works </strong>

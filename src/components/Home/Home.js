@@ -1,86 +1,53 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import homeLogoAvif from "../../Assets/home-main.avif";
-import homeLogoWebp from "../../Assets/home-main.webp";
-import Particle from "../Particle";
-import Picture from "../common/Picture";
+import { motion } from "motion/react";
 import Home2 from "./Home2";
 import HomeAbout from "./HomeAbout";
-import Type from "./Type";
 import LogoCloud from "../LogoCloud/LogoCloud";
 import BentoGrid from "../Bento/BentoGrid";
+import "./hero.css";
+
+const EASE = [0.16, 1, 0.3, 1];
+const STAGGER = 0.08;
+
+function reveal(index) {
+  return {
+    initial: { opacity: 0, y: 24 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, ease: EASE, delay: index * STAGGER },
+  };
+}
 
 function Home() {
   return (
     <section>
       {/* ══════════════════ HERO ══════════════════ */}
-      <div className="hero-section" id="home">
-        <Particle />
+      <div className="hero" id="home">
+        <div className="hero-bg-placeholder" />
+        <div className="hero-scrim" />
 
-        <Container style={{ position: "relative", zIndex: 1 }}>
-          <Row
-            className="align-items-center"
-            style={{ minHeight: "100vh", paddingTop: "70px" }}
-          >
-            {/* Left — text */}
-            <Col md={7} style={{ paddingBottom: "2rem" }}>
-              <p className="hero-greeting">
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-                &nbsp; Hello, World
-              </p>
+        <div className="hero-content">
+          <motion.p className="label hero-label" {...reveal(0)}>
+            AI / ML ENGINEER — LONDON
+          </motion.p>
 
-              <h1 className="hero-name">
-                I'M <br />
-                <span className="hero-name-accent">VIRAJ</span>
-              </h1>
+          <motion.h1 className="hero-name" {...reveal(1)}>
+            Viraj Bulugahapitiya
+          </motion.h1>
 
-              <div style={{ marginBottom: "1.5rem" }}>
-                <Type />
-              </div>
+          <motion.p className="hero-statement" {...reveal(2)}>
+            AI Engineer building autonomous multi-agent systems — from data
+            pipelines to production.
+          </motion.p>
 
-              <div className="hero-cta-group">
-                <Link to="/project" className="hero-cta-primary">
-                  View My Work →
-                </Link>
-                <Link to="/contact" className="hero-cta-outline">
-                  Contact Me
-                </Link>
-              </div>
-            </Col>
-
-            {/* Right — avatar */}
-            <Col
-              md={5}
-              className="d-flex justify-content-center"
-              style={{ paddingBottom: "2rem" }}
-            >
-              <div className="hero-img-wrapper">
-                <div className="hero-img-glow" />
-                <Picture
-                  avif={homeLogoAvif}
-                  webp={homeLogoWebp}
-                  width={1000}
-                  height={1000}
-                  alt="AI Engineer"
-                  className="img-fluid"
-                  style={{ maxHeight: "430px", position: "relative", zIndex: 1 }}
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-
-        {/* Scroll cue */}
-        <div className="scroll-indicator">
-          <div className="scroll-mouse">
-            <div className="scroll-mouse-dot" />
-          </div>
-          <span>scroll</span>
+          <motion.div className="hero-cta-group" {...reveal(3)}>
+            <Link to="/project" className="hero-cta-primary">
+              View My Work →
+            </Link>
+            <Link to="/contact" className="hero-cta-ghost">
+              Contact Me
+            </Link>
+          </motion.div>
         </div>
       </div>
 

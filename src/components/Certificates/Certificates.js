@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import Particle from "../Particle";
 
 // ─────────────────────────────────────────────────────────────────
 // ➕  Add your certificates here.
@@ -109,7 +108,6 @@ function Certificates() {
   return (
     <section>
       <Container fluid className="cert-section">
-        <Particle />
         <Container>
           <p className="cert-subheading">Credentials &amp; Achievements</p>
           <h1 className="cert-heading">
