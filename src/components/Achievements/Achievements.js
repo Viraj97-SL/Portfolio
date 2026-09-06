@@ -4,21 +4,51 @@ import { FaTrophy, FaMedal, FaChalkboardTeacher, FaChevronLeft, FaChevronRight }
 import { BsFileEarmarkText, BsImages } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import Particle from "../Particle";
+import Picture from "../common/Picture";
 
-import hackathon1 from "../../Assets/Projects/UKOMAIN26_Hackathon1.jpg";
-import hackathon2 from "../../Assets/Projects/UKOMAIN26_Hackathon2.gif";
-import hackathon3 from "../../Assets/Projects/UKOMAIN26_Hackathon3.jpg";
-import mmaiPoster1 from "../../Assets/Projects/UKOMAIN26_Poster1.jpg";
-import mmaiPoster2 from "../../Assets/Projects/UKOMAIN26_poster2.jpg";
-import mmaiPoster3 from "../../Assets/Projects/UKOMAIN26_poster3.jpg";
-import uhds1 from "../../Assets/Projects/UHDS_01.jpg";
-import uhds2 from "../../Assets/Projects/UHDS_02.jpg";
-import uhds3 from "../../Assets/Projects/UHDS_03.jpg";
-import pyws1 from "../../Assets/Projects/Python WS01.jpg";
-import pyws2 from "../../Assets/Projects/Python WS02.jpg";
-import icml1 from "../../Assets/Projects/ICML26_01.jpg";
-import icml2 from "../../Assets/Projects/ICML26_02.jpg";
-import icml3 from "../../Assets/Projects/ICML26_03.jpg";
+import hackathon1Avif from "../../Assets/Projects/UKOMAIN26_Hackathon1.avif";
+import hackathon1Webp from "../../Assets/Projects/UKOMAIN26_Hackathon1.webp";
+import hackathon2Avif from "../../Assets/Projects/UKOMAIN26_Hackathon2.avif";
+import hackathon2Webp from "../../Assets/Projects/UKOMAIN26_Hackathon2.webp";
+import hackathon3Avif from "../../Assets/Projects/UKOMAIN26_Hackathon3.avif";
+import hackathon3Webp from "../../Assets/Projects/UKOMAIN26_Hackathon3.webp";
+import mmaiPoster1Avif from "../../Assets/Projects/UKOMAIN26_Poster1.avif";
+import mmaiPoster1Webp from "../../Assets/Projects/UKOMAIN26_Poster1.webp";
+import mmaiPoster2Avif from "../../Assets/Projects/UKOMAIN26_poster2.avif";
+import mmaiPoster2Webp from "../../Assets/Projects/UKOMAIN26_poster2.webp";
+import mmaiPoster3Avif from "../../Assets/Projects/UKOMAIN26_poster3.avif";
+import mmaiPoster3Webp from "../../Assets/Projects/UKOMAIN26_poster3.webp";
+import uhds1Avif from "../../Assets/Projects/UHDS_01.avif";
+import uhds1Webp from "../../Assets/Projects/UHDS_01.webp";
+import uhds2Avif from "../../Assets/Projects/UHDS_02.avif";
+import uhds2Webp from "../../Assets/Projects/UHDS_02.webp";
+import uhds3Avif from "../../Assets/Projects/UHDS_03.avif";
+import uhds3Webp from "../../Assets/Projects/UHDS_03.webp";
+import pyws1Avif from "../../Assets/Projects/Python WS01.avif";
+import pyws1Webp from "../../Assets/Projects/Python WS01.webp";
+import pyws2Avif from "../../Assets/Projects/Python WS02.avif";
+import pyws2Webp from "../../Assets/Projects/Python WS02.webp";
+import icml1Avif from "../../Assets/Projects/ICML26_01.avif";
+import icml1Webp from "../../Assets/Projects/ICML26_01.webp";
+import icml2Avif from "../../Assets/Projects/ICML26_02.avif";
+import icml2Webp from "../../Assets/Projects/ICML26_02.webp";
+import icml3Avif from "../../Assets/Projects/ICML26_03.avif";
+import icml3Webp from "../../Assets/Projects/ICML26_03.webp";
+
+const hackathon1 = { avif: hackathon1Avif, webp: hackathon1Webp, width: 1024, height: 768 };
+const hackathon2 = { avif: hackathon2Avif, webp: hackathon2Webp, width: 1200, height: 900 };
+const hackathon3 = { avif: hackathon3Avif, webp: hackathon3Webp, width: 1200, height: 865 };
+const mmaiPoster1 = { avif: mmaiPoster1Avif, webp: mmaiPoster1Webp, width: 800, height: 1066 };
+const mmaiPoster2 = { avif: mmaiPoster2Avif, webp: mmaiPoster2Webp, width: 800, height: 1066 };
+const mmaiPoster3 = { avif: mmaiPoster3Avif, webp: mmaiPoster3Webp, width: 1200, height: 900 };
+const uhds1 = { avif: uhds1Avif, webp: uhds1Webp, width: 541, height: 767 };
+const uhds2 = { avif: uhds2Avif, webp: uhds2Webp, width: 800, height: 1066 };
+const uhds3 = { avif: uhds3Avif, webp: uhds3Webp, width: 800, height: 1066 };
+const pyws1 = { avif: pyws1Avif, webp: pyws1Webp, width: 1200, height: 900 };
+const pyws2 = { avif: pyws2Avif, webp: pyws2Webp, width: 1200, height: 1200 };
+const icml1 = { avif: icml1Avif, webp: icml1Webp, width: 1200, height: 900 };
+const icml2 = { avif: icml2Avif, webp: icml2Webp, width: 1200, height: 1599 };
+const icml3 = { avif: icml3Avif, webp: icml3Webp, width: 1200, height: 1599 };
 
 // ─────────────────────────────────────────────────────────────────
 // ➕ Add achievements here. `images` accepts one or more photos —
@@ -129,10 +159,14 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
         </button>
       )}
 
-      <img
-        src={images[index]}
+      <Picture
+        avif={images[index].avif}
+        webp={images[index].webp}
+        width={images[index].width}
+        height={images[index].height}
         alt={`${index + 1} of ${images.length}`}
         className="ach-lightbox-img"
+        loading="eager"
         onClick={(e) => e.stopPropagation()}
       />
 
@@ -162,7 +196,13 @@ function AchievementCard({ item, onOpenGallery }) {
         role="button"
         tabIndex={0}
       >
-        <img src={item.images[0]} alt={item.title} />
+        <Picture
+          avif={item.images[0].avif}
+          webp={item.images[0].webp}
+          width={item.images[0].width}
+          height={item.images[0].height}
+          alt={item.title}
+        />
         <div className="ach-tag">{item.tag}</div>
         {item.images.length > 1 && (
           <div className="ach-photo-count">

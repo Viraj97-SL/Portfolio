@@ -3,19 +3,44 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-// Importing your custom generated AI visual assets
-import cricoracleImg from "../../Assets/Projects/cricoracle.png";
-import reposentinelImg from "../../Assets/Projects/reposentinel.png";
-import newsanalystImg from "../../Assets/Projects/newsanalyst.png";
-import pamoryaImg from "../../Assets/Projects/pamorya.png";
-import alzheimersImg from "../../Assets/Projects/alzheimers.png";
-import sathchakraImg from "../../Assets/Projects/sathchakra.png";
-import massifyxImg from "../../Assets/Projects/MassifyX Global.png";
-import marketforgeImg from "../../Assets/Projects/MarketForge AI.png";
-import jobfinderImg from "../../Assets/Projects/JobFinder.png";
-import visionaidImg from "../../Assets/Projects/VisionAID.png";
-import scopeguardImg from "../../Assets/Projects/ScopeGuuard.png";
-import ukomainImg from "../../Assets/Projects/ICU Command Center-selection.png";
+// Importing your custom generated AI visual assets (AVIF primary, WebP fallback)
+import cricoracleAvif from "../../Assets/Projects/cricoracle.avif";
+import cricoracleWebp from "../../Assets/Projects/cricoracle.webp";
+import reposentinelAvif from "../../Assets/Projects/reposentinel.avif";
+import reposentinelWebp from "../../Assets/Projects/reposentinel.webp";
+import newsanalystAvif from "../../Assets/Projects/newsanalyst.avif";
+import newsanalystWebp from "../../Assets/Projects/newsanalyst.webp";
+import pamoryaAvif from "../../Assets/Projects/pamorya.avif";
+import pamoryaWebp from "../../Assets/Projects/pamorya.webp";
+import alzheimersAvif from "../../Assets/Projects/alzheimers.avif";
+import alzheimersWebp from "../../Assets/Projects/alzheimers.webp";
+import sathchakraAvif from "../../Assets/Projects/sathchakra.avif";
+import sathchakraWebp from "../../Assets/Projects/sathchakra.webp";
+import massifyxAvif from "../../Assets/Projects/MassifyX Global.avif";
+import massifyxWebp from "../../Assets/Projects/MassifyX Global.webp";
+import marketforgeAvif from "../../Assets/Projects/MarketForge AI.avif";
+import marketforgeWebp from "../../Assets/Projects/MarketForge AI.webp";
+import jobfinderAvif from "../../Assets/Projects/JobFinder.avif";
+import jobfinderWebp from "../../Assets/Projects/JobFinder.webp";
+import visionaidAvif from "../../Assets/Projects/VisionAID.avif";
+import visionaidWebp from "../../Assets/Projects/VisionAID.webp";
+import scopeguardAvif from "../../Assets/Projects/ScopeGuuard.avif";
+import scopeguardWebp from "../../Assets/Projects/ScopeGuuard.webp";
+import ukomainAvif from "../../Assets/Projects/ICU Command Center-selection.avif";
+import ukomainWebp from "../../Assets/Projects/ICU Command Center-selection.webp";
+
+const cricoracleImg = { avif: cricoracleAvif, webp: cricoracleWebp, width: 1200, height: 800 };
+const reposentinelImg = { avif: reposentinelAvif, webp: reposentinelWebp, width: 1200, height: 800 };
+const newsanalystImg = { avif: newsanalystAvif, webp: newsanalystWebp, width: 1200, height: 800 };
+const pamoryaImg = { avif: pamoryaAvif, webp: pamoryaWebp, width: 1200, height: 800 };
+const alzheimersImg = { avif: alzheimersAvif, webp: alzheimersWebp, width: 1200, height: 799 };
+const sathchakraImg = { avif: sathchakraAvif, webp: sathchakraWebp, width: 1200, height: 799 };
+const massifyxImg = { avif: massifyxAvif, webp: massifyxWebp, width: 1200, height: 675 };
+const marketforgeImg = { avif: marketforgeAvif, webp: marketforgeWebp, width: 1200, height: 675 };
+const jobfinderImg = { avif: jobfinderAvif, webp: jobfinderWebp, width: 1200, height: 675 };
+const visionaidImg = { avif: visionaidAvif, webp: visionaidWebp, width: 1200, height: 675 };
+const scopeguardImg = { avif: scopeguardAvif, webp: scopeguardWebp, width: 1200, height: 675 };
+const ukomainImg = { avif: ukomainAvif, webp: ukomainWebp, width: 1200, height: 675 };
 
 function Projects() {
   return (
@@ -34,7 +59,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={marketforgeImg}
+              image={marketforgeImg}
               featured
               isBlog={false}
               category="Multi-Agent · Career Intelligence"
@@ -48,7 +73,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={ukomainImg}
+              image={ukomainImg}
               featured
               isBlog={false}
               category="Hackathon Win · Clinical AI"
@@ -61,7 +86,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={visionaidImg}
+              image={visionaidImg}
               featured
               isBlog={false}
               category="Computer Vision · Assistive AI"
@@ -74,7 +99,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={pamoryaImg}
+              image={pamoryaImg}
               featured
               isBlog={false}
               category="Multi-Agent · Retail"
@@ -90,7 +115,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={alzheimersImg}
+              image={alzheimersImg}
               isBlog={false}
               category="Research · Medical AI"
               tags={["PyTorch", "3D Swin Transformer", "Multimodal Fusion"]}
@@ -102,7 +127,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={cricoracleImg}
+              image={cricoracleImg}
               isBlog={false}
               category="Predictive AI · Sports"
               tags={["XGBoost", "PyTorch LSTM", "Genetic Algorithms", "FastAPI"]}
@@ -114,7 +139,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={massifyxImg}
+              image={massifyxImg}
               isBlog={false}
               category="Supply Chain Intelligence"
               tags={["Node.js", "AI Enrichment", "Live Monitoring", "REST API"]}
@@ -126,7 +151,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={reposentinelImg}
+              image={reposentinelImg}
               isBlog={false}
               category="Multi-Agent · LangGraph"
               tags={["LangGraph", "Gemini 2.5 Pro", "GitHub Automation"]}
@@ -138,7 +163,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={newsanalystImg}
+              image={newsanalystImg}
               isBlog={false}
               category="Multi-Agent · Automation"
               tags={["LangGraph", "FastAPI", "HITL", "Headless Chromium"]}
@@ -150,7 +175,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={sathchakraImg}
+              image={sathchakraImg}
               isBlog={false}
               category="Agentic Framework"
               tags={["LangGraph", "Groq Llama-3", "Playwright", "React"]}
@@ -163,7 +188,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={jobfinderImg}
+              image={jobfinderImg}
               isBlog={false}
               category="Autonomous Agents · Career"
               tags={["Multi-Agent", "Automation", "NLP"]}
@@ -175,7 +200,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={scopeguardImg}
+              image={scopeguardImg}
               isBlog={false}
               category="Hackathon · London"
               tags={["Cursor", "Rapid Prototyping", "Hackathon"]}

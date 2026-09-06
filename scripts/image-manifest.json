@@ -1,0 +1,118 @@
+{
+  "home-main": {
+    "width": 1000,
+    "height": 1000
+  },
+  "about": {
+    "width": 1000,
+    "height": 689
+  },
+  "profile-photo": {
+    "width": 1025,
+    "height": 873
+  },
+  "alzheimers": {
+    "width": 1200,
+    "height": 799
+  },
+  "cricoracle": {
+    "width": 1200,
+    "height": 800
+  },
+  "ICML26_01": {
+    "width": 1200,
+    "height": 900
+  },
+  "ICML26_02": {
+    "width": 1200,
+    "height": 1599
+  },
+  "ICML26_03": {
+    "width": 1200,
+    "height": 1599
+  },
+  "ICU Command Center-selection": {
+    "width": 1200,
+    "height": 675
+  },
+  "JobFinder": {
+    "width": 1200,
+    "height": 675
+  },
+  "MarketForge AI": {
+    "width": 1200,
+    "height": 675
+  },
+  "MassifyX Global": {
+    "width": 1200,
+    "height": 675
+  },
+  "newsanalyst": {
+    "width": 1200,
+    "height": 800
+  },
+  "pamorya": {
+    "width": 1200,
+    "height": 800
+  },
+  "Python WS01": {
+    "width": 1200,
+    "height": 900
+  },
+  "Python WS02": {
+    "width": 1200,
+    "height": 1200
+  },
+  "reposentinel": {
+    "width": 1200,
+    "height": 800
+  },
+  "sathchakra": {
+    "width": 1200,
+    "height": 799
+  },
+  "ScopeGuuard": {
+    "width": 1200,
+    "height": 675
+  },
+  "UHDS_01": {
+    "width": 541,
+    "height": 767
+  },
+  "UHDS_02": {
+    "width": 800,
+    "height": 1066
+  },
+  "UHDS_03": {
+    "width": 800,
+    "height": 1066
+  },
+  "UKOMAIN26_Hackathon1": {
+    "width": 1024,
+    "height": 768
+  },
+  "UKOMAIN26_Hackathon2": {
+    "width": 1200,
+    "height": 900
+  },
+  "UKOMAIN26_Hackathon3": {
+    "width": 1200,
+    "height": 865
+  },
+  "UKOMAIN26_Poster1": {
+    "width": 800,
+    "height": 1066
+  },
+  "UKOMAIN26_poster2": {
+    "width": 800,
+    "height": 1066
+  },
+  "UKOMAIN26_poster3": {
+    "width": 1200,
+    "height": 900
+  },
+  "VisionAID": {
+    "width": 1200,
+    "height": 675
+  }
+}

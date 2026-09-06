@@ -1,8 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import homeLogo from "../../Assets/home-main.svg";
+import homeLogoAvif from "../../Assets/home-main.avif";
+import homeLogoWebp from "../../Assets/home-main.webp";
 import Particle from "../Particle";
+import Picture from "../common/Picture";
 import Home2 from "./Home2";
 import HomeAbout from "./HomeAbout";
 import Type from "./Type";
@@ -57,11 +59,16 @@ function Home() {
             >
               <div className="hero-img-wrapper">
                 <div className="hero-img-glow" />
-                <img
-                  src={homeLogo}
+                <Picture
+                  avif={homeLogoAvif}
+                  webp={homeLogoWebp}
+                  width={1000}
+                  height={1000}
                   alt="AI Engineer"
                   className="img-fluid"
                   style={{ maxHeight: "430px", position: "relative", zIndex: 1 }}
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             </Col>

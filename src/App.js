@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Preloader from "../src/components/Pre";
+import React, { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
-import Contact from "./components/Contact/Contact";
-import Certificates from "./components/Certificates/Certificates";
-import Achievements from "./components/Achievements/Achievements";
 import {
   BrowserRouter as Router,
   Route,
@@ -20,32 +13,34 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Code-split every route but Home so / only ships the JS it needs
+// (Resume alone pulls in react-pdf/pdfjs-dist, which is otherwise the
+// single largest contributor to the shared bundle).
+const About = lazy(() => import("./components/About/About"));
+const Projects = lazy(() => import("./components/Projects/Projects"));
+const Resume = lazy(() => import("./components/Resume/ResumeNew"));
+const Contact = lazy(() => import("./components/Contact/Contact"));
+const Certificates = lazy(() => import("./components/Certificates/Certificates"));
+const Achievements = lazy(() => import("./components/Achievements/Achievements"));
+
 function App() {
-  const [load, upadateLoad] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <div className="App">
         <Navbar />
         <ScrollToTop />
-        <Routes>
-          <Route path="/"             element={<Home />} />
-          <Route path="/project"      element={<Projects />} />
-          <Route path="/about"        element={<About />} />
-          <Route path="/resume"       element={<Resume />} />
-          <Route path="/contact"      element={<Contact />} />
-          <Route path="/certificates" element={<Certificates />} />
-          <Route path="/achievements" element={<Achievements />} />
-          <Route path="*"             element={<Navigate to="/" />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/"             element={<Home />} />
+            <Route path="/project"      element={<Projects />} />
+            <Route path="/about"        element={<About />} />
+            <Route path="/resume"       element={<Resume />} />
+            <Route path="/contact"      element={<Contact />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="*"             element={<Navigate to="/" />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </Router>

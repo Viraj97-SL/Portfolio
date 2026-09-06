@@ -3,9 +3,10 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub, BsStars } from "react-icons/bs";
+import Picture from "../common/Picture";
 
 function ProjectCards(props) {
-  const { tags = [], category, featured } = props;
+  const { tags = [], category, featured, image } = props;
 
   return (
     <Card className="project-card-view">
@@ -15,8 +16,15 @@ function ProjectCards(props) {
         </div>
       )}
 
-      {props.imgPath ? (
-        <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      {image ? (
+        <Picture
+          avif={image.avif}
+          webp={image.webp}
+          width={image.width}
+          height={image.height}
+          alt="card-img"
+          className="card-img-top"
+        />
       ) : (
         <div
           className="project-card-noimg"

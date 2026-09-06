@@ -2,7 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ImPointRight } from "react-icons/im";
-import laptopImg from "../../Assets/about.png";
+import laptopImgAvif from "../../Assets/about.avif";
+import laptopImgWebp from "../../Assets/about.webp";
+import Picture from "../common/Picture";
 
 const highlights = [
   'Volunteering for "Data for Good" initiatives at DataKind UK',
@@ -62,7 +64,14 @@ function HomeAbout() {
           {/* Image */}
           <Col lg={6} md={12} className="ha-img-col">
             <div className="ha-img-wrap">
-              <img src={laptopImg} alt="about" className="img-fluid ha-img" />
+              <Picture
+                avif={laptopImgAvif}
+                webp={laptopImgWebp}
+                width={1000}
+                height={689}
+                alt="about"
+                className="img-fluid ha-img"
+              />
             </div>
           </Col>
         </Row>
