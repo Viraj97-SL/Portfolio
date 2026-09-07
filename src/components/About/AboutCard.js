@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
@@ -10,7 +9,7 @@ function AboutCard() {
     >
       <Card.Body style={{ background: "transparent", padding: 0 }}>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify", color: "rgba(255,255,255,0.82)" }}>
+          <p style={{ textAlign: "left", color: "var(--text-primary)" }}>
             Hi everyone, I am{" "}
             <span className="text-accent">Viraj Bulugahapitiya</span> based in{" "}
             <span className="text-accent">London, UK.</span>
@@ -30,25 +29,25 @@ function AboutCard() {
           </p>
 
           <ul style={{ paddingLeft: 0, listStyle: "none" }}>
-            <li className="about-activity" style={{ color: "rgba(255,255,255,0.75)", padding: "4px 0" }}>
-              <ImPointRight style={{ color: "#00d2ff", marginRight: 8 }} />
+            <li className="about-activity" style={{ color: "var(--text-secondary)", padding: "4px 0", display: "flex", alignItems: "center" }}>
+              <span className="bullet-square" aria-hidden="true" />
               Volunteering for "Data for Good" initiatives at DataKind UK
             </li>
-            <li className="about-activity" style={{ color: "rgba(255,255,255,0.75)", padding: "4px 0" }}>
-              <ImPointRight style={{ color: "#00d2ff", marginRight: 8 }} />
+            <li className="about-activity" style={{ color: "var(--text-secondary)", padding: "4px 0", display: "flex", alignItems: "center" }}>
+              <span className="bullet-square" aria-hidden="true" />
               Mentoring students in AI engineering through Teens in AI
             </li>
-            <li className="about-activity" style={{ color: "rgba(255,255,255,0.75)", padding: "4px 0" }}>
-              <ImPointRight style={{ color: "#00d2ff", marginRight: 8 }} />
+            <li className="about-activity" style={{ color: "var(--text-secondary)", padding: "4px 0", display: "flex", alignItems: "center" }}>
+              <span className="bullet-square" aria-hidden="true" />
               Exploring Supply Chain and Operations Research
             </li>
           </ul>
 
-          <p style={{ color: "#6ab0d4", marginTop: "1rem" }}>
+          <p style={{ color: "var(--text-secondary)", marginTop: "1rem" }}>
             "Build AI systems that bridge the gap between intelligence and
             real-world impact."
           </p>
-          <footer className="blockquote-footer" style={{ color: "#6ab0d4" }}>
+          <footer className="blockquote-footer" style={{ color: "var(--text-secondary)" }}>
             Viraj
           </footer>
         </blockquote>

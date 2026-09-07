@@ -1,0 +1,27 @@
+{
+  "rules": {
+    "color-no-hex": true,
+    "declaration-property-value-allowed-list": {
+      "color": [
+        "/^var\\(--/",
+        "/^(rgb|oklch)\\(from var\\(--/",
+        "/^color-mix\\(in [a-z]+, var\\(--/"
+      ],
+      "background-color": [
+        "/^var\\(--/",
+        "/^(rgb|oklch)\\(from var\\(--/",
+        "/^color-mix\\(in [a-z]+, var\\(--/",
+        "transparent"
+      ]
+    }
+  },
+  "overrides": [
+    {
+      "files": ["src/styles/tokens.css"],
+      "rules": {
+        "color-no-hex": null,
+        "declaration-property-value-allowed-list": null
+      }
+    }
+  ]
+}

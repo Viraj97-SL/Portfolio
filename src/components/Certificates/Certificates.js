@@ -24,7 +24,7 @@ const certificates = [
     category: "ML / AI",
     credentialUrl: "#",
     icon: "🧠",
-    color: "#00d2ff",
+    color: "var(--accent)",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const certificates = [
     category: "ML / AI",
     credentialUrl: "#",
     icon: "🔥",
-    color: "#FF6F00",
+    color: "var(--warning)",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const certificates = [
     category: "ML / AI",
     credentialUrl: "#",
     icon: "🤖",
-    color: "#9B59B6",
+    color: "var(--text-secondary)",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const certificates = [
     category: "Cloud",
     credentialUrl: "#",
     icon: "☁️",
-    color: "#4285F4",
+    color: "var(--accent-dim)",
   },
   {
     id: 5,
@@ -64,7 +64,7 @@ const certificates = [
     category: "Cloud",
     credentialUrl: "#",
     icon: "⚡",
-    color: "#FF9900",
+    color: "var(--warning)",
   },
   {
     id: 6,
@@ -74,7 +74,7 @@ const certificates = [
     category: "Data Engineering",
     credentialUrl: "#",
     icon: "🌬️",
-    color: "#017CEE",
+    color: "var(--accent-bright)",
   },
   {
     id: 7,
@@ -84,7 +84,7 @@ const certificates = [
     category: "Data Engineering",
     credentialUrl: "#",
     icon: "🗄️",
-    color: "#27AE60",
+    color: "var(--success)",
   },
   {
     id: 8,
@@ -94,7 +94,7 @@ const certificates = [
     category: "ML / AI",
     credentialUrl: "#",
     icon: "🔗",
-    color: "#E74C3C",
+    color: "var(--danger)",
   },
 ];
 

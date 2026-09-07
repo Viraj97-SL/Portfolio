@@ -115,7 +115,7 @@ html {
   }
 }
 .navbar-brand {
-  color: rgb(250, 250, 250) !important;
+  color: var(--text-primary) !important;
 }
 
 .logo {
@@ -124,7 +124,7 @@ html {
 }
 
 .navbar-nav .nav-link {
-  color: white !important;
+  color: var(--text-primary) !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
 }
@@ -184,7 +184,7 @@ html {
 
 .home-content {
   padding: 9rem 0 2rem !important;
-  color: whitesmoke;
+  color: var(--text-primary);
   text-align: left;
 }
 
@@ -216,7 +216,7 @@ html {
   background: rgba(5, 5, 12, 0.75);
   border: 1px solid rgb(from var(--accent) r g b / 0.18);
   border-radius: 18px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02),
+  box-shadow: 0 0 0 1px rgb(from var(--text-primary) r g b / 0.02),
     0 20px 45px rgba(0, 0, 0, 0.45), 0 0 40px rgb(from var(--accent) r g b / 0.08);
   max-width: 320px;
 }
@@ -241,7 +241,7 @@ html {
 }
 
 .home-about-description {
-  color: white !important;
+  color: var(--text-primary) !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
@@ -256,7 +256,7 @@ html {
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
-  color: white !important;
+  color: var(--text-primary) !important;
 }
 
 .home-about-social-links {
@@ -275,7 +275,7 @@ html {
   text-align: center !important;
   font-size: 1.2em !important;
   line-height: 2em !important;
-  background: rgba(255, 255, 255, 0.972) !important;
+  background: rgb(from var(--text-primary) r g b / 0.972) !important;
   border-radius: 50% !important;
   transition: 0.5s !important;
 }
@@ -319,7 +319,7 @@ html {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  background-color: var(--bg-surface);
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -345,7 +345,7 @@ html {
 
 .footer h3 {
   font-size: 1em;
-  color: white !important;
+  color: var(--text-primary) !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
@@ -395,7 +395,7 @@ html {
   border-color: oklch(from var(--accent) calc(l - 0.08) c h) !important;
 }
 .project-heading {
-  color: white !important;
+  color: var(--text-primary) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -410,7 +410,7 @@ html {
   padding-top: 40px !important;
   padding-bottom: 30px !important;
   /* background-image: var(--section-background-color) !important; */
-  color: white !important;
+  color: var(--text-primary) !important;
 }
 
 .tech-icons {
@@ -431,14 +431,14 @@ html {
   width: fit-content !important;
   cursor: pointer !important;
   transition: outline-color 0.3s, outline-width 0.3s, transform 0.3s;
-  color: white;
+  color: var(--text-primary);
 }
 
 .tech-icons-text {
   display: flex;
   align-items: center;
   margin-left: 10px;
-  color: white;
+  color: var(--text-primary);
 }
 
 @media (max-width: 767px) {
@@ -459,7 +459,7 @@ html {
 
 .quote-card-view {
   border: none !important;
-  color: white !important;
+  color: var(--text-primary) !important;
   background-color: transparent !important;
 }
 
@@ -467,6 +467,15 @@ html {
   list-style: none !important;
   text-align: left !important;
   padding-left: 1px !important;
+}
+
+.bullet-square {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 767px) {
@@ -483,7 +492,7 @@ html {
   padding-top: 40px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
-  color: white !important;
+  color: var(--text-primary) !important;
 }
 
 .resume {
@@ -537,7 +546,7 @@ html {
 
 .resume .resume-item ul {
   padding-left: 20px;
-  text-align: justify;
+  text-align: left;
 }
 
 .resume .resume-item ul li {
@@ -568,8 +577,8 @@ html {
 }
 
 .like-btn {
-  background-color: rgba(58, 123, 213, 0.37) !important;
-  border-color: rgba(58, 123, 213, 0.37) !important;
+  background-color: color-mix(in oklch, var(--accent) 20%, var(--bg-surface)) !important;
+  border-color: color-mix(in oklch, var(--accent) 20%, var(--bg-surface)) !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -603,7 +612,7 @@ html {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: rgba(58, 123, 213, 0.37) !important;
+  background-color: color-mix(in oklch, var(--accent) 20%, var(--bg-surface)) !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
@@ -647,7 +656,7 @@ html {
 
 .logo-cloud-label {
   text-align: center;
-  color: rgba(255, 255, 255, 0.26);
+  color: rgb(from var(--text-primary) r g b / 0.26);
   font-size: 0.64rem;
   letter-spacing: 0.48em;
   text-transform: uppercase;
@@ -660,10 +669,10 @@ html {
   gap: 9px;
   padding: 8px 17px;
   margin: 0 7px;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgb(from var(--text-primary) r g b / 0.025);
   border: 1px solid rgb(from var(--accent) r g b / 0.09);
   border-radius: 40px;
-  color: rgba(255, 255, 255, 0.48);
+  color: rgb(from var(--text-primary) r g b / 0.48);
   font-size: 0.79rem;
   font-weight: 500;
   white-space: nowrap;
@@ -700,7 +709,7 @@ html {
 
 .ha-label {
   text-align: center;
-  color: rgba(255, 255, 255, 0.28);
+  color: rgb(from var(--text-primary) r g b / 0.28);
   font-size: 0.66rem;
   letter-spacing: 0.42em;
   text-transform: uppercase;
@@ -710,7 +719,7 @@ html {
 .ha-title {
   font-size: 2rem;
   font-weight: 700;
-  color: white;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 0;
 }
@@ -738,7 +747,7 @@ html {
 }
 
 .ha-text {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgb(from var(--text-primary) r g b / 0.72);
   font-size: 0.89rem;
   line-height: 1.88;
   margin-bottom: 1rem;
@@ -751,7 +760,7 @@ html {
 }
 
 .ha-list li {
-  color: rgba(255, 255, 255, 0.62);
+  color: rgb(from var(--text-primary) r g b / 0.62);
   font-size: 0.84rem;
   padding: 0.38rem 0;
   display: flex;
@@ -807,7 +816,7 @@ html {
 }
 
 .bento-section-title {
-  color: white;
+  color: var(--text-primary);
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -820,7 +829,7 @@ html {
 }
 
 .bento-section-subtitle {
-  color: rgba(255, 255, 255, 0.28);
+  color: rgb(from var(--text-primary) r g b / 0.28);
   text-align: center;
   font-size: 0.66rem;
   letter-spacing: 0.38em;
@@ -898,7 +907,7 @@ html {
 }
 
 .bento-stat-label {
-  color: rgba(255, 255, 255, 0.38);
+  color: rgb(from var(--text-primary) r g b / 0.38);
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -908,12 +917,12 @@ html {
 .bento-bio-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: white;
+  color: var(--text-primary);
   margin-bottom: 0.65rem;
 }
 
 .bento-bio-text {
-  color: rgba(255, 255, 255, 0.48);
+  color: rgb(from var(--text-primary) r g b / 0.48);
   font-size: 0.84rem;
   line-height: 1.78;
   margin-bottom: 0;
@@ -967,25 +976,25 @@ html {
 }
 
 .about-section h1 {
-  color: white !important;
+  color: var(--text-primary) !important;
 }
 
 .about-section .card,
 .about-section .card-body {
   background-color: transparent !important;
   border: none !important;
-  color: rgba(255, 255, 255, 0.82) !important;
+  color: rgb(from var(--text-primary) r g b / 0.82) !important;
 }
 
 .about-section p,
 .about-section blockquote p,
 .about-section .blockquote p {
-  color: rgba(255, 255, 255, 0.82) !important;
+  color: rgb(from var(--text-primary) r g b / 0.82) !important;
 }
 
 .about-section li,
 .about-section .about-activity {
-  color: rgba(255, 255, 255, 0.72) !important;
+  color: rgb(from var(--text-primary) r g b / 0.72) !important;
 }
 
 /* ---- Contact Section ---- */
@@ -994,7 +1003,7 @@ html {
   padding-top: 40px;
   padding-bottom: 80px;
   min-height: 100vh;
-  color: white;
+  color: var(--text-primary);
   z-index: 1;
   background: rgba(2, 2, 6, 0.92);
 }
@@ -1010,10 +1019,10 @@ html {
 .contact-input {
   display: block;
   width: 100%;
-  background: rgba(255, 255, 255, 0.03) !important;
+  background: rgb(from var(--text-primary) r g b / 0.03) !important;
   border: 1px solid rgb(from var(--accent) r g b / 0.15) !important;
   border-radius: 10px !important;
-  color: white !important;
+  color: var(--text-primary) !important;
   padding: 0.82rem 1rem !important;
   font-family: "PT Mono", monospace !important;
   font-size: 0.86rem;
@@ -1025,10 +1034,10 @@ html {
 .contact-input:focus {
   border-color: rgb(from var(--accent) r g b / 0.48) !important;
   box-shadow: 0 0 0 3px rgb(from var(--accent) r g b / 0.06) !important;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: rgb(from var(--text-primary) r g b / 0.05) !important;
 }
 
-.contact-input::placeholder { color: rgba(255, 255, 255, 0.22); }
+.contact-input::placeholder { color: rgb(from var(--text-primary) r g b / 0.22); }
 
 .contact-textarea { resize: vertical; min-height: 140px; }
 
@@ -1066,7 +1075,7 @@ html {
   gap: 1rem;
   text-decoration: none !important;
   transition: all 0.3s ease;
-  color: white !important;
+  color: var(--text-primary) !important;
 }
 
 .contact-info-card:hover {
@@ -1085,10 +1094,10 @@ html {
   font-size: 0.63rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.32);
+  color: rgb(from var(--text-primary) r g b / 0.32);
 }
 
-.contact-info-value { font-size: 0.86rem; color: rgba(255, 255, 255, 0.75); margin-top: 2px; }
+.contact-info-value { font-size: 0.86rem; color: rgb(from var(--text-primary) r g b / 0.75); margin-top: 2px; }
 
 .contact-success { color: var(--success); text-align: center; margin-top: 1rem; font-size: 0.86rem; }
 .contact-error   { color: var(--error); text-align: center; margin-top: 1rem; font-size: 0.86rem; }
@@ -1099,7 +1108,7 @@ html {
   padding-top: 40px;
   padding-bottom: 80px;
   min-height: 100vh;
-  color: white;
+  color: var(--text-primary);
   z-index: 1;
   background: rgba(2, 2, 6, 0.92);
 }
@@ -1117,7 +1126,7 @@ html {
   border-radius: 30px;
   border: 1px solid rgb(from var(--accent) r g b / 0.18);
   background: transparent;
-  color: rgba(255, 255, 255, 0.42);
+  color: rgb(from var(--text-primary) r g b / 0.42);
   font-size: 0.74rem;
   font-family: "PT Mono", monospace;
   letter-spacing: 0.08em;
@@ -1180,8 +1189,8 @@ html {
   letter-spacing: 0.06em;
 }
 
-.cert-title  { font-size: 0.94rem; font-weight: 700; color: white; margin-bottom: 0.3rem; line-height: 1.4; }
-.cert-issuer { font-size: 0.74rem; color: rgba(255, 255, 255, 0.36); margin-bottom: 0.25rem; }
+.cert-title  { font-size: 0.94rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem; line-height: 1.4; }
+.cert-issuer { font-size: 0.74rem; color: rgb(from var(--text-primary) r g b / 0.36); margin-bottom: 0.25rem; }
 .cert-date   { font-size: 0.7rem;  color: var(--accent);    margin-bottom: 0.9rem; opacity: 0.78; }
 
 .cert-link {
@@ -1202,7 +1211,7 @@ html {
   padding-top: 40px;
   padding-bottom: 80px;
   min-height: 100vh;
-  color: white;
+  color: var(--text-primary);
   z-index: 1;
   background: rgba(2, 2, 6, 0.92);
 }
@@ -1276,7 +1285,7 @@ html {
   background: rgba(2, 2, 6, 0.75);
   border-radius: 20px;
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgb(from var(--text-primary) r g b / 0.85);
   backdrop-filter: blur(6px);
 }
 
@@ -1284,20 +1293,20 @@ html {
   padding: 1.2rem 1.4rem 1.4rem;
 }
 
-.ach-title { font-size: 0.98rem; font-weight: 700; color: white; margin-bottom: 0.35rem; line-height: 1.4; }
+.ach-title { font-size: 0.98rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem; line-height: 1.4; }
 .ach-event { font-size: 0.78rem; color: var(--ach-color, var(--accent)); margin-bottom: 0.7rem; line-height: 1.5; opacity: 0.9; }
-.ach-blurb { font-size: 0.78rem; color: rgba(255, 255, 255, 0.55); line-height: 1.72; margin-bottom: 0.6rem; }
-.ach-credits { font-size: 0.72rem; color: rgba(255, 255, 255, 0.34); font-style: italic; margin-bottom: 0.9rem; }
+.ach-blurb { font-size: 0.78rem; color: rgb(from var(--text-primary) r g b / 0.55); line-height: 1.72; margin-bottom: 0.6rem; }
+.ach-credits { font-size: 0.72rem; color: rgb(from var(--text-primary) r g b / 0.34); font-style: italic; margin-bottom: 0.9rem; }
 
 .ach-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 0.8rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgb(from var(--text-primary) r g b / 0.06);
 }
 
-.ach-date { font-size: 0.7rem; color: rgba(255, 255, 255, 0.32); }
+.ach-date { font-size: 0.7rem; color: rgb(from var(--text-primary) r g b / 0.32); }
 
 .ach-link {
   font-size: 0.74rem;
@@ -1307,7 +1316,7 @@ html {
   transition: opacity 0.2s;
 }
 .ach-link:hover { opacity: 1; }
-.ach-link-disabled { color: rgba(255, 255, 255, 0.28) !important; cursor: default; }
+.ach-link-disabled { color: rgb(from var(--text-primary) r g b / 0.28) !important; cursor: default; }
 
 /* ---- Achievements Lightbox ---- */
 .ach-lightbox {
@@ -1334,9 +1343,9 @@ html {
   position: absolute;
   top: 22px;
   right: 26px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: white;
+  background: rgb(from var(--text-primary) r g b / 0.06);
+  border: 1px solid rgb(from var(--text-primary) r g b / 0.15);
+  color: var(--text-primary);
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -1347,15 +1356,15 @@ html {
   cursor: pointer;
   transition: background 0.2s;
 }
-.ach-lightbox-close:hover { background: rgba(255, 255, 255, 0.14); }
+.ach-lightbox-close:hover { background: rgb(from var(--text-primary) r g b / 0.14); }
 
 .ach-lightbox-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: white;
+  background: rgb(from var(--text-primary) r g b / 0.06);
+  border: 1px solid rgb(from var(--text-primary) r g b / 0.15);
+  color: var(--text-primary);
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -1376,7 +1385,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(from var(--text-primary) r g b / 0.6);
   letter-spacing: 0.05em;
 }
 
@@ -1445,7 +1454,7 @@ html {
   justify-content: center;
   background:
     radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--noimg-accent) 30%, transparent) 0%, transparent 55%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.25) 100%),
+    linear-gradient(135deg, rgb(from var(--text-primary) r g b / 0.03) 0%, rgba(0, 0, 0, 0.25) 100%),
     var(--bg);
   border: 1px solid color-mix(in srgb, var(--noimg-accent) 30%, transparent);
 }
@@ -1455,8 +1464,8 @@ html {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(rgb(from var(--text-primary) r g b / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(from var(--text-primary) r g b / 0.04) 1px, transparent 1px);
   background-size: 18px 18px;
 }
 
@@ -1492,11 +1501,11 @@ html {
 
 .project-card-tag {
   padding: 3px 10px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgb(from var(--text-primary) r g b / 0.04);
+  border: 1px solid rgb(from var(--text-primary) r g b / 0.1);
   border-radius: 20px;
   font-size: 0.66rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgb(from var(--text-primary) r g b / 0.55);
 }
 
 /* ---- Resume section darker ---- */

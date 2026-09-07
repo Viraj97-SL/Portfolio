@@ -7,8 +7,22 @@ body {
   background: var(--bg);
 }
 
+/* Belt-and-braces against any white flash between sections — every
+   top-level section owns its own background regardless of what
+   loaded (or failed to load) behind it. */
+.App,
+main,
+body > section,
+.App > section {
+  background: var(--bg-base);
+}
+
 p {
   max-width: 65ch;
+}
+
+h1, h2, h3 {
+  line-height: 1.15;
 }
 
 h1 {
@@ -21,6 +35,20 @@ h2 {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-color: var(--accent-dim);
+}
+
+a:hover {
+  color: var(--accent-bright);
 }
 
 .label {

@@ -33,12 +33,15 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    to right,
-    var(--bg) 0%,
-    oklch(from var(--bg) l c h / 0.5) 45%,
-    transparent 70%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      var(--bg-base) 0%,
+      oklch(from var(--bg-base) l c h / 0.92) 34%,
+      oklch(from var(--bg-base) l c h / 0.35) 62%,
+      oklch(from var(--bg-base) l c h / 0.15) 100%
+    ),
+    linear-gradient(0deg, var(--bg-base) 0%, transparent 28%);
 }
 
 .page-header-content {
@@ -56,6 +59,7 @@
 .page-header-title {
   margin: 0 0 0.5rem;
   font-size: clamp(2rem, 4vw, 3rem);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
 }
 
 .page-header-description {

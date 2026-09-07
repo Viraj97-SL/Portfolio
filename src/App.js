@@ -10,11 +10,16 @@ import {
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Grain from "./components/Grain/Grain";
+// Bootstrap loads first so it establishes the baseline; every stylesheet
+// after it is an override layer. Loading it last (as this was) let its
+// own `body { background-color: var(--bs-body-bg) }` — defaulting to
+// white — silently win the cascade over the tokens' dark body background,
+// which was the actual cause of the white bands between sections.
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/tokens.css";
 import "./styles/fonts.css";
 import "./styles/typography.css";
 import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 // Code-split every route but Home so / only ships the JS it needs
 // (Resume alone pulls in react-pdf/pdfjs-dist, which is otherwise the

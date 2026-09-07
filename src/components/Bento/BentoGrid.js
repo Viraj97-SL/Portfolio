@@ -38,7 +38,7 @@ function BentoGrid() {
           {/* Fact — exact project count, matches the /project grid */}
           <Link to="/project" className="bento-tile bento-tile-link">
             <div className="bento-stat-icon">
-              <FaCode style={{ color: "#27AE60" }} />
+              <FaCode style={{ color: "var(--success)" }} />
             </div>
             <div className="bento-stat-value">12</div>
             <div className="bento-stat-label">Production AI/ML projects shipped →</div>
@@ -47,7 +47,7 @@ function BentoGrid() {
           {/* Fact — named, dated award */}
           <Link to="/achievements" className="bento-tile bento-tile-link">
             <div className="bento-stat-icon">
-              <FaTrophy style={{ color: "#00d2ff" }} />
+              <FaTrophy style={{ color: "var(--accent)" }} />
             </div>
             <div className="bento-stat-value">MMAI'26</div>
             <div className="bento-stat-label">Best Multimodal Idea, UKOMAIN × UCL East →</div>
@@ -56,7 +56,7 @@ function BentoGrid() {
           {/* Fact — real credential */}
           <div className="bento-tile">
             <div className="bento-stat-icon">
-              <FaGraduationCap style={{ color: "#9B59B6" }} />
+              <FaGraduationCap style={{ color: "var(--text-secondary)" }} />
             </div>
             <div className="bento-stat-value">MSc</div>
             <div className="bento-stat-label">Data Science, University of Hertfordshire</div>
@@ -65,7 +65,7 @@ function BentoGrid() {
           {/* GitHub tile — spans 2 */}
           <div className="bento-tile bento-span-2">
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
-              <BiLogoGithub style={{ fontSize: "2.2rem", color: "#00d2ff" }} />
+              <BiLogoGithub style={{ fontSize: "2.2rem", color: "var(--accent)" }} />
               <div>
                 <div style={{ color: "white", fontWeight: 700, fontSize: "1rem" }}>
                   GitHub Activity
@@ -104,7 +104,7 @@ function BentoGrid() {
           {/* Achievements tile — spans full width */}
           <Link to="/achievements" className="bento-tile bento-span-4 bento-tile-link">
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-              <FaTrophy style={{ fontSize: "1.9rem", color: "#00d2ff", flexShrink: 0 }} />
+              <FaTrophy style={{ fontSize: "1.9rem", color: "var(--accent)", flexShrink: 0 }} />
               <div>
                 <div style={{ color: "white", fontWeight: 700, fontSize: "1rem" }}>
                   Hackathon wins, poster presentations &amp; workshops

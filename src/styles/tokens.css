@@ -1,15 +1,71 @@
 :root {
-  /* Core palette */
-  --bg: oklch(0.15 0.012 60);
-  --surface: oklch(0.19 0.014 60);
-  --text: oklch(0.93 0.012 85);
-  --dim: oklch(0.62 0.014 80);
-  --accent: oklch(0.72 0.13 68);
-  --line: oklch(0.28 0.012 60);
+  /* surfaces, warm neutral, never pure black or pure white */
+  --bg-base:        #16150F;
+  --bg-surface:     #1E1C16;
+  --bg-elevated:    #26231C;
+  --bg-overlay:     rgba(22, 21, 15, 0.88);
 
-  /* Status colours — not in the original six, but "success"/"error" states
-     need a distinct hue from --accent and have nowhere else to live without
-     reintroducing hardcoded hex. */
-  --success: oklch(0.75 0.16 145);
-  --error: oklch(0.65 0.19 25);
+  /* brand */
+  --accent:         #E4A03C;
+  --accent-bright:  #F2B95A;
+  --accent-dim:     #A8752A;
+  --accent-wash:    rgba(228, 160, 60, 0.10);
+  --accent-border:  rgba(228, 160, 60, 0.28);
+
+  /* text */
+  --text-primary:   #EFE7DA;
+  --text-secondary: #B7AC9B;
+  --text-muted:     #7E7568;
+  --text-on-accent: #16150F;
+
+  /* semantic, tinted warm so they never read as stock green/red */
+  --success:        #9BA860;
+  --warning:        #D89344;
+  --danger:         #C4674A;
+
+  /* structure */
+  --border-subtle:  rgba(239, 231, 218, 0.08);
+  --border-strong:  rgba(239, 231, 218, 0.16);
+  --radius-card:    14px;
+  --radius-pill:    999px;
+  --shadow-card:    0 8px 32px rgba(0, 0, 0, 0.45);
+
+  /* type — self-hosted fonts loaded in fonts.css own these names too;
+     kept in sync here rather than introducing a third family */
+  --font-display: "Instrument Serif", "Instrument Serif Fallback", Georgia, serif;
+  --font-body:    "Inter Tight", "Inter Tight Fallback", Arial, sans-serif;
+
+  /* layout */
+  --nav-height:  72px;
+  --section-pad: clamp(4rem, 9vw, 8rem);
+
+  /* --- back-compat aliases: the existing stylesheet (~40 files) was
+     built against this shorter token set. Rather than a mechanical
+     rename across every file (pure risk, no visual change), alias the
+     old names onto the new ones so both vocabularies resolve to the
+     same values. New/touched CSS should prefer the left-hand names
+     above. */
+  --bg: var(--bg-base);
+  --surface: var(--bg-surface);
+  --text: var(--text-primary);
+  --dim: var(--text-secondary);
+  --line: var(--border-subtle);
+  --error: var(--danger);
+
+  /* Bootstrap reads its own --bs-* variables for defaults (body
+     background, card backgrounds, etc). Point them at the same
+     tokens so any Bootstrap component that doesn't get an explicit
+     override still lands on-palette instead of Bootstrap's own
+     white/near-black defaults. */
+  --bs-body-bg: var(--bg-base);
+  --bs-body-color: var(--text-primary);
+  --bs-border-color: var(--border-subtle);
+  --bs-link-color: var(--accent);
+  --bs-link-hover-color: var(--accent-bright);
+}
+
+/* Anchored sections (nav links, in-page jumps) shouldn't land under the
+   fixed navbar. */
+[id] {
+  scroll-margin-top: calc(var(--nav-height) + 16px);
 }

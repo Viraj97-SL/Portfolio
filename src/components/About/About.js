@@ -15,7 +15,7 @@ function About() {
   return (
     <>
       <PageHeader label="Who I Am" avif={headerAvif} webp={headerWebp}>
-        Know Who <span className="text-accent">I'M</span>
+        Know Who <span className="text-accent">I Am</span>
       </PageHeader>
 
       <Container fluid className="about-section">

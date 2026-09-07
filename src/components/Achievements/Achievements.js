@@ -64,7 +64,7 @@ const achievements = [
     date: "2026",
     tag: "Hackathon Win",
     icon: <FaTrophy />,
-    color: "#00d2ff",
+    color: "var(--accent)",
     images: [hackathon1, hackathon2, hackathon3],
     blurb:
       "Three days at UCL East building a full AI governance pipeline for ICU early-warning systems — three competing models (multimodal fusion, LightGBM, logistic regression) triangulated for trust, an explicit MNAR-aware feature for the ~32% of patients missing clinical notes, and two production UIs: a 6-tab evidence dashboard and a voice-driven ICU nursing monitor with a LangChain clinical agent.",
@@ -79,7 +79,7 @@ const achievements = [
     date: "2026",
     tag: "Poster Presentation",
     icon: <BsFileEarmarkText />,
-    color: "#9B59B6",
+    color: "var(--text-secondary)",
     images: [mmaiPoster1, mmaiPoster2, mmaiPoster3],
     blurb:
       '"A Synergistic Tri-Modal Framework for Alzheimer\'s Disease Diagnosis Using Self-Supervised 3D Swin Transformer and LSTM with Gated Fusion" — 89.66% accuracy, 0.9611 AUC-ROC, and an MCC of 0.8337 on a small, imbalanced 187-subject dataset by fusing MRI, longitudinal clinical scores, and CSF biomarkers through dynamic gated fusion.',
@@ -94,7 +94,7 @@ const achievements = [
     date: "2025",
     tag: "Competition Win",
     icon: <FaMedal />,
-    color: "#FF6F00",
+    color: "var(--warning)",
     images: [uhds1, uhds2, uhds3],
     blurb:
       "VisionAId — a multi-agent assistive system for visually impaired users, coordinating Navigation, Vision, and E-commerce agents over a lightweight MCP protocol. Whisper for speech, YOLOv8 + OpenCV for real-time object/text/barcode recognition, OSRM/Nominatim for turn-by-turn navigation — running fully offline on a Raspberry Pi.",
@@ -109,7 +109,7 @@ const achievements = [
     date: "2026",
     tag: "Workshop",
     icon: <FaChalkboardTeacher />,
-    color: "#27AE60",
+    color: "var(--success)",
     images: [pyws1, pyws2],
     blurb:
       "Two days on explanatory vs. exploratory visualization, Plotly/Bokeh/Altair, Streamlit dashboards, and ML-driven narratives. Rebuilt my own UK job-market intelligence data as a restrained-design Streamlit dashboard and a D3 scrollytelling piece in the style of the Tampa Bay Times' \"Failure Factories.\"",
@@ -124,7 +124,7 @@ const achievements = [
     date: "2026",
     tag: "Poster Presentation",
     icon: <BsFileEarmarkText />,
-    color: "#E74C3C",
+    color: "var(--danger)",
     images: [icml1, icml2, icml3],
     blurb:
       "Presented the tri-modal Alzheimer's diagnosis research (3D Swin Transformer + LSTM + gated fusion) to the London ML community, alongside talks on uncertainty quantification, LLM agent prompt-injection benchmarks, and analytical low-rank attention approximation.",
