@@ -82,6 +82,7 @@ function Home() {
         webp={seamWebp}
         width={1200}
         height={593}
+        heading="Where the notebook and the workbench meet."
         caption="RESEARCH / PRODUCTION"
       />
 
@@ -93,6 +94,7 @@ function Home() {
         webp={scaleWebp}
         width={1200}
         height={593}
+        heading="One thing, done properly, is enough to start."
       />
     </section>
   );

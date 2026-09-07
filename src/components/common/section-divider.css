@@ -45,3 +45,29 @@
   margin: 0;
   pointer-events: none;
 }
+
+/* A real typographic moment set into the photo's own negative space,
+   not just a small corner label — this is what actually uses the empty
+   area in the frame instead of leaving it purely decorative. */
+.section-divider-heading {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 15%;
+  max-width: 34ch;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+  line-height: 1.2;
+  color: var(--text);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .section-divider-heading {
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+    bottom: 20%;
+  }
+}

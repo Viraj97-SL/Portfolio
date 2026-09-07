@@ -21,9 +21,9 @@ function HomeAbout() {
           About <span>Me</span>
         </h2>
 
-        <Row className="align-items-stretch ha-row">
+        <Row className="align-items-center ha-row">
           {/* Text card */}
-          <Col lg={6} md={12} className="ha-text-col">
+          <Col lg={5} md={12} className="ha-text-col">
             <div className="ha-card">
               <p className="ha-text">
                 Hi, I'm Viraj Bulugahapitiya — an <em>AI Engineer</em>,{" "}
@@ -57,7 +57,7 @@ function HomeAbout() {
           </Col>
 
           {/* Image */}
-          <Col lg={6} md={12} className="ha-img-col">
+          <Col lg={7} md={12} className="ha-img-col">
             <div className="ha-img-wrap">
               <Picture
                 avif={laptopImgAvif}

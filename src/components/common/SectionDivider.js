@@ -10,7 +10,7 @@ import "./section-divider.css";
  * Exactly three instances exist across the site; each route/placement is
  * deliberate — do not reuse one image on a second route.
  */
-function SectionDivider({ avif, webp, width, height, caption }) {
+function SectionDivider({ avif, webp, width, height, caption, heading }) {
   const ref = useRef(null);
   const prefersReducedMotion = useReducedMotion();
 
@@ -39,6 +39,7 @@ function SectionDivider({ avif, webp, width, height, caption }) {
           />
         </picture>
       </div>
+      {heading && <p className="section-divider-heading">{heading}</p>}
       {caption && <p className="section-divider-caption">{caption}</p>}
     </div>
   );
