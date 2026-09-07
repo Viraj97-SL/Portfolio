@@ -197,17 +197,10 @@
 
 .profile-photo-frame {
   position: relative;
-  padding: 0.6rem;
-  background: rgb(from var(--bg-base) r g b / 0.75);
-  border: 1px solid rgb(from var(--accent) r g b / 0.18);
-  border-radius: 18px;
-  box-shadow: 0 0 0 1px rgb(from var(--text-primary) r g b / 0.02),
-    0 20px 45px rgba(0, 0, 0, 0.45), 0 0 40px rgb(from var(--accent) r g b / 0.08);
   max-width: 320px;
 }
 
 .profile-photo-img {
-  border-radius: 12px;
   display: block;
   width: 100%;
 }
@@ -770,18 +763,11 @@
 
 .ha-img-wrap {
   position: relative;
-  padding: 1.25rem;
-  background: rgb(from var(--bg-base) r g b / 0.75);
-  border: 1px solid rgb(from var(--accent) r g b / 0.1);
-  border-radius: 20px;
   max-width: 440px;
   width: 100%;
 }
 
 .ha-img {
-  border-radius: 12px;
-  opacity: 0.86;
-  filter: brightness(0.88) contrast(1.06);
   width: 100%;
 }
 
@@ -1308,8 +1294,6 @@
 .ach-lightbox-img {
   max-width: 88vw;
   max-height: 86vh;
-  border-radius: 10px;
-  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7);
   cursor: default;
 }
 
@@ -1544,10 +1528,8 @@
   width: 100%;
   aspect-ratio: 21 / 9;
   object-fit: cover;
-  border-radius: var(--radius-card);
   margin: 0 0 2rem;
   display: block;
-  opacity: 0.9;
 }
 .section-band-img--16-9 { aspect-ratio: 16 / 9; }
 

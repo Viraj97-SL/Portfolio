@@ -169,7 +169,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
         width={images[index].width}
         height={images[index].height}
         alt={`${index + 1} of ${images.length}`}
-        className="ach-lightbox-img"
+        className="ach-lightbox-img media-grade"
         loading="eager"
         onClick={(e) => e.stopPropagation()}
       />
@@ -206,6 +206,7 @@ function AchievementCard({ item, onOpenGallery }) {
           width={item.images[0].width}
           height={item.images[0].height}
           alt={item.title}
+          className="media-grade"
         />
         <div className="ach-tag">{item.tag}</div>
         {item.images.length > 1 && (
@@ -276,7 +277,7 @@ function Achievements() {
             width={1200}
             height={655}
             alt=""
-            className="section-band-img section-band-img--16-9"
+            className="section-band-img section-band-img--16-9 media-feather-all media-grade"
           />
 
           <div className="ach-grid">

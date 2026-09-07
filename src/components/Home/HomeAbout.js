@@ -70,7 +70,7 @@ function HomeAbout() {
                 width={1200}
                 height={655}
                 alt="Overhead flatlay of a brass sextant, an open notebook, and drafting instruments on linen"
-                className="img-fluid ha-img"
+                className="img-fluid ha-img media-feather-all media-grade"
               />
             </div>
           </Col>

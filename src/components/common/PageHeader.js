@@ -13,7 +13,7 @@ function PageHeader({ label, children, description, avif, webp }) {
           width={1920}
           height={634}
           alt=""
-          className="page-header-bg"
+          className="page-header-bg media-feather-bottom media-grade"
           loading="eager"
           fetchPriority="high"
         />

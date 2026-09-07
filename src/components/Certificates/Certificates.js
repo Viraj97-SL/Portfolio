@@ -125,7 +125,7 @@ function Certificates() {
             width={1200}
             height={593}
             alt=""
-            className="section-band-img section-band-img--16-9"
+            className="section-band-img section-band-img--16-9 media-feather-all media-grade"
           />
 
           {/* Filter bar */}

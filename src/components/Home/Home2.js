@@ -47,7 +47,7 @@ function Home2() {
                 webp={myImgWebp}
                 width={1025}
                 height={873}
-                className="img-fluid profile-photo-img"
+                className="img-fluid profile-photo-img media-grade"
                 alt="Viraj Bulugahapitiya"
               />
             </div>

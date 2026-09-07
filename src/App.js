@@ -19,6 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/tokens.css";
 import "./styles/fonts.css";
 import "./styles/typography.css";
+import "./styles/media.css";
 import "./style.css";
 
 // Code-split every route but Home so / only ships the JS it needs

@@ -8,7 +8,6 @@
   margin-top: 120px;
   margin-bottom: 120px;
   aspect-ratio: 2 / 1;
-  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -17,21 +16,28 @@
   }
 }
 
+/* Clips the parallax-shifted image; the caption sits outside this layer
+   so it can straddle the frame's bottom edge without being cut off. */
+.section-divider-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
 .section-divider-img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.82;
-  box-shadow:
-    inset 0 96px 64px -48px var(--bg),
-    inset 0 -96px 64px -48px var(--bg);
 }
 
+/* Half on the photograph, half on the page — sits astride the feathered
+   lower-left edge rather than fully inside the image. */
 .section-divider-caption {
   position: absolute;
   left: 24px;
-  bottom: 24px;
+  bottom: -10px;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.22em;

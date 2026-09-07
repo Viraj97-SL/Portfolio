@@ -22,21 +22,23 @@ function SectionDivider({ avif, webp, width, height, caption }) {
 
   return (
     <div ref={ref} className="section-divider" aria-hidden="true">
-      <picture>
-        <source srcSet={avif} type="image/avif" />
-        <source srcSet={webp} type="image/webp" />
-        <motion.img
-          src={webp}
-          alt=""
-          width={width}
-          height={height}
-          loading="lazy"
-          fetchpriority="low"
-          decoding="async"
-          className="section-divider-img"
-          style={prefersReducedMotion ? undefined : { y }}
-        />
-      </picture>
+      <div className="section-divider-frame">
+        <picture>
+          <source srcSet={avif} type="image/avif" />
+          <source srcSet={webp} type="image/webp" />
+          <motion.img
+            src={webp}
+            alt=""
+            width={width}
+            height={height}
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+            className="section-divider-img media-feather-y media-grade"
+            style={prefersReducedMotion ? undefined : { y }}
+          />
+        </picture>
+      </div>
       {caption && <p className="section-divider-caption">{caption}</p>}
     </div>
   );

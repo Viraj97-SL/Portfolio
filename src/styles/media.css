@@ -1,0 +1,35 @@
+/* Photographic image treatment — feathered edges instead of hard boxes,
+   and one unified colour grade so every photo reads as part of the same
+   printed-plate set rather than individually inserted UI assets.
+   Masks are background-agnostic, unlike the inset box-shadow approach
+   they replace (which only worked when the shadow colour exactly
+   matched the surrounding background). */
+
+/* Full-bleed divider: dissolves top and bottom */
+.media-feather-y {
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%, #000 14%, #000 86%, transparent 100%);
+  mask-image: linear-gradient(to bottom,
+    transparent 0%, #000 14%, #000 86%, transparent 100%);
+}
+
+/* Page header: hard at top under the nav, dissolves at bottom */
+.media-feather-bottom {
+  -webkit-mask-image: linear-gradient(to bottom,
+    #000 0%, #000 62%, transparent 100%);
+  mask-image: linear-gradient(to bottom,
+    #000 0%, #000 62%, transparent 100%);
+}
+
+/* Inline image beside text: dissolves on all four edges */
+.media-feather-all {
+  -webkit-mask-image: radial-gradient(ellipse 120% 120% at 50% 50%,
+    #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 120% 120% at 50% 50%,
+    #000 55%, transparent 100%);
+}
+
+/* Unified grade. EVERY photographic image gets this. */
+.media-grade {
+  filter: saturate(0.72) contrast(1.04) brightness(0.88);
+}

@@ -26,7 +26,7 @@ function ProjectCards(props) {
           width={image.width}
           height={image.height}
           alt="card-img"
-          className="card-img-top"
+          className="card-img-top media-grade"
         />
       ) : (
         <div

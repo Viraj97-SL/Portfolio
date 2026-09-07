@@ -37,7 +37,7 @@ function Home() {
           width={1264}
           height={848}
           alt=""
-          className="hero-bg"
+          className="hero-bg media-feather-bottom media-grade"
           loading="eager"
           fetchPriority="high"
         />

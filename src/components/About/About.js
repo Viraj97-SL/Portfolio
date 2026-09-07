@@ -46,7 +46,7 @@ function About() {
                 width={1200}
                 height={2150}
                 alt="A brass armillary sphere standing on aged oak, beside a stack of worn leather-bound books"
-                className="img-fluid"
+                className="img-fluid media-feather-all media-grade"
               />
             </Col>
           </Row>
@@ -60,7 +60,7 @@ function About() {
             width={1200}
             height={655}
             alt=""
-            className="section-band-img"
+            className="section-band-img media-feather-all media-grade"
           />
           <Techstack />
 
@@ -74,7 +74,7 @@ function About() {
             width={1200}
             height={655}
             alt=""
-            className="section-band-img"
+            className="section-band-img media-feather-all media-grade"
           />
           <Toolstack />
 
