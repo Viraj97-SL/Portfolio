@@ -21,7 +21,7 @@ function HomeAbout() {
           About <span>Me</span>
         </h2>
 
-        <Row className="align-items-center ha-row">
+        <Row className="align-items-stretch ha-row">
           {/* Text card */}
           <Col lg={6} md={12} className="ha-text-col">
             <div className="ha-card">

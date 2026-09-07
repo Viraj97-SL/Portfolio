@@ -24,7 +24,7 @@ function About() {
 
       <Container fluid className="about-section">
         <Container>
-          <Row style={{ justifyContent: "center", padding: "10px" }}>
+          <Row className="align-items-stretch" style={{ justifyContent: "center", padding: "10px" }}>
             <Col
               md={7}
               style={{
@@ -37,17 +37,19 @@ function About() {
             </Col>
             <Col
               md={5}
-              style={{ paddingTop: "120px", paddingBottom: "50px" }}
+              style={{ paddingTop: "30px", paddingBottom: "50px", display: "flex" }}
               className="about-img"
             >
-              <Picture
-                avif={laptopImgAvif}
-                webp={laptopImgWebp}
-                width={1200}
-                height={2150}
-                alt="A brass armillary sphere standing on aged oak, beside a stack of worn leather-bound books"
-                className="img-fluid media-feather-all media-grade media-breakout-right"
-              />
+              <div className="about-img-frame">
+                <Picture
+                  avif={laptopImgAvif}
+                  webp={laptopImgWebp}
+                  width={1200}
+                  height={2150}
+                  alt="A brass armillary sphere standing on aged oak, beside a stack of worn leather-bound books"
+                  className="img-fluid media-feather-all media-grade media-breakout-right"
+                />
+              </div>
             </Col>
           </Row>
           <h1 className="project-heading">What I work with</h1>

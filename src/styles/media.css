@@ -5,28 +5,33 @@
    they replace (which only worked when the shadow colour exactly
    matched the surrounding background). */
 
-/* Full-bleed divider: dissolves top and bottom */
+/* Full-bleed divider: dissolves top and bottom. Fade zones are wide
+   (38% each) — a narrow fade reads as a hard edge on any photo whose
+   border pixels are already dark, which most of these are. */
 .media-feather-y {
   -webkit-mask-image: linear-gradient(to bottom,
-    transparent 0%, #000 14%, #000 86%, transparent 100%);
+    transparent 0%, #000 38%, #000 62%, transparent 100%);
   mask-image: linear-gradient(to bottom,
-    transparent 0%, #000 14%, #000 86%, transparent 100%);
+    transparent 0%, #000 38%, #000 62%, transparent 100%);
 }
 
 /* Page header: hard at top under the nav, dissolves at bottom */
 .media-feather-bottom {
   -webkit-mask-image: linear-gradient(to bottom,
-    #000 0%, #000 62%, transparent 100%);
+    #000 0%, #000 32%, transparent 100%);
   mask-image: linear-gradient(to bottom,
-    #000 0%, #000 62%, transparent 100%);
+    #000 0%, #000 32%, transparent 100%);
 }
 
-/* Inline image beside text: dissolves on all four edges */
+/* Inline image beside text: dissolves on all four edges. Small ending
+   shape + early black stop so the fade is unmistakable, not a subtle
+   vignette — the box's own edges/corners must land in fully-transparent
+   territory, not just "on their way there". */
 .media-feather-all {
-  -webkit-mask-image: radial-gradient(ellipse 120% 120% at 50% 50%,
-    #000 55%, transparent 100%);
-  mask-image: radial-gradient(ellipse 120% 120% at 50% 50%,
-    #000 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%,
+    #000 25%, transparent 92%);
+  mask-image: radial-gradient(ellipse 65% 65% at 50% 50%,
+    #000 25%, transparent 92%);
 }
 
 /* Unified grade. EVERY photographic image gets this. */
