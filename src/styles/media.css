@@ -33,3 +33,40 @@
 .media-grade {
   filter: saturate(0.72) contrast(1.04) brightness(0.88);
 }
+
+/* Pulls the section that follows a full-bleed image up into its
+   feathered zone so the image bleeds behind the text instead of
+   stacking image/gap/text/gap/image with zero overlap. Applied
+   directly to every section that immediately follows a PageHeader,
+   the Home hero, or a SectionDivider. */
+/* Inline image beside text breaks out of the text column on its outer
+   (right) edge instead of being boxed inside it. Below 768px it goes
+   full-bleed rather than breaking out by a fixed amount that would
+   overrun a narrow viewport. */
+.media-breakout-right {
+  width: calc(100% + 4rem);
+  max-width: calc(100% + 4rem);
+  margin-right: -4rem;
+}
+
+@media (max-width: 767px) {
+  .media-breakout-right {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+.logo-cloud-section,   /* follows the Home hero */
+.bento-section,        /* follows the seam divider */
+.about-section,        /* follows the About PageHeader */
+.project-section,      /* follows the Projects PageHeader, and again follows the pipeline divider */
+.resume-section,       /* follows the Résumé PageHeader */
+.cert-section,         /* follows the Certificates PageHeader */
+.ach-section,          /* follows the Achievements PageHeader */
+.contact-section {     /* follows the Contact PageHeader */
+  margin-top: clamp(-9rem, -12vw, -5rem) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}

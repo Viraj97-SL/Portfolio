@@ -46,7 +46,7 @@ function About() {
                 width={1200}
                 height={2150}
                 alt="A brass armillary sphere standing on aged oak, beside a stack of worn leather-bound books"
-                className="img-fluid media-feather-all media-grade"
+                className="img-fluid media-feather-all media-grade media-breakout-right"
               />
             </Col>
           </Row>
