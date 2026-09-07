@@ -7,6 +7,8 @@ import Picture from "../common/Picture";
 import PageHeader from "../common/PageHeader";
 import headerAvif from "../../Assets/PageHeaders/achievements.avif";
 import headerWebp from "../../Assets/PageHeaders/achievements.webp";
+import laurelAvif from "../../Assets/New_photos/Achievements 1212.avif";
+import laurelWebp from "../../Assets/New_photos/Achievements 1212.webp";
 
 import hackathon1Avif from "../../Assets/Projects/UKOMAIN26_Hackathon1.avif";
 import hackathon1Webp from "../../Assets/Projects/UKOMAIN26_Hackathon1.webp";
@@ -267,6 +269,15 @@ function Achievements() {
 
       <Container fluid className="ach-section">
         <Container>
+
+          <Picture
+            avif={laurelAvif}
+            webp={laurelWebp}
+            width={1200}
+            height={655}
+            alt=""
+            className="section-band-img section-band-img--16-9"
+          />
 
           <div className="ach-grid">
             {achievements.map((item) => (

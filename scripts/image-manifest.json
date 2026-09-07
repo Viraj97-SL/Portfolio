@@ -1,118 +1,50 @@
 {
-  "home-main": {
-    "width": 1000,
-    "height": 1000
-  },
-  "about": {
-    "width": 1000,
-    "height": 689
-  },
-  "profile-photo": {
-    "width": 1025,
-    "height": 873
-  },
-  "alzheimers": {
+  "ABout sec intro.jpg": {
     "width": 1200,
-    "height": 799
+    "height": 2150
   },
-  "cricoracle": {
+  "Achievements 1212.jpg": {
     "width": 1200,
-    "height": 800
+    "height": 655
   },
-  "ICML26_01": {
+  "Certifications.jpg": {
     "width": 1200,
-    "height": 900
+    "height": 655
   },
-  "ICML26_02": {
+  "Days i code.jpg": {
     "width": 1200,
-    "height": 1599
+    "height": 655
   },
-  "ICML26_03": {
+  "Home about.jpg": {
     "width": 1200,
-    "height": 1599
+    "height": 655
   },
-  "ICU Command Center-selection": {
+  "imG1.jpg": {
     "width": 1200,
-    "height": 675
+    "height": 805
   },
-  "JobFinder": {
+  "imG2.jpg": {
     "width": 1200,
-    "height": 675
+    "height": 805
   },
-  "MarketForge AI": {
+  "Pipeline.jpg": {
     "width": 1200,
-    "height": 675
+    "height": 593
   },
-  "MassifyX Global": {
+  "Research to production.jpg": {
     "width": 1200,
-    "height": 675
+    "height": 593
   },
-  "newsanalyst": {
+  "Scale.jpg": {
     "width": 1200,
-    "height": 800
+    "height": 593
   },
-  "pamorya": {
+  "Sec level professional skillset.jpg": {
     "width": 1200,
-    "height": 800
+    "height": 655
   },
-  "Python WS01": {
+  "tools i used.jpg": {
     "width": 1200,
-    "height": 900
-  },
-  "Python WS02": {
-    "width": 1200,
-    "height": 1200
-  },
-  "reposentinel": {
-    "width": 1200,
-    "height": 800
-  },
-  "sathchakra": {
-    "width": 1200,
-    "height": 799
-  },
-  "ScopeGuuard": {
-    "width": 1200,
-    "height": 675
-  },
-  "UHDS_01": {
-    "width": 541,
-    "height": 767
-  },
-  "UHDS_02": {
-    "width": 800,
-    "height": 1066
-  },
-  "UHDS_03": {
-    "width": 800,
-    "height": 1066
-  },
-  "UKOMAIN26_Hackathon1": {
-    "width": 1024,
-    "height": 768
-  },
-  "UKOMAIN26_Hackathon2": {
-    "width": 1200,
-    "height": 900
-  },
-  "UKOMAIN26_Hackathon3": {
-    "width": 1200,
-    "height": 865
-  },
-  "UKOMAIN26_Poster1": {
-    "width": 800,
-    "height": 1066
-  },
-  "UKOMAIN26_poster2": {
-    "width": 800,
-    "height": 1066
-  },
-  "UKOMAIN26_poster3": {
-    "width": 1200,
-    "height": 900
-  },
-  "VisionAID": {
-    "width": 1200,
-    "height": 675
+    "height": 655
   }
 }

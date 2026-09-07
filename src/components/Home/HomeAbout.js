@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ImPointRight } from "react-icons/im";
-import laptopImgAvif from "../../Assets/about.avif";
-import laptopImgWebp from "../../Assets/about.webp";
+import laptopImgAvif from "../../Assets/New_photos/Home about.avif";
+import laptopImgWebp from "../../Assets/New_photos/Home about.webp";
 import Picture from "../common/Picture";
 
 const highlights = [
@@ -67,9 +67,9 @@ function HomeAbout() {
               <Picture
                 avif={laptopImgAvif}
                 webp={laptopImgWebp}
-                width={1000}
-                height={689}
-                alt="about"
+                width={1200}
+                height={655}
+                alt="Overhead flatlay of a brass sextant, an open notebook, and drafting instruments on linen"
                 className="img-fluid ha-img"
               />
             </div>

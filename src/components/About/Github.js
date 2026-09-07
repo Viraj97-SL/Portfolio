@@ -1,6 +1,9 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
+import Picture from "../common/Picture";
+import ledgerAvif from "../../Assets/New_photos/Days i code.avif";
+import ledgerWebp from "../../Assets/New_photos/Days i code.webp";
 
 // Empty cells must read darker than the page background, not lighter —
 // level0 is --bg-elevated (lighter than --bg-base) precisely because an
@@ -25,6 +28,15 @@ function Github() {
       <h1 className="project-heading pb-4" style={{ paddingBottom: "20px" }}>
         Days I <strong className="text-accent">Code</strong>
       </h1>
+      <Picture
+        avif={ledgerAvif}
+        webp={ledgerWebp}
+        width={1200}
+        height={655}
+        alt=""
+        className="section-band-img section-band-img--16-9"
+        style={{ maxWidth: 900, margin: "0 auto 2rem" }}
+      />
       <GitHubCalendar
         username="Viraj97-SL"
         blockSize={30}

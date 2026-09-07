@@ -2,8 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import PageHeader from "../common/PageHeader";
+import SectionDivider from "../common/SectionDivider";
 import headerAvif from "../../Assets/PageHeaders/projects.avif";
 import headerWebp from "../../Assets/PageHeaders/projects.webp";
+import pipelineAvif from "../../Assets/New_photos/Pipeline.avif";
+import pipelineWebp from "../../Assets/New_photos/Pipeline.webp";
 
 // Importing your custom generated AI visual assets (AVIF primary, WebP fallback)
 import cricoracleAvif from "../../Assets/Projects/cricoracle.avif";
@@ -114,6 +117,22 @@ function Projects() {
               demoLink="https://apparel-agent-frontend.vercel.app"
             />
           </Col>
+
+        </Row>
+      </Container>
+      </Container>
+
+      <SectionDivider
+        avif={pipelineAvif}
+        webp={pipelineWebp}
+        width={1200}
+        height={593}
+        caption="NINE STAGES"
+      />
+
+      <Container fluid className="project-section">
+      <Container>
+        <Row style={{ justifyItems: "center", paddingBottom: "10px" }}>
 
           {/* ── Rest, ordered by depth / tech / impact ── */}
 

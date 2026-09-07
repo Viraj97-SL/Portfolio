@@ -6,8 +6,13 @@ import HomeAbout from "./HomeAbout";
 import LogoCloud from "../LogoCloud/LogoCloud";
 import BentoGrid from "../Bento/BentoGrid";
 import Picture from "../common/Picture";
+import SectionDivider from "../common/SectionDivider";
 import heroAvif from "../../Assets/hero-orrery.avif";
 import heroWebp from "../../Assets/hero-orrery.webp";
+import seamAvif from "../../Assets/New_photos/Research to production.avif";
+import seamWebp from "../../Assets/New_photos/Research to production.webp";
+import scaleAvif from "../../Assets/New_photos/Scale.avif";
+import scaleWebp from "../../Assets/New_photos/Scale.webp";
 import "./hero.css";
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -72,8 +77,23 @@ function Home() {
       {/* ══════════════════ ABOUT PREVIEW ══════════════════ */}
       <HomeAbout />
 
+      <SectionDivider
+        avif={seamAvif}
+        webp={seamWebp}
+        width={1200}
+        height={593}
+        caption="RESEARCH / PRODUCTION"
+      />
+
       {/* ══════════════════ BENTO GRID ══════════════════ */}
       <BentoGrid />
+
+      <SectionDivider
+        avif={scaleAvif}
+        webp={scaleWebp}
+        width={1200}
+        height={593}
+      />
     </section>
   );
 }

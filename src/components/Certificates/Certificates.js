@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import PageHeader from "../common/PageHeader";
+import Picture from "../common/Picture";
 import headerAvif from "../../Assets/PageHeaders/certificates.avif";
 import headerWebp from "../../Assets/PageHeaders/certificates.webp";
+import parchmentAvif from "../../Assets/New_photos/Certifications.avif";
+import parchmentWebp from "../../Assets/New_photos/Certifications.webp";
 
 // ─────────────────────────────────────────────────────────────────
 // ➕  Add your certificates here.
@@ -116,6 +119,15 @@ function Certificates() {
 
       <Container fluid className="cert-section">
         <Container>
+          <Picture
+            avif={parchmentAvif}
+            webp={parchmentWebp}
+            width={1200}
+            height={593}
+            alt=""
+            className="section-band-img section-band-img--16-9"
+          />
+
           {/* Filter bar */}
           <div className="cert-filter-bar">
             {categories.map((cat) => (

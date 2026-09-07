@@ -1571,3 +1571,22 @@ html {
 
   .bento-stat-value { font-size: 2.2rem; }
 }
+
+/* Section-level wide-band imagery — decorative context photos placed above
+   a content grid (Skillset, Tools) or within a section body (Days I Code,
+   Achievements, Certificates). Not exhibits — set back visually so they
+   read as atmosphere for the grid/content beneath, not competing content. */
+.section-band-img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  margin: 0 0 2rem;
+  display: block;
+  opacity: 0.9;
+}
+.section-band-img--16-9 { aspect-ratio: 16 / 9; }
+
+@media (max-width: 768px) {
+  .section-band-img { aspect-ratio: 16 / 9; }
+}

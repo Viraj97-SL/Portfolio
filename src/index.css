@@ -17,4 +17,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* SectionDivider breaks out with width:100vw, which is fractionally wider
+     than the visual viewport whenever a vertical scrollbar is present —
+     clip that sliver here instead of letting it show as horizontal scroll. */
+  overflow-x: clip;
 }
