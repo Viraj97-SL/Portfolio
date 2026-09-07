@@ -18,8 +18,8 @@ import toolsBandWebp from "../../Assets/New_photos/tools i used.webp";
 function About() {
   return (
     <>
-      <PageHeader label="Who I Am" avif={headerAvif} webp={headerWebp}>
-        Know Who <span className="text-accent">I Am</span>
+      <PageHeader label="01 · About" avif={headerAvif} webp={headerWebp}>
+        Field notes
       </PageHeader>
 
       <Container fluid className="about-section">
@@ -50,9 +50,7 @@ function About() {
               />
             </Col>
           </Row>
-          <h1 className="project-heading">
-            Professional <strong className="text-accent">Skillset </strong>
-          </h1>
+          <h1 className="project-heading">What I work with</h1>
 
           <Picture
             avif={skillsetBandAvif}
@@ -63,10 +61,6 @@ function About() {
             className="section-band-img media-feather-all media-grade"
           />
           <Techstack />
-
-          <h1 className="project-heading">
-            <strong className="text-accent">Tools</strong> I use
-          </h1>
 
           <Picture
             avif={toolsBandAvif}

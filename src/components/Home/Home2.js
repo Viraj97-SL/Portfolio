@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import myImgAvif from "../../Assets/profile-photo.avif";
 import myImgWebp from "../../Assets/profile-photo.webp";
 import Picture from "../common/Picture";
@@ -12,33 +13,18 @@ function Home2() {
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="text-accent"> INTRODUCE </span> MYSELF
-            </h1>
-            <p className="home-about-body">
-              I am an <b className="text-accent">AI Engineer</b>, <b className="text-accent">Machine Learning Engineer</b>, and <b className="text-accent">Data Scientist</b> — bridging the full spectrum from raw data pipelines to deployed autonomous agent systems.
-              <br />
-              <br />I am fluent in end-to-end ML stacks including
-              <i>
-                <b className="text-accent"> Python, PyTorch, scikit-learn, SQL, and FastAPI </b>
-              </i>
-              — covering everything from statistical modelling to production LLM orchestration.
-              <br />
-              <br />
-              My core interests span building &nbsp;
-              <i>
-                <b className="text-accent">Autonomous Multi-Agent Architectures (LangGraph)</b>
-              </i>
-              , training and deploying{" "}
-              <b className="text-accent">Deep Learning models</b> for Computer Vision &amp; NLP, and designing scalable{" "}
-              <b className="text-accent">Data Engineering pipelines.</b>
-              <br />
-              <br />
-              Whenever possible, I close the gap between research and production by deploying full-stack AI systems with <b className="text-accent">Docker, GCP,</b> and
-              <i>
-                <b className="text-accent"> React.</b>
-              </i>
+            <p className="section-index">
+              <span className="section-index-num">01</span>
+              <span className="section-index-label">About</span>
             </p>
+            <h1 style={{ fontSize: "2.6em" }}>Between the paper and the pipeline</h1>
+            <p className="home-about-body">
+              Most AI work sits on one side of a line. Research that never ships, or
+              products that never asked whether the model was right. I have spent the
+              last few years working on both sides of it, and the interesting problems
+              are almost always at the seam.
+            </p>
+            <Link to="/about" className="hero-cta-outline">Read more →</Link>
           </Col>
           <Col md={4} className="myAvtar">
             <div className="profile-photo-frame">

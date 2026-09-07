@@ -59,6 +59,32 @@ a:hover {
   color: var(--dim);
 }
 
+/* Section numbering: two-digit index in the display serif, immediately
+   left of a 10px uppercase label. Used at the top of each major section
+   (01 About, 02 Work, 04 Résumé, 05 Signals, 06 Contact...). */
+.section-index {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-index-num {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--dim);
+}
+
+.section-index-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--dim);
+}
+
 /* Replaces the old .purple utility — same role (inline accent-coloured
    text/emphasis), tied to the accent token instead of a hardcoded hex. */
 .text-accent {

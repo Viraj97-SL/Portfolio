@@ -26,16 +26,11 @@ function HomeAbout() {
           <Col lg={6} md={12} className="ha-text-col">
             <div className="ha-card">
               <p className="ha-text">
-                Hi, I'm{" "}
-                <span className="text-accent">Viraj Bulugahapitiya</span> — an{" "}
-                <span className="text-accent">AI Engineer</span>,{" "}
-                <span className="text-accent">ML Engineer</span> and{" "}
-                <span className="text-accent">Data Scientist</span> based in{" "}
-                <span className="text-accent">London, UK</span>.
+                Hi, I'm Viraj Bulugahapitiya — an <em>AI Engineer</em>,{" "}
+                <em>ML Engineer</em> and <em>Data Scientist</em> based in London, UK.
               </p>
               <p className="ha-text">
-                Currently completing my{" "}
-                <span className="text-accent">MSc in Data Science</span> at the
+                Currently completing my <em>MSc in Data Science</em> at the
                 University of Hertfordshire, I specialise in autonomous
                 multi-agent architectures, production LLM deployment, and
                 scalable data engineering pipelines.
@@ -55,7 +50,7 @@ function HomeAbout() {
                   Full Profile →
                 </Link>
                 <Link to="/contact" className="hero-cta-primary">
-                  Hire Me
+                  Get in touch
                 </Link>
               </div>
             </div>
