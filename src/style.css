@@ -777,7 +777,7 @@
   align-items: center;
 }
 
-/* ---- Three plain facts (replaces the old counter/bento grid) ---- */
+/* ---- Bento Grid Section (restored — key metrics/stats grid) ---- */
 .bento-section {
   padding: 90px 0;
   position: relative;
@@ -785,54 +785,144 @@
   border-top: 1px solid var(--line);
 }
 
-.bento-facts {
+.bento-section-title {
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.bento-section-title span {
+  color: var(--accent);
+}
+
+.bento-section-subtitle {
+  color: var(--dim);
+  text-align: center;
+  font-size: 0.66rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.bento-tile-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.75;
+  margin-bottom: 0.6rem;
+}
+
+.bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 0.9rem;
   margin-top: 2.5rem;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
 }
 
-.bento-fact {
-  padding: 2.25rem 1.75rem;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  transition: background 0.25s ease;
+.bento-tile {
+  background: rgb(from var(--bg-base) r g b / 0.9);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.6rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.bento-tile:hover {
+  border-color: rgb(from var(--accent) r g b / 0.35);
+  transform: translateY(-3px);
+}
+
+.bento-tile-link {
   display: block;
   text-decoration: none !important;
+  cursor: pointer;
 }
 
-.bento-fact:hover {
-  background: rgb(from var(--bg-elevated) r g b / 0.5);
-}
+.bento-span-2 { grid-column: span 2; }
+.bento-span-3 { grid-column: span 3; }
+.bento-span-4 { grid-column: span 4; }
 
-.bento-fact-link:hover .bento-fact-title { color: var(--accent); }
+.bento-stat-icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
 
-.bento-fact-icon {
-  font-size: 1.3rem;
+.bento-stat-value {
+  font-size: 3rem;
+  font-weight: 800;
   color: var(--accent);
-  opacity: 0.85;
-  margin-bottom: 1rem;
+  line-height: 1;
 }
 
-.bento-fact-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: var(--text);
-  margin-bottom: 0.6rem;
-  transition: color 0.2s ease;
-}
-
-.bento-fact-detail {
+.bento-stat-label {
   color: var(--dim);
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 0.45rem;
+}
+
+.bento-bio-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.65rem;
+}
+
+.bento-bio-text {
+  color: var(--dim);
+  font-size: 0.84rem;
+  line-height: 1.78;
+  margin-bottom: 0;
+}
+
+.bento-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgb(from var(--accent) r g b / 0.07);
+  border: 1px solid rgb(from var(--accent) r g b / 0.2);
+  border-radius: 20px;
+  color: var(--accent);
+  font-size: 0.68rem;
+  margin: 3px;
+}
+
+.bento-status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--success);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.bento-status-text { color: var(--success); font-size: 0.84rem; font-weight: 600; }
+
+.bento-gh-link {
+  color: var(--accent) !important;
+  font-size: 0.8rem;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.85rem;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.bento-gh-link:hover { opacity: 1; }
+
+@media (max-width: 991px) {
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .bento-span-3, .bento-span-4 { grid-column: span 2; }
 }
 
 @media (max-width: 767px) {
-  .bento-facts { grid-template-columns: 1fr; }
+  .bento-section { padding: 60px 0; }
+  .bento-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+  .bento-span-2, .bento-span-3, .bento-span-4 { grid-column: span 1; }
+  .bento-stat-value { font-size: 2.4rem; }
 }
 
 /* ---- About Page fixes ---- */
@@ -1412,12 +1502,17 @@
    Achievements, Certificates). Not exhibits — set back visually so they
    read as atmosphere for the grid/content beneath, not competing content. */
 .section-band-img {
-  width: 100%;
+  /* Full-bleed like the page header above it, instead of sitting inset
+     inside the content column with wide empty gutters either side.
+     max-width:none overrides the global `img { max-width:100% }` rule
+     (index.css), which was silently capping this at the Bootstrap
+     container's width despite width:100vw. */
+  width: 100vw;
+  max-width: none;
   height: auto;
-  margin: 0 0 2rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 0;
+  margin-bottom: 2rem;
   display: block;
-}
-
-@media (max-width: 768px) {
-  .section-band-img { aspect-ratio: 16 / 9; }
 }
