@@ -2,19 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-  AiOutlineMail,
-} from "react-icons/ai";
-import { CgFileDocument } from "react-icons/cg";
-import { BiAward } from "react-icons/bi";
-import { FaTrophy } from "react-icons/fa";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -61,56 +49,38 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                About
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
-                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} />{" "}
                 Projects
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={Link} to="/achievements" onClick={() => updateExpanded(false)}>
-                <FaTrophy style={{ marginBottom: "2px" }} /> Achievements
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link as={Link} to="/certificates" onClick={() => updateExpanded(false)}>
-                <BiAward style={{ marginBottom: "2px" }} /> Certificates
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link as={Link} to="/contact" onClick={() => updateExpanded(false)}>
-                <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
+              <Nav.Link as={Link} to="/signals" onClick={() => updateExpanded(false)}>
+                Signals
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link as={Link} to="/resume" onClick={() => updateExpanded(false)}>
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                Resume
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/Viraj97-SL"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/contact" onClick={() => updateExpanded(false)}>
+                Contact
+              </Nav.Link>
             </Nav.Item>
 
           </Nav>

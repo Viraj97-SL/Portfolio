@@ -63,8 +63,9 @@
 .about-section,        /* follows the About PageHeader */
 .project-section,      /* follows the Projects PageHeader, and again follows the pipeline divider */
 .resume-section,       /* follows the Résumé PageHeader */
-.cert-section,         /* follows the Certificates PageHeader */
-.ach-section,          /* follows the Achievements PageHeader */
+.ach-section,          /* follows the Signals PageHeader — .cert-section deliberately excluded:
+                          it now sits second within Signals, after .ach-section's own content,
+                          not directly after an image, so it must not carry the same negative pull */
 .contact-section {     /* follows the Contact PageHeader */
   margin-top: clamp(-9rem, -12vw, -5rem) !important;
   position: relative !important;

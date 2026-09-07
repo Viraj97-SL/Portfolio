@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Container } from "react-bootstrap";
-import { FaTrophy, FaMedal, FaChalkboardTeacher, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaTrophy, FaMedal, FaChalkboardTeacher, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from "react-icons/fa";
 import { BsFileEarmarkText, BsImages } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import Picture from "../common/Picture";
@@ -9,6 +9,8 @@ import headerAvif from "../../Assets/PageHeaders/achievements.avif";
 import headerWebp from "../../Assets/PageHeaders/achievements.webp";
 import laurelAvif from "../../Assets/New_photos/Achievements 1212.avif";
 import laurelWebp from "../../Assets/New_photos/Achievements 1212.webp";
+import parchmentAvif from "../../Assets/New_photos/Certifications.avif";
+import parchmentWebp from "../../Assets/New_photos/Certifications.webp";
 
 import hackathon1Avif from "../../Assets/Projects/UKOMAIN26_Hackathon1.avif";
 import hackathon1Webp from "../../Assets/Projects/UKOMAIN26_Hackathon1.webp";
@@ -136,6 +138,22 @@ const achievements = [
   },
 ];
 
+// ─────────────────────────────────────────────────────────────────
+// ➕  Add your certificates here.
+// ─────────────────────────────────────────────────────────────────
+const certificates = [
+  { id: 1, title: "Machine Learning Specialization", issuer: "DeepLearning.AI / Stanford University", date: "2023", category: "ML / AI", credentialUrl: "#", icon: "🧠", color: "var(--accent)" },
+  { id: 2, title: "TensorFlow Developer Certificate", issuer: "Google", date: "2023", category: "ML / AI", credentialUrl: "#", icon: "🔥", color: "var(--warning)" },
+  { id: 3, title: "Deep Learning Specialization", issuer: "DeepLearning.AI", date: "2023", category: "ML / AI", credentialUrl: "#", icon: "🤖", color: "var(--text-secondary)" },
+  { id: 4, title: "Google Cloud Professional Data Engineer", issuer: "Google Cloud", date: "2024", category: "Cloud", credentialUrl: "#", icon: "☁️", color: "var(--accent-dim)" },
+  { id: 5, title: "AWS Certified Machine Learning – Specialty", issuer: "Amazon Web Services", date: "2024", category: "Cloud", credentialUrl: "#", icon: "⚡", color: "var(--warning)" },
+  { id: 6, title: "Apache Airflow Fundamentals", issuer: "Astronomer", date: "2024", category: "Data Engineering", credentialUrl: "#", icon: "🌬️", color: "var(--accent-bright)" },
+  { id: 7, title: "Data Engineering with Python", issuer: "DataCamp", date: "2023", category: "Data Engineering", credentialUrl: "#", icon: "🗄️", color: "var(--success)" },
+  { id: 8, title: "LangChain & LLM Applications", issuer: "DeepLearning.AI", date: "2024", category: "ML / AI", credentialUrl: "#", icon: "🔗", color: "var(--danger)" },
+];
+
+const categories = ["All", "ML / AI", "Cloud", "Data Engineering"];
+
 function Lightbox({ images, index, onClose, onPrev, onNext }) {
   useEffect(() => {
     function handleKey(e) {
@@ -243,8 +261,9 @@ function AchievementCard({ item, onOpenGallery }) {
   );
 }
 
-function Achievements() {
+function Signals() {
   const [gallery, setGallery] = useState(null); // { images, index }
+  const [activeFilter, setActiveFilter] = useState("All");
 
   const openGallery = useCallback((images) => setGallery({ images, index: 0 }), []);
   const closeGallery = useCallback(() => setGallery(null), []);
@@ -257,20 +276,23 @@ function Achievements() {
     []
   );
 
+  const filteredCertificates =
+    activeFilter === "All" ? certificates : certificates.filter((c) => c.category === activeFilter);
+
   return (
     <section>
       <PageHeader
-        label="Wins & Recognition"
-        description="Hackathon wins, poster presentations, and workshops from the past year."
+        label="05 · Signals"
+        description="Evidence, in reverse chronological order."
         avif={headerAvif}
         webp={headerWebp}
       >
-        My <span className="text-accent">Achievements</span>
+        Certificates, talks and hackathons
       </PageHeader>
 
+      {/* ── Achievements (newer dates first) ── */}
       <Container fluid className="ach-section">
         <Container>
-
           <Picture
             avif={laurelAvif}
             webp={laurelWebp}
@@ -280,9 +302,70 @@ function Achievements() {
             className="section-band-img section-band-img--16-9 media-feather-all media-grade"
           />
 
+          <p className="label">Hackathons, talks &amp; workshops</p>
+
           <div className="ach-grid">
             {achievements.map((item) => (
               <AchievementCard key={item.id} item={item} onOpenGallery={openGallery} />
+            ))}
+          </div>
+        </Container>
+      </Container>
+
+      {/* ── Certificates ── */}
+      <Container fluid className="cert-section">
+        <Container>
+          <Picture
+            avif={parchmentAvif}
+            webp={parchmentWebp}
+            width={1200}
+            height={593}
+            alt=""
+            className="section-band-img section-band-img--16-9 media-feather-all media-grade"
+          />
+
+          <p className="label">Certificates</p>
+
+          <div className="cert-filter-bar">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`cert-filter-btn${activeFilter === cat ? " active" : ""}`}
+                onClick={() => setActiveFilter(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          <div className="cert-grid">
+            {filteredCertificates.map((cert) => (
+              <div
+                key={cert.id}
+                className="cert-card"
+                style={{ "--cert-color": cert.color }}
+              >
+                <div className="cert-icon-wrap">{cert.icon}</div>
+                <div className="cert-badge">{cert.category}</div>
+                <h4 className="cert-title">{cert.title}</h4>
+                <p className="cert-issuer">{cert.issuer}</p>
+                <p className="cert-date">Issued {cert.date}</p>
+                {cert.credentialUrl !== "#" ? (
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cert-link"
+                  >
+                    View Credential&nbsp;
+                    <FaExternalLinkAlt style={{ fontSize: "0.65rem" }} />
+                  </a>
+                ) : (
+                  <span className="cert-link" style={{ opacity: 0.35, cursor: "default" }}>
+                    Credential link coming soon
+                  </span>
+                )}
+              </div>
             ))}
           </div>
         </Container>
@@ -301,4 +384,4 @@ function Achievements() {
   );
 }
 
-export default Achievements;
+export default Signals;

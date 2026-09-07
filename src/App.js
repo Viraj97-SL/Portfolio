@@ -29,8 +29,7 @@ const About = lazy(() => import("./components/About/About"));
 const Projects = lazy(() => import("./components/Projects/Projects"));
 const Resume = lazy(() => import("./components/Resume/ResumeNew"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
-const Certificates = lazy(() => import("./components/Certificates/Certificates"));
-const Achievements = lazy(() => import("./components/Achievements/Achievements"));
+const Signals = lazy(() => import("./components/Signals/Signals"));
 
 function App() {
   return (
@@ -46,8 +45,10 @@ function App() {
             <Route path="/about"        element={<About />} />
             <Route path="/resume"       element={<Resume />} />
             <Route path="/contact"      element={<Contact />} />
-            <Route path="/certificates" element={<Certificates />} />
-            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/signals"      element={<Signals />} />
+            {/* Achievements + Certificates merged into /signals */}
+            <Route path="/achievements" element={<Navigate to="/signals" replace />} />
+            <Route path="/certificates" element={<Navigate to="/signals" replace />} />
             <Route path="*"             element={<Navigate to="/" />} />
           </Routes>
         </Suspense>

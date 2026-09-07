@@ -27,14 +27,14 @@
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: oklch(from var(--surface) l c h / 0.66) !important;
+  background-color: var(--bg) !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
-  backdrop-filter: blur(15px) !important;
+  box-shadow: 0 1px 0 var(--line) !important;
 }
 
 .navbar {
   position: fixed !important;
+  background-color: var(--bg) !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
@@ -574,28 +574,6 @@
   100% {
     transform: scale(1);
   }
-}
-
-.fork-btn {
-  font-size: 1.1em !important;
-  padding-top: 10px !important;
-}
-
-.fork-btn-inner {
-  line-height: 1.4em !important;
-  background-color: color-mix(in oklch, var(--accent) 20%, var(--bg-surface)) !important;
-  padding: 0.25rem 1.1rem !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-}
-
-.fork-btn-inner:hover {
-  transform: translateY(-2px) !important;
-  background-color: rgb(from var(--accent) r g b / 0.53) !important;
-  border-color: rgb(from var(--accent) r g b / 0.53) !important;
-}
-.fork-btn-inner::after {
-  display: none !important;
 }
 
 

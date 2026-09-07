@@ -66,6 +66,10 @@
 
 /* Anchored sections (nav links, in-page jumps) shouldn't land under the
    fixed navbar. */
+html {
+  scroll-padding-top: var(--nav-height);
+}
+
 [id] {
   scroll-margin-top: calc(var(--nav-height) + 16px);
 }
