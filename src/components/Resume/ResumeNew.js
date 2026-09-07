@@ -19,14 +19,8 @@ function ResumeNew() {
 
   return (
     <div>
-      <PageHeader
-        n="04"
-        label="Résumé"
-        description="Full history, or download the PDF."
-        avif={headerAvif}
-        webp={headerWebp}
-      >
-        The short version
+      <PageHeader label="Curriculum Vitae" avif={headerAvif} webp={headerWebp}>
+        My <span className="text-accent">Resume</span>
       </PageHeader>
 
       <Container fluid className="resume-section">
@@ -38,7 +32,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV (PDF)
+            &nbsp;Download CV
           </Button>
         </Row>
 
@@ -57,7 +51,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV (PDF)
+            &nbsp;Download CV
           </Button>
         </Row>
       </Container>

@@ -6,9 +6,9 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
+  Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import NotFound from "./components/NotFound/NotFound";
 import Grain from "./components/Grain/Grain";
 import "./styles/tokens.css";
 import "./styles/fonts.css";
@@ -21,10 +21,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // single largest contributor to the shared bundle).
 const About = lazy(() => import("./components/About/About"));
 const Projects = lazy(() => import("./components/Projects/Projects"));
-const Research = lazy(() => import("./components/Research/Research"));
 const Resume = lazy(() => import("./components/Resume/ResumeNew"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
-const Signals = lazy(() => import("./components/Signals/Signals"));
+const Certificates = lazy(() => import("./components/Certificates/Certificates"));
+const Achievements = lazy(() => import("./components/Achievements/Achievements"));
 
 function App() {
   return (
@@ -35,14 +35,14 @@ function App() {
         <ScrollToTop />
         <Suspense fallback={null}>
           <Routes>
-            <Route path="/"          element={<Home />} />
-            <Route path="/project"   element={<Projects />} />
-            <Route path="/about"     element={<About />} />
-            <Route path="/research"  element={<Research />} />
-            <Route path="/resume"    element={<Resume />} />
-            <Route path="/signals"   element={<Signals />} />
-            <Route path="/contact"   element={<Contact />} />
-            <Route path="*"          element={<NotFound />} />
+            <Route path="/"             element={<Home />} />
+            <Route path="/project"      element={<Projects />} />
+            <Route path="/about"        element={<About />} />
+            <Route path="/resume"       element={<Resume />} />
+            <Route path="/contact"      element={<Contact />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="*"             element={<Navigate to="/" />} />
           </Routes>
         </Suspense>
         <Footer />

@@ -1,10 +1,9 @@
 import React from "react";
 import Picture from "./Picture";
-import SectionIndex from "./SectionIndex";
 import "./page-header.css";
 
 // Same scrim technique as the hero, at a 3:1 panoramic aspect ratio.
-function PageHeader({ n, label, children, description, avif, webp, objectPosition = "center" }) {
+function PageHeader({ label, children, description, avif, webp }) {
   return (
     <div className="page-header">
       {avif && webp ? (
@@ -15,7 +14,6 @@ function PageHeader({ n, label, children, description, avif, webp, objectPositio
           height={634}
           alt=""
           className="page-header-bg"
-          style={{ objectPosition }}
           loading="eager"
           fetchPriority="high"
         />
@@ -24,7 +22,7 @@ function PageHeader({ n, label, children, description, avif, webp, objectPositio
       )}
       <div className="page-header-scrim" />
       <div className="page-header-content">
-        {n && label && <SectionIndex n={n} label={label} />}
+        {label && <p className="label page-header-label">{label}</p>}
         <h1 className="page-header-title">{children}</h1>
         {description && <p className="page-header-description">{description}</p>}
       </div>

@@ -1,27 +1,43 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
-  const year = new Date().getFullYear();
+  let date = new Date();
+  let year = date.getFullYear();
   return (
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <p>Viraj Bulugahapitiya · London</p>
-        </Col>
-        <Col md="4" className="footer-body">
-          <a href="https://github.com/Viraj97-SL" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-          {" · "}
-          <a href="https://www.linkedin.com/in/viraj97" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-          {" · "}
-          <a href="mailto:amanthavirajavb@gmail.com">Email</a>
+          <h3>Designed and Developed by Viraj Bulugahapitiya</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <p>Built by hand. {year}.</p>
+          <h3>Copyright © {year} Viraj</h3>
+        </Col>
+        <Col md="4" className="footer-body">
+          <ul className="footer-icons">
+            <li className="social-icons">
+              <a
+                href="https://github.com/Viraj97-SL"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillGithub />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/viraj97"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
+          </ul>
         </Col>
       </Row>
     </Container>

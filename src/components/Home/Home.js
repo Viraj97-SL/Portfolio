@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import HomeIntro from "./HomeIntro";
-import HomeFacts from "./HomeFacts";
+import Home2 from "./Home2";
+import HomeAbout from "./HomeAbout";
+import LogoCloud from "../LogoCloud/LogoCloud";
+import BentoGrid from "../Bento/BentoGrid";
 import Picture from "../common/Picture";
 import heroAvif from "../../Assets/hero-orrery.avif";
 import heroWebp from "../../Assets/hero-orrery.webp";
@@ -38,7 +40,7 @@ function Home() {
 
         <div className="hero-content">
           <motion.p className="label hero-label" {...reveal(0)}>
-            AI / ML ENGINEER · LONDON
+            AI / ML ENGINEER — LONDON
           </motion.p>
 
           <motion.h1 className="hero-name" {...reveal(1)}>
@@ -46,29 +48,32 @@ function Home() {
           </motion.h1>
 
           <motion.p className="hero-statement" {...reveal(2)}>
-            I build at both ends of the stack. Research-grade deep
-            learning on one side, the agent infrastructure that puts it
-            into production on the other.
+            AI Engineer building autonomous multi-agent systems — from data
+            pipelines to production.
           </motion.p>
 
           <motion.div className="hero-cta-group" {...reveal(3)}>
             <Link to="/project" className="hero-cta-primary">
-              See the work
+              View My Work →
             </Link>
             <Link to="/contact" className="hero-cta-ghost">
-              Get in touch
+              Contact Me
             </Link>
           </motion.div>
         </div>
-
-        <div className="hero-scroll-cue" aria-hidden="true" />
       </div>
 
-      {/* ══════════════════ 01 ABOUT ══════════════════ */}
-      <HomeIntro />
+      {/* ══════════════════ LOGO CLOUD ══════════════════ */}
+      <LogoCloud />
 
-      {/* ══════════════════ FACTS ══════════════════ */}
-      <HomeFacts />
+      {/* ══════════════════ INTRO ══════════════════ */}
+      <Home2 />
+
+      {/* ══════════════════ ABOUT PREVIEW ══════════════════ */}
+      <HomeAbout />
+
+      {/* ══════════════════ BENTO GRID ══════════════════ */}
+      <BentoGrid />
     </section>
   );
 }

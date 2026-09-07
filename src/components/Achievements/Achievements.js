@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Container } from "react-bootstrap";
-import { FaTrophy, FaMedal, FaChalkboardTeacher, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from "react-icons/fa";
+import { FaTrophy, FaMedal, FaChalkboardTeacher, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { BsFileEarmarkText, BsImages } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import Picture from "../common/Picture";
 import PageHeader from "../common/PageHeader";
-import headerAvif from "../../Assets/PageHeaders/certificates.avif";
-import headerWebp from "../../Assets/PageHeaders/certificates.webp";
+import headerAvif from "../../Assets/PageHeaders/achievements.avif";
+import headerWebp from "../../Assets/PageHeaders/achievements.webp";
 
 import hackathon1Avif from "../../Assets/Projects/UKOMAIN26_Hackathon1.avif";
 import hackathon1Webp from "../../Assets/Projects/UKOMAIN26_Hackathon1.webp";
@@ -64,6 +64,7 @@ const achievements = [
     date: "2026",
     tag: "Hackathon Win",
     icon: <FaTrophy />,
+    color: "#00d2ff",
     images: [hackathon1, hackathon2, hackathon3],
     blurb:
       "Three days at UCL East building a full AI governance pipeline for ICU early-warning systems — three competing models (multimodal fusion, LightGBM, logistic regression) triangulated for trust, an explicit MNAR-aware feature for the ~32% of patients missing clinical notes, and two production UIs: a 6-tab evidence dashboard and a voice-driven ICU nursing monitor with a LangChain clinical agent.",
@@ -78,6 +79,7 @@ const achievements = [
     date: "2026",
     tag: "Poster Presentation",
     icon: <BsFileEarmarkText />,
+    color: "#9B59B6",
     images: [mmaiPoster1, mmaiPoster2, mmaiPoster3],
     blurb:
       '"A Synergistic Tri-Modal Framework for Alzheimer\'s Disease Diagnosis Using Self-Supervised 3D Swin Transformer and LSTM with Gated Fusion" — 89.66% accuracy, 0.9611 AUC-ROC, and an MCC of 0.8337 on a small, imbalanced 187-subject dataset by fusing MRI, longitudinal clinical scores, and CSF biomarkers through dynamic gated fusion.',
@@ -92,6 +94,7 @@ const achievements = [
     date: "2025",
     tag: "Competition Win",
     icon: <FaMedal />,
+    color: "#FF6F00",
     images: [uhds1, uhds2, uhds3],
     blurb:
       "VisionAId — a multi-agent assistive system for visually impaired users, coordinating Navigation, Vision, and E-commerce agents over a lightweight MCP protocol. Whisper for speech, YOLOv8 + OpenCV for real-time object/text/barcode recognition, OSRM/Nominatim for turn-by-turn navigation — running fully offline on a Raspberry Pi.",
@@ -106,6 +109,7 @@ const achievements = [
     date: "2026",
     tag: "Workshop",
     icon: <FaChalkboardTeacher />,
+    color: "#27AE60",
     images: [pyws1, pyws2],
     blurb:
       "Two days on explanatory vs. exploratory visualization, Plotly/Bokeh/Altair, Streamlit dashboards, and ML-driven narratives. Rebuilt my own UK job-market intelligence data as a restrained-design Streamlit dashboard and a D3 scrollytelling piece in the style of the Tampa Bay Times' \"Failure Factories.\"",
@@ -120,6 +124,7 @@ const achievements = [
     date: "2026",
     tag: "Poster Presentation",
     icon: <BsFileEarmarkText />,
+    color: "#E74C3C",
     images: [icml1, icml2, icml3],
     blurb:
       "Presented the tri-modal Alzheimer's diagnosis research (3D Swin Transformer + LSTM + gated fusion) to the London ML community, alongside talks on uncertainty quantification, LLM agent prompt-injection benchmarks, and analytical low-rank attention approximation.",
@@ -128,30 +133,6 @@ const achievements = [
     linkLabel: "View research",
   },
 ];
-
-// ─────────────────────────────────────────────────────────────────
-// ➕  Add your certificates here.
-// ─────────────────────────────────────────────────────────────────
-const certificates = [
-  { id: 1, title: "Machine Learning Specialization", issuer: "DeepLearning.AI / Stanford University", date: "2023", category: "ML / AI", credentialUrl: "#", icon: "🧠",
- },
-  { id: 2, title: "TensorFlow Developer Certificate", issuer: "Google", date: "2023", category: "ML / AI", credentialUrl: "#", icon: "🔥",
- },
-  { id: 3, title: "Deep Learning Specialization", issuer: "DeepLearning.AI", date: "2023", category: "ML / AI", credentialUrl: "#", icon: "🤖",
- },
-  { id: 4, title: "Google Cloud Professional Data Engineer", issuer: "Google Cloud", date: "2024", category: "Cloud", credentialUrl: "#", icon: "☁️",
- },
-  { id: 5, title: "AWS Certified Machine Learning – Specialty", issuer: "Amazon Web Services", date: "2024", category: "Cloud", credentialUrl: "#", icon: "⚡",
- },
-  { id: 6, title: "Apache Airflow Fundamentals", issuer: "Astronomer", date: "2024", category: "Data Engineering", credentialUrl: "#", icon: "🌬️",
- },
-  { id: 7, title: "Data Engineering with Python", issuer: "DataCamp", date: "2023", category: "Data Engineering", credentialUrl: "#", icon: "🗄️",
- },
-  { id: 8, title: "LangChain & LLM Applications", issuer: "DeepLearning.AI", date: "2024", category: "ML / AI", credentialUrl: "#", icon: "🔗",
- },
-];
-
-const categories = ["All", "ML / AI", "Cloud", "Data Engineering"];
 
 function Lightbox({ images, index, onClose, onPrev, onNext }) {
   useEffect(() => {
@@ -210,7 +191,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
 
 function AchievementCard({ item, onOpenGallery }) {
   return (
-    <div className="ach-card">
+    <div className="ach-card" style={{ "--ach-color": item.color }}>
       <div
         className="ach-media"
         onClick={() => onOpenGallery(item.images)}
@@ -259,9 +240,8 @@ function AchievementCard({ item, onOpenGallery }) {
   );
 }
 
-function Signals() {
-  const [gallery, setGallery] = useState(null);
-  const [activeFilter, setActiveFilter] = useState("All");
+function Achievements() {
+  const [gallery, setGallery] = useState(null); // { images, index }
 
   const openGallery = useCallback((images) => setGallery({ images, index: 0 }), []);
   const closeGallery = useCallback(() => setGallery(null), []);
@@ -274,25 +254,20 @@ function Signals() {
     []
   );
 
-  const filteredCertificates =
-    activeFilter === "All"
-      ? certificates
-      : certificates.filter((c) => c.category === activeFilter);
-
   return (
     <section>
       <PageHeader
-        n="05"
-        label="Signals"
-        description="Evidence, in reverse chronological order."
+        label="Wins & Recognition"
+        description="Hackathon wins, poster presentations, and workshops from the past year."
         avif={headerAvif}
         webp={headerWebp}
       >
-        Certificates, talks and hackathons
+        My <span className="text-accent">Achievements</span>
       </PageHeader>
 
       <Container fluid className="ach-section">
         <Container>
+
           <div className="ach-grid">
             {achievements.map((item) => (
               <AchievementCard key={item.id} item={item} onOpenGallery={openGallery} />
@@ -310,51 +285,8 @@ function Signals() {
           onNext={nextImage}
         />
       )}
-
-      <Container fluid className="cert-section">
-        <Container>
-          <div className="cert-filter-bar">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className={`cert-filter-btn${activeFilter === cat ? " active" : ""}`}
-                onClick={() => setActiveFilter(cat)}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          <div className="cert-grid">
-            {filteredCertificates.map((cert) => (
-              <div key={cert.id} className="cert-card">
-                <div className="cert-icon-wrap">{cert.icon}</div>
-                <div className="cert-badge">{cert.category}</div>
-                <h4 className="cert-title">{cert.title}</h4>
-                <p className="cert-issuer">{cert.issuer}</p>
-                <p className="cert-date">Issued {cert.date}</p>
-                {cert.credentialUrl !== "#" ? (
-                  <a
-                    href={cert.credentialUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="cert-link"
-                  >
-                    View credential&nbsp;
-                    <FaExternalLinkAlt style={{ fontSize: "0.65rem" }} />
-                  </a>
-                ) : (
-                  <span className="cert-link" style={{ opacity: 0.35, cursor: "default" }}>
-                    Credential link coming soon
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Container>
     </section>
   );
 }
 
-export default Signals;
+export default Achievements;
