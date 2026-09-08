@@ -18,7 +18,7 @@ import toolsBandWebp from "../../Assets/New_photos/tools i used.webp";
 function About() {
   return (
     <>
-      <PageHeader label="01 · About" avif={headerAvif} webp={headerWebp}>
+      <PageHeader label="01 · About" avif={headerAvif} webp={headerWebp} className="page-header--tall">
         Field notes
       </PageHeader>
 
@@ -60,7 +60,7 @@ function About() {
             width={1200}
             height={655}
             alt=""
-            className="section-band-img media-feather-all media-grade"
+            className="section-band-img media-feather-y media-grade"
           />
           <Techstack />
 
@@ -70,7 +70,7 @@ function About() {
             width={1200}
             height={655}
             alt=""
-            className="section-band-img media-feather-all media-grade"
+            className="section-band-img media-feather-y media-grade"
           />
           <Toolstack />
 

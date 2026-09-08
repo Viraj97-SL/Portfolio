@@ -72,7 +72,7 @@
   color: var(--bg) !important;
   font-weight: 700;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   text-decoration: none !important;
   font-size: 0.88rem;
   letter-spacing: 0.04em;
@@ -93,7 +93,7 @@
   color: var(--text) !important;
   font-weight: 600;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 4px;
   text-decoration: none !important;
   font-size: 0.88rem;
   letter-spacing: 0.04em;

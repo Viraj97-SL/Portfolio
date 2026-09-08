@@ -34,8 +34,7 @@ function Github() {
         width={1200}
         height={655}
         alt=""
-        className="section-band-img section-band-img--16-9 media-feather-all media-grade"
-        style={{ maxWidth: 900, margin: "0 auto 2rem" }}
+        className="section-band-img media-feather-y media-grade"
       />
       <GitHubCalendar
         username="Viraj97-SL"

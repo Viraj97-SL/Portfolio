@@ -76,3 +76,12 @@
     padding: 2rem 0;
   }
 }
+
+/* Fixed height instead of an aspect-ratio that scales with viewport
+   width — the fix for a header whose content column collides with the
+   body block that follows it, since a fixed height is a hard, known
+   quantity the next section's negative margin can be tuned against. */
+.page-header--tall {
+  aspect-ratio: unset;
+  height: 44vh;
+}

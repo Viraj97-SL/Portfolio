@@ -293,14 +293,17 @@ function Signals() {
       {/* ── Achievements (newer dates first) ── */}
       <Container fluid className="ach-section">
         <Container>
-          <Picture
-            avif={laurelAvif}
-            webp={laurelWebp}
-            width={1200}
-            height={655}
-            alt=""
-            className="section-band-img section-band-img--16-9 media-feather-all media-grade"
-          />
+          <div className="media-caption-frame">
+            <Picture
+              avif={laurelAvif}
+              webp={laurelWebp}
+              width={1200}
+              height={655}
+              alt=""
+              className="media-feather-y media-grade"
+            />
+            <p className="media-caption-line">Everything here has a date and a link.</p>
+          </div>
 
           <p className="label">Hackathons, talks &amp; workshops</p>
 
@@ -315,14 +318,17 @@ function Signals() {
       {/* ── Certificates ── */}
       <Container fluid className="cert-section">
         <Container>
-          <Picture
-            avif={parchmentAvif}
-            webp={parchmentWebp}
-            width={1200}
-            height={593}
-            alt=""
-            className="section-band-img section-band-img--16-9 media-feather-all media-grade"
-          />
+          <div className="media-caption-frame">
+            <Picture
+              avif={parchmentAvif}
+              webp={parchmentWebp}
+              width={1200}
+              height={593}
+              alt=""
+              className="media-feather-y media-grade"
+            />
+            <p className="media-caption-line">Paper, earned one at a time.</p>
+          </div>
 
           <p className="label">Certificates</p>
 

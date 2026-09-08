@@ -3,9 +3,9 @@ import Picture from "./Picture";
 import "./page-header.css";
 
 // Same scrim technique as the hero, at a 3:1 panoramic aspect ratio.
-function PageHeader({ label, children, description, avif, webp }) {
+function PageHeader({ label, children, description, avif, webp, className }) {
   return (
-    <div className="page-header">
+    <div className={`page-header${className ? ` ${className}` : ""}`}>
       {avif && webp ? (
         <Picture
           avif={avif}

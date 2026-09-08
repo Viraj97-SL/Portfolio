@@ -14,13 +14,11 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(from var(--accent) r g b / 0.9);
-  border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(from var(--accent) r g b / 0.9);
-  border-radius: 12px;
 }
 
 /* --------- */
@@ -143,7 +141,6 @@
   display: block;
   height: 5px;
   width: 0;
-  border-radius: 16px;
   background: var(--accent);
   bottom: 1px;
   left: 0;
@@ -222,7 +219,6 @@
   color: var(--text-primary) !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
-  text-align: center;
 }
 
 .home-about-body {
@@ -232,7 +228,6 @@
 }
 
 .home-about-social {
-  text-align: center !important;
   padding-top: 25px;
   color: var(--text-primary) !important;
 }
@@ -247,14 +242,14 @@
 
 .home-social-icons {
   position: relative !important;
-  display: inline-block !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: 40px !important;
   height: 40px !important;
-  text-align: center !important;
   font-size: 1.2em !important;
-  line-height: 2em !important;
   background: rgb(from var(--text-primary) r g b / 0.972) !important;
-  border-radius: 50% !important;
+  border-radius: 4px !important;
   transition: 0.5s !important;
 }
 
@@ -265,7 +260,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 4px;
   background: color-mix(in oklch, var(--accent) 40%, var(--bg));
   transition: 0.5s;
   transform: scale(0.9);
@@ -302,23 +297,8 @@
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
 }
-.footer-copywright {
-  text-align: center !important;
-}
-
 .footer-body {
   z-index: 1;
-  text-align: center !important;
-}
-
-@media (max-width: 767px) {
-  .footer-copywright {
-    text-align: center !important;
-  }
-
-  .footer-body {
-    text-align: center !important;
-  }
 }
 
 .footer h3 {
@@ -345,16 +325,39 @@
   padding-bottom: 30px !important;
 }
 
+/* Card grid: auto-fill keeps cards from stretching thin at wide
+   viewports, with explicit column counts at each breakpoint so the
+   count is deterministic rather than dependent on container gutters. */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .project-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .project-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .project-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767.98px) {
+  .project-grid { grid-template-columns: 1fr; }
+}
+
 .project-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  height: auto !important;
+  height: auto;
 }
 
 .card-img-top {
   aspect-ratio: 16 / 9;
+  max-height: 200px;
   width: 100%;
   object-fit: cover;
   display: block;
@@ -365,6 +368,7 @@
   color: var(--text) !important;
   background-color: var(--accent) !important;
   border-color: var(--accent) !important;
+  border-radius: 4px !important;
 }
 
 .btn-primary:hover {
@@ -399,8 +403,7 @@
   padding: 10px 20px !important;
   border: 1px solid var(--line) !important;
   vertical-align: middle !important;
-  text-align: center !important;
-  border-radius: 24px !important;
+  border-radius: 999px !important;
   overflow: hidden !important;
   transition: border-color 0.3s ease, transform 0.3s ease;
   width: fit-content !important;
@@ -560,7 +563,6 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  border-radius: 50px;
   left: -9px;
   top: 0;
   background: var(--text);
@@ -577,7 +579,7 @@
   background-color: color-mix(in oklch, var(--accent) 20%, var(--bg-surface)) !important;
   border-color: color-mix(in oklch, var(--accent) 20%, var(--bg-surface)) !important;
   padding: 0.25rem 0.98rem !important;
-  border-radius: 5px !important;
+  border-radius: 4px !important;
   line-height: 1.4 !important;
   transition: 0.3s ease !important;
 }
@@ -629,7 +631,7 @@
 }
 
 .logo-cloud-label {
-  text-align: center;
+  padding-left: 4vw;
   color: rgb(from var(--text-primary) r g b / 0.26);
   font-size: 0.64rem;
   letter-spacing: 0.48em;
@@ -645,7 +647,6 @@
   margin: 0 7px;
   background: rgb(from var(--text-primary) r g b / 0.025);
   border: 1px solid rgb(from var(--accent) r g b / 0.09);
-  border-radius: 40px;
   color: rgb(from var(--text-primary) r g b / 0.48);
   font-size: 0.79rem;
   font-weight: 500;
@@ -680,7 +681,6 @@
 }
 
 .ha-label {
-  text-align: center;
   color: rgb(from var(--text-primary) r g b / 0.28);
   font-size: 0.66rem;
   letter-spacing: 0.42em;
@@ -692,7 +692,6 @@
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
-  text-align: center;
   margin-bottom: 0;
 }
 
@@ -712,7 +711,6 @@
 .ha-card {
   background: rgb(from var(--bg-base) r g b / 0.88);
   border: 1px solid rgb(from var(--accent) r g b / 0.12);
-  border-radius: 18px;
   padding: 2rem 2.2rem;
   backdrop-filter: blur(14px);
   height: 100%;
@@ -789,7 +787,6 @@
   color: var(--text-primary);
   font-size: 2rem;
   font-weight: 700;
-  text-align: center;
   margin-bottom: 0.4rem;
 }
 
@@ -799,7 +796,6 @@
 
 .bento-section-subtitle {
   color: var(--dim);
-  text-align: center;
   font-size: 0.66rem;
   letter-spacing: 0.38em;
   text-transform: uppercase;
@@ -825,7 +821,6 @@
 .bento-tile {
   background: rgb(from var(--bg-base) r g b / 0.9);
   border: 1px solid var(--line);
-  border-radius: 16px;
   padding: 1.6rem;
   position: relative;
   overflow: hidden;
@@ -883,7 +878,6 @@
   padding: 3px 10px;
   background: rgb(from var(--accent) r g b / 0.07);
   border: 1px solid rgb(from var(--accent) r g b / 0.2);
-  border-radius: 20px;
   color: var(--accent);
   font-size: 0.68rem;
   margin: 3px;
@@ -893,7 +887,6 @@
   width: 8px;
   height: 8px;
   background: var(--success);
-  border-radius: 50%;
   display: inline-block;
   margin-right: 8px;
 }
@@ -926,7 +919,12 @@
 }
 
 /* ---- About Page fixes ---- */
+/* Overrides media.css's shared -9rem..-5rem clamp (same specificity,
+   later in source) with the fixed pull the 44vh header (page-header.css)
+   was tuned against — the body block rises into the feathered edge
+   instead of colliding with it. */
 .about-section {
+  margin-top: -4rem !important;
 }
 
 .about-section h1 {
@@ -964,7 +962,6 @@
 .contact-form-card {
   background: rgb(from var(--bg-base) r g b / 0.92);
   border: 1px solid rgb(from var(--accent) r g b / 0.12);
-  border-radius: 20px;
   padding: 2.4rem;
   backdrop-filter: blur(16px);
 }
@@ -974,7 +971,7 @@
   width: 100%;
   background: rgb(from var(--text-primary) r g b / 0.03) !important;
   border: 1px solid rgb(from var(--accent) r g b / 0.15) !important;
-  border-radius: 10px !important;
+  border-radius: 4px !important;
   color: var(--text-primary) !important;
   padding: 0.82rem 1rem !important;
   font-family: "PT Mono", monospace !important;
@@ -1001,7 +998,7 @@
   color: var(--bg) !important;
   font-weight: 700;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 0.88rem;
   font-family: "PT Mono", monospace;
   letter-spacing: 0.04em;
@@ -1020,7 +1017,6 @@
 .contact-info-card {
   background: rgb(from var(--bg-base) r g b / 0.85);
   border: 1px solid rgb(from var(--accent) r g b / 0.1);
-  border-radius: 14px;
   padding: 1.1rem 1.4rem;
   margin-bottom: 0.85rem;
   display: flex;
@@ -1052,8 +1048,8 @@
 
 .contact-info-value { font-size: 0.86rem; color: rgb(from var(--text-primary) r g b / 0.75); margin-top: 2px; }
 
-.contact-success { color: var(--success); text-align: center; margin-top: 1rem; font-size: 0.86rem; }
-.contact-error   { color: var(--error); text-align: center; margin-top: 1rem; font-size: 0.86rem; }
+.contact-success { color: var(--success); margin-top: 1rem; font-size: 0.86rem; }
+.contact-error   { color: var(--error); margin-top: 1rem; font-size: 0.86rem; }
 
 /* ---- Certificates Section ---- */
 .cert-section {
@@ -1075,7 +1071,7 @@
 
 .cert-filter-btn {
   padding: 5px 18px;
-  border-radius: 30px;
+  border-radius: 4px;
   border: 1px solid rgb(from var(--accent) r g b / 0.18);
   background: transparent;
   color: rgb(from var(--text-primary) r g b / 0.42);
@@ -1102,7 +1098,6 @@
 .cert-card {
   background: rgb(from var(--bg-base) r g b / 0.9);
   border: 1px solid rgb(from var(--accent) r g b / 0.09);
-  border-radius: 16px;
   padding: 1.4rem 1.5rem 1.4rem 2rem;
   position: relative;
   overflow: hidden;
@@ -1118,7 +1113,6 @@
   width: 4px;
   height: 100%;
   background: var(--cert-color, var(--accent));
-  border-radius: 16px 0 0 16px;
 }
 
 .cert-card:hover {
@@ -1134,7 +1128,6 @@
   padding: 2px 10px;
   background: rgb(from var(--accent) r g b / 0.07);
   border: 1px solid rgb(from var(--accent) r g b / 0.15);
-  border-radius: 12px;
   font-size: 0.63rem;
   color: var(--accent);
   margin-bottom: 0.7rem;
@@ -1177,7 +1170,6 @@
 .ach-card {
   background: rgb(from var(--bg-base) r g b / 0.9);
   border: 1px solid rgb(from var(--accent) r g b / 0.09);
-  border-radius: 16px;
   overflow: hidden;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(14px);
@@ -1217,7 +1209,6 @@
   padding: 3px 11px;
   background: rgb(from var(--bg-base) r g b / 0.75);
   border: 1px solid var(--ach-color, var(--accent));
-  border-radius: 20px;
   font-size: 0.62rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1234,7 +1225,6 @@
   gap: 5px;
   padding: 3px 10px;
   background: rgb(from var(--bg-base) r g b / 0.75);
-  border-radius: 20px;
   font-size: 0.68rem;
   color: rgb(from var(--text-primary) r g b / 0.85);
   backdrop-filter: blur(6px);
@@ -1297,7 +1287,7 @@
   color: var(--text-primary);
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1316,7 +1306,7 @@
   color: var(--text-primary);
   width: 46px;
   height: 46px;
-  border-radius: 50%;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1341,8 +1331,7 @@
 /* ---- Project cards ---- */
 .project-card-view {
   background: rgb(from var(--bg-base) r g b / 0.85);
-  border: 1px solid var(--line);
-  border-radius: 0;
+  border-bottom: 1px solid var(--line);
   overflow: hidden;
   position: relative;
   height: 100%;
@@ -1350,7 +1339,7 @@
 }
 
 .project-card-view:hover {
-  border-color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .project-card-title {
@@ -1383,19 +1372,18 @@
   align-items: center;
   gap: 5px;
   padding: 4px 12px;
-  background: linear-gradient(135deg, var(--accent) 0%, oklch(from var(--accent) calc(l - 0.12) c h) 100%);
-  color: var(--bg);
-  font-size: 0.66rem;
+  background: transparent;
+  color: var(--accent);
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-radius: 30px;
-  box-shadow: 0 0 18px rgb(from var(--accent) r g b / 0.45);
 }
 
 .project-card-noimg {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
+  max-height: 200px;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -1432,7 +1420,6 @@
   margin-bottom: 0.6rem;
   background: rgb(from var(--accent) r g b / 0.08);
   border: 1px solid rgb(from var(--accent) r g b / 0.2);
-  border-radius: 12px;
   font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1452,7 +1439,6 @@
   padding: 3px 10px;
   background: rgb(from var(--text-primary) r g b / 0.04);
   border: 1px solid rgb(from var(--text-primary) r g b / 0.1);
-  border-radius: 20px;
   font-size: 0.66rem;
   color: rgb(from var(--text-primary) r g b / 0.55);
 }

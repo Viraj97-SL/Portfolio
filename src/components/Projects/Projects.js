@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import PageHeader from "../common/PageHeader";
 import SectionDivider from "../common/SectionDivider";
@@ -60,11 +60,11 @@ function Projects() {
 
       <Container fluid className="project-section">
       <Container>
-        <Row style={{ justifyItems: "center", paddingBottom: "10px" }}>
+        <div className="project-grid">
 
           {/* ── Featured — brought to the front ── */}
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={marketforgeImg}
               featured
@@ -76,9 +76,9 @@ function Projects() {
               ghLink="https://github.com/Viraj97-SL/marketforge-ai"
               demoLink="https://www.marketforge.digital/"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={ukomainImg}
               featured
@@ -89,9 +89,9 @@ function Projects() {
               description='🏆 Best Multimodal Idea at the MultimodalAI’26 Hackathon (UKOMAIN × UCL East). Built a full AI governance pipeline for ICU early-warning systems — three competing models triangulated for trust, an explicit MNAR-aware feature for missing clinical notes, a 6-tab evidence dashboard (AUROC/AUPRC, calibration, DCA, SHAP), and a voice-driven ICU nursing monitor powered by a LangChain clinical agent.'
               ghLink="https://github.com/Viraj97-SL/UKOMAIN26_Hackathon_Clinical"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={visionaidImg}
               featured
@@ -102,9 +102,9 @@ function Projects() {
               description="🏆 1st place, Data Science Project Club, University of Hertfordshire. A multi-agent assistive system for visually impaired users, coordinating Navigation, Vision, and E-commerce agents over a lightweight MCP protocol — Whisper for speech, YOLOv8 + OpenCV for real-time recognition, running fully offline on a Raspberry Pi."
               ghLink="https://github.com/Viraj97-SL/VisionAId"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={pamoryaImg}
               featured
@@ -116,9 +116,9 @@ function Projects() {
               ghLink="https://github.com/Viraj97-SL/apparel-agent-backend"
               demoLink="https://apparel-agent-frontend.vercel.app"
             />
-          </Col>
+          </div>
 
-        </Row>
+        </div>
       </Container>
       </Container>
 
@@ -132,11 +132,11 @@ function Projects() {
 
       <Container fluid className="project-section">
       <Container>
-        <Row style={{ justifyItems: "center", paddingBottom: "10px" }}>
+        <div className="project-grid">
 
           {/* ── Rest, ordered by depth / tech / impact ── */}
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={alzheimersImg}
               isBlog={false}
@@ -146,9 +146,9 @@ function Projects() {
               description="Engineered a custom 3D Swin Transformer using PyTorch for the early detection of Alzheimer's Disease. Fused disparate healthcare data including high-dimensional 3D MRI scans, longitudinal clinical records, and biomarker sequences to handle unstructured medical data efficiently."
               ghLink="https://github.com/Viraj97-SL/Research-Early-prediction-of-Alzheimer-s"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={cricoracleImg}
               isBlog={false}
@@ -158,9 +158,9 @@ function Projects() {
               description="A production-grade T20 World Cup prediction platform. Features match outcome probabilities, first-innings score forecasts, and optimal Playing XI selection using an ensemble of XGBoost, PyTorch LSTMs, and DEAP Genetic Algorithms. Deployed with a FastAPI backend and Platt-calibrated inference."
               ghLink="https://github.com/Viraj97-SL/CricOracle2026"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={massifyxImg}
               isBlog={false}
@@ -170,9 +170,9 @@ function Projects() {
               description="A real-time supply chain disruption monitoring platform. The MassifyX Intelligence Service ingests global disruption signals, enriches them with AI-generated analysis, and exposes a read API that powers a live monitor dashboard for logistics and procurement teams."
               ghLink="https://github.com/Viraj97-SL/MassifyX_Global"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={reposentinelImg}
               isBlog={false}
@@ -182,9 +182,9 @@ function Projects() {
               description="An autonomous multi-agent system that analyzes GitHub repositories against a DS/ML/AI taxonomy. It scouts the web, arXiv, and YouTube for gaps, and synthesizes Markdown resources using Gemini 2.5 Pro via a LangGraph state machine. Features a 5-check quality gate and automated PR publishing."
               ghLink="https://github.com/Viraj97-SL/AI-ML-DS-Learning-Hub"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={newsanalystImg}
               isBlog={false}
@@ -194,9 +194,9 @@ function Projects() {
               description="A dual-pipeline AI media empire built with LangGraph and FastAPI. Features an autonomous news aggregator and a deep-tech academic analyst that isolates and breaks down complex arXiv papers. Incorporates Human-in-the-Loop (HITL) approval gates and dynamic headless Chromium image generation."
               ghLink="https://github.com/Viraj97-SL/AI-News-Analyzer"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={sathchakraImg}
               isBlog={false}
@@ -207,9 +207,9 @@ function Projects() {
               ghLink="https://github.com/Viraj97-SL/Sath-Chakra-AI"
               demoLink="https://sath-chakra-ai.vercel.app"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={jobfinderImg}
               isBlog={false}
@@ -219,9 +219,9 @@ function Projects() {
               description="An autonomous multi-agent job-hunting pipeline that discovers, evaluates, and prepares personalised applications for Data Science, AI Engineering, and ML Engineering roles across the UK — end to end, without manual triage."
               ghLink="https://github.com/Viraj97-SL/JobFinder"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card">
+          <div className="project-card">
             <ProjectCard
               image={scopeguardImg}
               isBlog={false}
@@ -231,9 +231,9 @@ function Projects() {
               description="Built at the Cursor Hackathon 2026 in London under a tight build window — a rapid-prototyped tool shipped end-to-end during the live event."
               ghLink="https://github.com/Viraj97-SL/ScopeGuard_Cursor-Hackathon-2026"
             />
-          </Col>
+          </div>
 
-        </Row>
+        </div>
       </Container>
       </Container>
     </>

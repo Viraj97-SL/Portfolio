@@ -63,6 +63,60 @@
   }
 }
 
+/* .about-img-frame img already carries a `width: auto; max-width: 100%`
+   rule (style.css) at the same specificity (class + element), so on
+   source order alone it would win over .media-breakout-right and the
+   image would never actually break out. This selector adds the extra
+   class to outrank it. */
+@media (min-width: 768px) {
+  .about-img-frame img.media-breakout-right {
+    width: calc(100% + 4rem);
+    max-width: calc(100% + 4rem);
+  }
+}
+
+/* Prose caption set into a full-bleed image's lower feathered edge —
+   Treatment A (a real sentence, not a short label). This frame owns the
+   100vw breakout itself (same shape as SectionDivider) so the caption's
+   inset is relative to the image's true edges, not the narrower content
+   column — the two caption treatments must anchor identically. */
+.media-caption-frame {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 2rem;
+}
+
+.media-caption-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.media-caption-line {
+  position: absolute;
+  left: 3rem;
+  right: 3rem;
+  bottom: 1.5rem;
+  max-width: 40ch;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--text);
+  opacity: 0.9;
+  margin: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .media-caption-line {
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1rem;
+  }
+}
+
 .logo-cloud-section,   /* follows the Home hero */
 .bento-section,        /* follows the seam divider */
 .about-section,        /* follows the About PageHeader */

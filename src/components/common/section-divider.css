@@ -32,12 +32,14 @@
   opacity: 0.82;
 }
 
-/* Half on the photograph, half on the page — sits astride the feathered
-   lower-left edge rather than fully inside the image. */
+/* Micro-label (Treatment B) sitting on the image's own lower feathered
+   edge — previously bottom:-10px pushed it entirely below the frame,
+   onto the page background, where var(--dim) read as illegibly muddy
+   against nothing. */
 .section-divider-caption {
   position: absolute;
-  left: 24px;
-  bottom: -10px;
+  left: 3rem;
+  bottom: 1.5rem;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
